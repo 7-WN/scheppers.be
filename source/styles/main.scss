@@ -1,0 +1,10 @@
+/* variables for normalize.scss */
+$base-font-size: 18px;
+$base-line-height: 30px;
+$base-unit: rem;
+$base-font-family: "Open Sans", Verdana, "Helvetia Neue", Helvetia, Arial, sans-serif;
+$indent-amount: 2rem;
+$normalize-vertical-rhythm: true;
+
+@import "../../bower_components/normalize-scss/sass/_normalize";
+@include normalize();
