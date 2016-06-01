@@ -1,0 +1,21 @@
+{
+  "name": "scheppers.be",
+  "authors": [
+    "Lars De Richter <lars@anansi.be>"
+  ],
+  "description": "Template code voor de nieuwe website van het Scheppersinstituut Deurne & Antwerpen.",
+  "main": "index.html",
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/7-WN/scheppers.be",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^2.2.4"
+  }
+}
