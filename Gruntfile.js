@@ -31,14 +31,14 @@ module.exports = function(grunt) {
                 options: {
                     livereload: true
                 },
-                files: ["**/*.html", "scripts/**/*.js", "images/**/*"],
+                files: ["source/**/*.html", "source/scripts/**/*.js", "source/images/**/*"],
                 tasks: ["copy:build"]
             },
             sass: {
                 options: {
                     livereload: true
                 },
-                files: ["styles/**/*.scss"],
+                files: ["source/styles/**/*.scss"],
                 tasks: ["sass:build"]
             }
         }
