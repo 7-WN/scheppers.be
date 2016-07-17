@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    $("#intro__text--replace").Morphext({
+    $("#id-intro__text--replace").Morphext({
         animation: "flipInX"
     });
+    $("#id-site-header").delay(1500).fadeIn("slow");
 });
