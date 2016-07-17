@@ -26,6 +26,7 @@ $normalize-vertical-rhythm: true;
 /**
 *   ~~~ 1. COLORS ~~~
 */
+$scheppers-blauw: #2a6bb0;
 $base-color: #529ecc;
 $base-color-deep: #0064af;
 $accent-color: #ffed42;
@@ -132,6 +133,18 @@ html
     padding-bottom: 1.6667rem;
 
     background-size: cover;
+}
+.intro__logo-wrapper {
+    background-color: rgba(255,255,255,0.8);
+    margin: 0 auto 1.6667rem auto;
+    padding: 0.8333rem;
+}
+.intro__logo {
+    display: block;
+    height: 10rem;
+    width: 8.8333rem;
+    padding: 0.8333rem;
+    border: 0.1111rem solid $scheppers-blauw;
 }
 .intro__content
 {
