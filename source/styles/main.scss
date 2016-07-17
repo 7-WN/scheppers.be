@@ -60,7 +60,7 @@ a
 html
 {
     color: $text-color-black;
-    background-color: $base-color;
+    background-color: white;
 }
 
 /**
@@ -121,11 +121,18 @@ html
 */
 .intro
 {
+    position: relative;
+    z-index: -1000;
+
+    width: 100%;
     width: 100vw;
     height: 100vh;
     margin-top: -1.6667rem;
     padding-bottom: 1.6667rem;
 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
     background-size: cover;
 }
 .intro__logo-wrapper
@@ -139,8 +146,8 @@ html
 {
     display: block;
 
-    width: 8.8333rem;
-    height: 10rem;
+    //width: 8.8333rem;
+    height: 6.6667rem;
     padding: .8333rem;
 
     border: .1111rem solid $scheppers-blauw;
@@ -177,12 +184,20 @@ html
 }
 
 /**
+*   --- 4.4 intro ---
+*/
+
+/**
 *   ~~~ 5. State ~~~
 */
 .hidden
 {
     display: none;
 }
+
+/**
+*   ~~~ 5. Utility ~~~
+*/
 .vcenter
 {
     display: flex;
