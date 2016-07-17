@@ -5,12 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic" rel="stylesheet">
+    <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" href="../bower_components/Morphext/dist/morphext.css">
     <link rel="stylesheet" href="styles/main.css">
     <title>Scheppersinstituut Deurne en Antwerpen</title>
 </head>
 
 <body>
-    <header class="site-header">
+    <header class="site-header hidden">
         <div class="site-header__logo"><img src="images/scheppers-logo.png" alt="Logo van het Scheppersinstituut Deurne en Antwerpen"></div>
         <h1 class="site-header__title">Scheppersinstituut Deurne &amp; Antwerpen</h1>
         <nav class="nav-bar nav-bar--primary">
@@ -36,10 +38,12 @@
 
     <main>
 
-        <!-- HOME -->
-        <div class="page-divider page-divider--home"></div>
-        <section class="page-section" id="home">
-            <h2 class="page-section__title">Scheppersinstituut Deurne &amp; Antwerpen</h2>
+        <!-- Intro -->
+        <section class="page-section intro vcenter" id="introduction">
+            <div class="intro__content">
+                <h2 class="intro__content__title">Scheppersinstituut Deurne &amp; Antwerpen</h2>
+                <p>De <span id="intro__text--replace">economie, handels, office, logistiek, informatica, mode</span> school van Antwerpen</p>
+            </div>
         </section>
 
         <!-- VISIE -->
@@ -71,6 +75,10 @@
     <footer>
 
     </footer>
+
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/Morphext/dist/morphext.min.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>

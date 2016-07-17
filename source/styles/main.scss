@@ -120,3 +120,62 @@ html
 {
     color: $text-color-white;
 }
+
+/**
+*   --- 4.3 intro ---
+*/
+.intro
+{
+    width: 100vw;
+    height: 100vh;
+    margin-top: -1.6667rem;
+    padding-bottom: 1.6667rem;
+
+    background-size: cover;
+}
+.intro__content
+{
+    font-size: 1.6667rem;
+    line-height: 1.6667rem;
+
+    margin: 0 auto;
+    padding: 1.6667rem;
+
+    text-align: center;
+
+    color: $text-color-white;
+    border: 1px solid $text-color-white;
+}
+.intro__content__title
+{
+    font-size: 2rem;
+    line-height: 1.6667rem;
+}
+#intro__text--replace
+{
+    display: inline-block;
+
+    width: 9rem;
+}
+#introduction
+{
+    background-image: linear-gradient(
+    rgba(0, 0, 0, .6),
+    rgba(0, 0, 0, .6)
+    ),url(../images/deurne.jpg);
+}
+
+/**
+*   ~~~ 5. State ~~~
+*/
+.hidden
+{
+    display: none;
+}
+.vcenter
+{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
