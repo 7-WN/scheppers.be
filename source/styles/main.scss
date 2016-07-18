@@ -157,7 +157,7 @@ html
 .intro
 {
     position: relative;
-    z-index: -1000;
+    z-index: -10;
 
     width: 100%;
     width: 100vw;
@@ -165,9 +165,33 @@ html
     margin-top: -1.6667rem;
     padding-bottom: 1.6667rem;
 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+    // background-position: center;
+    // background-size: cover;
+}
+#id-intro__background
+{
+    position: fixed;
+    z-index: -100;
+    top: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 100vh;
+}
+.intro__background-image
+{
+    position: absolute;
+    z-index: -90;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
 }
 .intro__logo-wrapper
 {
@@ -210,17 +234,12 @@ html
     color: $accent-color;
 }
 
-@keyframes animatedBackground {
-    from { background-position: bottom; }
-	to { background-position: top; }
-}
-
 #id-introduction
 {
     background-image: linear-gradient(
     rgba(0, 0, 0, .6),
     rgba(0, 0, 0, .6)
-    ),url(../images/deurne.jpg);
+    );
 }
 
 /**

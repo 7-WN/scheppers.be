@@ -11,15 +11,21 @@ $(document).ready(function() {
     $("#id-site-header").delay(1500).fadeIn("slow");
 
     // Change the background-images
-    var backgroundCounter = 0;
-    var backgroundImages = ["images/sancta-maria.jpg", "images/deurne.jpg"];
-    var backgroundTimer = setInterval(function() {
-        $("#id-introduction").css("background-image", "linear-gradient(rgba(0, 0, 0, .6),rgba(0, 0, 0, .6)),url(" + backgroundImages[backgroundCounter] + ")", "animation-name", "animatedBackground", "animation-duration", "3000ms");
-        backgroundCounter++;
-        if (backgroundCounter >= backgroundImages.length) {
-            backgroundCounter = 0;
-        }
-    }, 4000);
+    changeBackgrounds = function() {
+        var backgroundImages = $(".intro__background-image");
+        var backgroundCounter = 0;
+        var backgroundTimer = setInterval(function() {
+            var backgroundImage = $(backgroundImages.get(backgroundCounter));
+            backgroundImage.fadeOut(0);
+            backgroundImages.css("z-index", "-99");
+            backgroundImage.css("z-index", "-90");
+            backgroundImage.fadeIn("slow");
+            backgroundCounter++;
+            if (backgroundCounter >= backgroundImages.size()) {
+                backgroundCounter = 0;
+            }
+        }, 3000);
+    }();
 
     // Scroll events
     var scherm = $(window);
