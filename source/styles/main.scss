@@ -30,6 +30,7 @@ $scheppers-blauw: #2a6bb0;
 $base-color: #529ecc;
 $base-color-deep: #0064af;
 $accent-color: #ffed42;
+$accent-color--soft: #fcef78;
 $text-color-black: rgba(0,0,0,.87);
 $text-color-white: rgba(255,255,255,.95);
 
@@ -105,6 +106,11 @@ html
 
     justify-content: flex-end;
 }
+.nav-bar ul
+{
+    height: 5rem;
+    margin: 0;
+}
 .nav-bar__item
 {
     display: inline-block;
@@ -113,7 +119,37 @@ html
 }
 .nav-bar__item-link
 {
+    display: inline-block;
+
+    min-width: 9rem;
+    height: 100%;
+    padding: 1.6667rem .83335rem;
+
+    text-align: center;
+
     color: $text-color-white;
+}
+.nav-bar__item-link--active
+{
+    color: $text-color-black;
+    background-color: $accent-color--soft;
+    font-weight: 600;
+}
+.nav-bar--secondary
+{
+    height: 3.3333rem;
+
+    background-color: $accent-color--soft;
+}
+.nav-bar--secondary ul
+{
+    height: 3.3333rem;
+}
+.nav-bar--secondary .nav-bar__item-link
+{
+    padding: .83335rem;
+
+    color: $text-color-black;
 }
 
 /**
@@ -132,7 +168,7 @@ html
 
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center;
+    background-position: top;
     background-size: cover;
 }
 .intro__logo-wrapper
@@ -145,8 +181,8 @@ html
 .intro__logo
 {
     display: block;
-
     //width: 8.8333rem;
+
     height: 6.6667rem;
     padding: .8333rem;
 
