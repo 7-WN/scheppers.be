@@ -167,7 +167,6 @@ html
 
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: top;
     background-size: cover;
 }
 .intro__logo-wrapper
@@ -210,6 +209,12 @@ html
 
     color: $accent-color;
 }
+
+@keyframes animatedBackground {
+    from { background-position: bottom; }
+	to { background-position: top; }
+}
+
 #id-introduction
 {
     background-image: linear-gradient(
