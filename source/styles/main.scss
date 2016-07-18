@@ -105,6 +105,7 @@ html
     display: flex;
 
     justify-content: flex-end;
+    opacity: 0.7;
 }
 .nav-bar ul
 {
@@ -164,11 +165,6 @@ html
     height: 100vh;
     margin-top: -1.6667rem;
     padding-bottom: 1.6667rem;
-
-    // background-repeat: no-repeat;
-    // background-attachment: fixed;
-    // background-position: center;
-    // background-size: cover;
 }
 #id-intro__background
 {
@@ -191,7 +187,8 @@ html
 
     display: block;
 
-    width: 100%;
+    min-width: 100%;
+    min-height: 100vh;
 }
 .intro__logo-wrapper
 {
