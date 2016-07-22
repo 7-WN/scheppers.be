@@ -14,7 +14,7 @@ $(document).ready(function() {
     changeBackgrounds = function() {
         var backgroundImages = $(".intro__background-image");
         var backgroundCounter = 0;
-        var backgroundTimer = setInterval(function() {
+        return setInterval(function() {
             var backgroundImage = $(backgroundImages.get(backgroundCounter));
             backgroundImage.fadeOut(0);
             backgroundImages.css("z-index", "-99");
@@ -25,7 +25,8 @@ $(document).ready(function() {
                 backgroundCounter = 0;
             }
         }, 3000);
-    }();
+    };
+    var bgTimer = changeBackgrounds();
 
     // Scroll events
     var scherm = $(window);
@@ -34,6 +35,7 @@ $(document).ready(function() {
     scherm.scroll(function() {
         if (scherm.scrollTop() > (scherm.height() / 2 - 90)) {
             $("#id-site-header__logo").fadeIn();
+            clearInterval(bgTimer); // stop changing the backgroundimages in the intro
         } else if (scherm.scrollTop() < (scherm.height() / 2 - 90)) {
             $("#id-site-header__logo").fadeOut();
         }
