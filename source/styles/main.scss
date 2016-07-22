@@ -27,7 +27,9 @@ $normalize-vertical-rhythm: true;
 *   ~~~ 1. COLORS ~~~
 */
 $scheppers-blauw: #2a6bb0;
-$scheppers-blauw--wit: #e6eef6;
+$scheppers-blauw-wit: #e6eef6;
+$scheppers-blauw-wit--trans: rgba(230, 238, 246, .7);
+$scheppers-geel-wit: #fffce0;
 $accent-color: #ffed42;
 $accent-color--soft: #fcef78;
 $text-color-black: rgba(0,0,0,.87);
@@ -60,7 +62,7 @@ a
 html
 {
     color: $text-color-black;
-    background-color: $scheppers-blauw--wit;
+    background-color: $scheppers-blauw-wit;
 }
 
 /**
@@ -247,7 +249,25 @@ html
 *   --- 4.4 page-section ---
 */
 .page-section {
-    background-color: $scheppers-blauw--wit;
+    background-color: $scheppers-blauw-wit--trans;
+    padding:3.3334rem;
+}
+.page-section__content {
+    width: 60rem;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1.6667rem;
+    background-color: $scheppers-geel-wit;
+}
+.page-section__title {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 3.3334rem;
+}
+.page-section__subtitle {
+    margin: 0;
+    font-size: 1.6667rem;
+    line-height: 3.3334rem;
 }
 
 /**
