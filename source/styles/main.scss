@@ -27,8 +27,7 @@ $normalize-vertical-rhythm: true;
 *   ~~~ 1. COLORS ~~~
 */
 $scheppers-blauw: #2a6bb0;
-$base-color: #529ecc;
-$base-color-deep: #0064af;
+$scheppers-blauw--wit: #e6eef6;
 $accent-color: #ffed42;
 $accent-color--soft: #fcef78;
 $text-color-black: rgba(0,0,0,.87);
@@ -61,7 +60,7 @@ a
 html
 {
     color: $text-color-black;
-    background-color: white;
+    background-color: $scheppers-blauw--wit;
 }
 
 /**
@@ -240,7 +239,7 @@ html
 }
 
 /**
-*   --- 4.4 intro ---
+*   --- 4.4 page-section ---
 */
 
 /**
