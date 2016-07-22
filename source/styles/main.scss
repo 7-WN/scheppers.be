@@ -295,13 +295,28 @@ html
 }
 
 /**
-*   --- 4.4 page-section ---
+*   --- 4.4 container ---
+*/
+.container {
+    padding-bottom: 67vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#id-in-het-kort {
+    background-image: url("../images/schoolkinderen.jpg");
+}
+
+/**
+*   --- 4.5 page-section ---
 */
 .page-section
 {
     padding: 3.3334rem;
 
     background-color: $scheppers-blauw-wit--trans;
+    @include shadow(1);
 }
 .page-section__content
 {
@@ -359,6 +374,7 @@ html
 {
     flex-basis: calc(66.6667% - 3.3334rem);
 }
+
 /**
 *   ~~~ 5. State ~~~
 */
@@ -368,7 +384,7 @@ html
 }
 
 /**
-*   ~~~ 5. Utility ~~~
+*   ~~~ 6. Utility ~~~
 */
 .vcenter
 {
