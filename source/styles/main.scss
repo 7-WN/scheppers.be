@@ -183,6 +183,7 @@ html
 }
 .nav-bar__item-link--active
 {
+    opacity: 1;
     color: $text-color-black;
     background-color: $accent-color--soft;
 }
@@ -190,6 +191,7 @@ html
 {
     height: 3.3333rem;
 
+    opacity: 1;
     background-color: $accent-color--soft;
 }
 .nav-bar--secondary ul
@@ -376,7 +378,7 @@ html
 {
     display: flex;
 
-    margin: 0 -2px 0 0;
+    margin: 0 -3px 0 0;
 
     flex-wrap: wrap;
 }
@@ -385,7 +387,7 @@ html
     box-sizing: border-box;
     padding: 0 1.6667rem;
 
-    border-right: 1px solid $text-color-black;
+    border-right: 2px solid $scheppers-blauw;
 }
 .text-col--1-1
 {
