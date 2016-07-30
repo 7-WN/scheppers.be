@@ -142,6 +142,8 @@ html
 .site-header__logo img
 {
     height: 3.3333rem;
+
+    opacity: .95;
 }
 
 /**
@@ -297,14 +299,17 @@ html
 /**
 *   --- 4.4 container ---
 */
-.container {
+.container
+{
     padding-bottom: 67vh;
-    background-position: center;
+
     background-repeat: no-repeat;
-    background-size: cover;
     background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
-#id-in-het-kort {
+#id-in-het-kort
+{
     background-image: url("../images/schoolkinderen.jpg");
 }
 
@@ -316,6 +321,7 @@ html
     padding: 3.3334rem;
 
     background-color: $scheppers-blauw-wit--trans;
+
     @include shadow(1);
 }
 .page-section__content
