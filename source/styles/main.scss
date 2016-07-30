@@ -326,10 +326,12 @@ html
 }
 .page-section__content
 {
+    overflow: hidden;
+
     width: 60rem;
     max-width: 100%;
     margin: 0 auto;
-    padding: 1.6667rem;
+    padding: 1.6667rem 0;
 
     background-color: $scheppers-geel-wit;
 
@@ -358,27 +360,32 @@ html
 {
     display: flex;
 
-    width: 100%;
+    margin: 0 -2px 0 0;
 
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: stretch;
+    flex-wrap: wrap;
 }
-.col-1-1
+.text-col
 {
-    flex-basis: calc(100% - 3.3334rem);
+    box-sizing: border-box;
+    padding: 0 1.6667rem;
+
+    border-right: 1px solid $text-color-black;
 }
-.col-1-2
+.text-col--1-1
 {
-    flex-basis: calc(50% - 3.3334rem);
+    flex: 0 1 100%;
 }
-.col-1-3
+.text-col--1-2
 {
-    flex-basis: calc(33.3334% - 3.3334rem);
+    flex: 0 1 50%;
 }
-.col-2-3
+.text-col--1-3
 {
-    flex-basis: calc(66.6667% - 3.3334rem);
+    flex: 0 1 33.3334%;
+}
+.text-col--2-3
+{
+    flex: 0 1 66.6667%;
 }
 
 /**
