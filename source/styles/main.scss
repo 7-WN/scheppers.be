@@ -320,10 +320,12 @@ html
 {
     background-image: url("../images/economie-handel.jpg");
 }
-#id-informatica {
+#id-informatica
+{
     background-image: url("../images/informatica.jpg");
 }
-#id-mode-creatie {
+#id-mode-creatie
+{
     background-image: url("../images/mode-creatie.jpg");
 }
 
@@ -400,6 +402,32 @@ html
 .text-col--2-3
 {
     flex: 0 1 66.6667%;
+}
+
+/**
+*   4.6 page-footer
+*/
+.page-footer
+{
+    display: flex;
+
+    color: $text-color-white;
+    background-color: $scheppers-blauw;
+}
+.page-footer__content
+{
+    font-weight: 300;
+    font-style: normal;
+
+    padding: 1.6667rem;
+
+    flex: 0 1 25%;
+}
+.page-footer__content a
+{
+    text-decoration: underline;
+
+    color: $text-color-white;
 }
 
 /**
