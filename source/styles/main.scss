@@ -107,10 +107,12 @@ a
 */
 html
 {
+    overflow-x: hidden;
+
+    width: 100%;
+
     color: $text-color-black;
     background-color: $scheppers-blauw-wit;
-    width: 100%;
-    overflow-x: hidden;
 }
 
 /**
