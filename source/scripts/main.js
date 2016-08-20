@@ -1,6 +1,13 @@
 $(document).ready(function() {
-    // Hide all secondary nav-bars
-    $(".nav-bar--secondary").hide();
+    // Hide secondary nav-bar on home page
+    $("#id-nav-bar--school").hide();
+
+    // Show the secondary nav-bar on the home page when the link is clicked
+    $("#id-nav-bar__item--school").click(function() {
+        $("#id-nav-bar--school").fadeIn("slow");
+        $(this).addClass("nav-bar__item-link--active");
+        return true;
+    });
 
     // Animated text in the box on the introduction section
     $("#id-intro__text--replace").Morphext({
@@ -39,17 +46,5 @@ $(document).ready(function() {
         } else if (scherm.scrollTop() < (scherm.height() / 2 - 90)) {
             $("#id-site-header__logo").fadeOut();
         }
-    });
-
-    // Show the correct secondary nav-bar when a link on the main nav-bar is clicked
-    $(".nav-bar__item-link--primary").click(function() {
-        var link = $(this);
-        $(".nav-bar__item-link--primary").removeClass("nav-bar__item-link--active");
-        link.addClass("nav-bar__item-link--active");
-        if (link.data("nav-bar--secondary")) {
-            $(".nav-bar--secondary").hide();
-            $("#" + link.data("nav-bar--secondary")).fadeIn("slow");
-        }
-        return true;
     });
 });
