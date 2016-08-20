@@ -447,12 +447,12 @@ main
 */
 .card
 {
-    padding: .83335rem;
+    padding: .8335rem;
 
     background-color: $scheppers-geel-wit;
 
     @include rounded();
-    @include shadow(2);
+    @include shadow(1);
 }
 .card__title
 {
@@ -463,6 +463,20 @@ main
     margin: 0;
 
     color: $scheppers-blauw;
+}
+.card__action
+{
+    font-size: 1rem;
+    line-height: 1.6667rem;
+
+    padding: .83335rem 1.6667rem;
+
+    color: $text-color-white;
+    border: none;
+    background-color: $scheppers-blauw;
+
+    @include rounded();
+    @include shadow(1);
 }
 /**
 *   5.9 page-footer
