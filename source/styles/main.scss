@@ -9,7 +9,7 @@ $base-font-size: 18px;
 /* slightly larger fonts */
 $base-line-height: 30px;
 $base-unit: rem;
-$base-font-family: "Open Sans", Verdana, "Helvetia Neue", Helvetia, Arial, sans-serif;
+$base-font-family: 'Open Sans', Verdana, 'Helvetia Neue', Helvetia, Arial, sans-serif;
 $h1-font-size: 3 * $base-font-size;
 $h2-font-size: 2 * $base-font-size;
 $h3-font-size: 1.5 * $base-font-size;
@@ -18,7 +18,7 @@ $h5-font-size: 1 * $base-font-size;
 $h6-font-size: .83 * $base-font-size;
 $indent-amount: 2rem;
 $normalize-vertical-rhythm: true;
-@import "../../bower_components/normalize-scss/sass/_normalize";
+@import '../../bower_components/normalize-scss/sass/_normalize';
 @include normalize();
 /**
 *   ~~~ 1. VARIABLES & MIXINS ~~~
@@ -48,7 +48,7 @@ $text-color-white: rgba(255,255,255,.95);
     }
     @else if $depth > 5
     {
-        @warn"Invalid $depth `#{$depth}` for mixin `card`.";
+        @warn'Invalid $depth `#{$depth}` for mixin `card`.';
     }
     @else
     {
@@ -92,9 +92,11 @@ h6
 strong
 {
     font-weight: 600;
+
     color: $scheppers-blauw;
 }
-em {
+em
+{
     font-style: italic;
 }
 a
@@ -199,6 +201,8 @@ html
 
     opacity: 1;
     background-color: $accent-color--soft;
+
+    justify-content: center;
 }
 .nav-bar--secondary ul
 {
@@ -295,7 +299,8 @@ html
     border: 2px solid $text-color-white;
     background-color: rgba(0, 0, 0, .3);
 }
-.intro__content__title, .intro__content__subtitle
+.intro__content__title,
+.intro__content__subtitle
 {
     color: $text-color-white;
 }
@@ -321,23 +326,23 @@ html
 }
 #id-in-het-kort
 {
-    background-image: url("../images/schoolkinderen.jpg");
+    background-image: url('../images/schoolkinderen.jpg');
 }
 #id-visie
 {
-    background-image: url("../images/visie.jpg");
+    background-image: url('../images/visie.jpg');
 }
 #id-economie-handel
 {
-    background-image: url("../images/economie-handel.jpg");
+    background-image: url('../images/economie-handel.jpg');
 }
 #id-informatica
 {
-    background-image: url("../images/informatica.jpg");
+    background-image: url('../images/informatica.jpg');
 }
 #id-mode-creatie
 {
-    background-image: url("../images/mode-creatie.jpg");
+    background-image: url('../images/mode-creatie.jpg');
 }
 /**
 *   --- 4.5 page-section ---
