@@ -6,7 +6,7 @@ $(document).ready(function() {
     $(".modal").each(function() {
         var id = $(this).attr("id") + "-modal-view";
         var contents = this.innerHTML;
-        $("body").append("<div class='modal-view <!--hidden-->' id='" + id + "'>" + contents + "</div>");
+        $("body").append("<div class='modal-view hidden' id='" + id + "'>" + contents + "</div>");
     });
 
     // create click events for the modal buttons

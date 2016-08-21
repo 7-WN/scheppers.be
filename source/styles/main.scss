@@ -150,29 +150,34 @@ table
     border-bottom: 3px solid $scheppers-blauw--trans;
     border-left: 3px solid $scheppers-blauw--trans;
 }
-
-th
-{
-    font-weight: normal;
-
-    color: $scheppers-blauw;
-    border-top: 3px solid $scheppers-blauw--trans !important;
-    border-bottom: 3px solid $scheppers-blauw--trans !important;
-}
 th,
 td
 {
-    box-sizing: inherit;
     margin: 0;
     padding: 0 .8333rem;
 
     border-right: 1px solid $scheppers-blauw--trans;
-    border-bottom: 1px solid $scheppers-blauw--trans;
 }
 th:last-child,
 td:last-child
 {
     border-right: none;
+}
+thead tr th
+{
+    font-weight: normal;
+
+    color: $scheppers-blauw;
+    border-top: 3px solid $scheppers-blauw--trans;
+    border-bottom: 3px solid $scheppers-blauw--trans;
+}
+thead:last-child tr th
+{
+    border-bottom: none;
+}
+td
+{
+    border-bottom: 1px solid $scheppers-blauw--trans;
 }
 tr:last-child td
 {
