@@ -9,7 +9,7 @@ $base-font-size: 18px;
 /* slightly larger fonts */
 $base-line-height: 30px;
 $base-unit: rem;
-$base-font-family: 'Open Sans', Verdana, 'Helvetia Neue', Helvetia, Arial, sans-serif;
+$base-font-family: "Open Sans", Verdana, "Helvetia Neue", Helvetia, Arial, sans-serif;
 $h1-font-size: 3 * $base-font-size;
 $h2-font-size: 2 * $base-font-size;
 $h3-font-size: 1.5 * $base-font-size;
@@ -18,12 +18,13 @@ $h5-font-size: 1 * $base-font-size;
 $h6-font-size: .83 * $base-font-size;
 $indent-amount: 2rem;
 $normalize-vertical-rhythm: true;
-@import '../../bower_components/normalize-scss/sass/_normalize';
+@import "../../bower_components/normalize-scss/sass/_normalize";
 @include normalize();
 /**
 *   ~~~ 1. VARIABLES & MIXINS ~~~
 */
 $scheppers-blauw: #2a6bb0;
+$scheppers-blauw--trans: rgba(42, 107, 176, .87);
 $scheppers-blauw-wit: #dce6f2; // last step of 5 steps to white
 $scheppers-blauw-wit--trans: rgba(220, 230, 242, .88);
 $accent-color: #ffed42;
@@ -38,7 +39,7 @@ $text-color-white: rgba(255,255,255,.95);
     {
         display: table;
 
-        content: ' ';
+        content: " ";
     }
     &:after
     {
@@ -62,7 +63,7 @@ $text-color-white: rgba(255,255,255,.95);
     }
     @else if $depth > 5
     {
-        @warn'Invalid $depth `#{$depth}` for mixin `card`.';
+        @warn"Invalid $depth `#{$depth}` for mixin `card`.";
     }
     @else
     {
@@ -382,23 +383,23 @@ main
 }
 #id-in-het-kort
 {
-    background-image: url('../images/schoolkinderen.jpg');
+    background-image: url("../images/schoolkinderen.jpg");
 }
 #id-visie
 {
-    background-image: url('../images/visie.jpg');
+    background-image: url("../images/visie.jpg");
 }
 #id-economie-handel
 {
-    background-image: url('../images/economie-handel.jpg');
+    background-image: url("../images/economie-handel.jpg");
 }
 #id-informatica
 {
-    background-image: url('../images/informatica.jpg');
+    background-image: url("../images/informatica.jpg");
 }
 #id-mode-creatie
 {
-    background-image: url('../images/mode-creatie.jpg');
+    background-image: url("../images/mode-creatie.jpg");
 }
 /**
 *   --- 5.6 page-section ---
@@ -501,7 +502,70 @@ main
 /**
 *   5.9 modals
 */
+#curtain
+{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
 
+    width: 100vw;
+    height: 100vh;
+
+    background-color: $scheppers-blauw--trans;
+}
+.modal
+{
+    display: none;
+}
+.modal-view
+{
+    position: fixed;
+    z-index: 1000;
+    top: 5rem;
+    left: 16.6665vw;
+
+    width: 66.6667vw;
+    margin: 0 auto;
+    padding: .8333rem .8333rem 2.5rem .8333rem;
+
+    background-color: $scheppers-geel-wit;
+
+    @include rounded();
+    @include shadow(2);
+}
+.modal-view::before
+{
+    font-weight: 600;
+
+    display: block;
+    float: right;
+
+    content: "X";
+
+    color: $scheppers-blauw;
+}
+.modal-view::after
+{
+    font-size: 1rem;
+    line-height: 1.6667rem;
+
+    position: absolute;
+    right: .8333rem;
+    bottom: .8333rem;
+
+    display: block;
+
+    padding: .1667rem .8333rem;
+
+    content: "Sluiten";
+
+    color: $text-color-white;
+    background-color: $scheppers-blauw;
+
+    @include rounded();
+    @include shadow(1);
+}
 /**
 *   5.10 page-footer
 */
