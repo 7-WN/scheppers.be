@@ -144,7 +144,11 @@ html
 }
 table
 {
-    border: 3px solid $scheppers-blauw--trans;
+    border-spacing: 0;
+
+    border-right: 3px solid $scheppers-blauw--trans;
+    border-bottom: 3px solid $scheppers-blauw--trans;
+    border-left: 3px solid $scheppers-blauw--trans;
 }
 
 th
@@ -152,11 +156,14 @@ th
     font-weight: normal;
 
     color: $scheppers-blauw;
+    border-top: 3px solid $scheppers-blauw--trans !important;
+    border-bottom: 3px solid $scheppers-blauw--trans !important;
 }
 th,
 td
 {
     box-sizing: inherit;
+    margin: 0;
     padding: 0 .8333rem;
 
     border-right: 1px solid $scheppers-blauw--trans;
@@ -170,10 +177,6 @@ td:last-child
 tr:last-child td
 {
     border-bottom: none;
-}
-thead tr th
-{
-    border-bottom: 3px solid $scheppers-blauw--trans;
 }
 .t-col--1-2
 {
@@ -597,7 +600,7 @@ main
     width: 66.6667vw;
     max-height: 66.6667vh;
     margin: 0 auto;
-    padding: .8333rem .8333rem 2.5rem .8333rem;
+    padding: .8333rem;
 
     background-color: $scheppers-geel-wit;
 
@@ -620,11 +623,7 @@ main
     font-size: 1rem;
     line-height: 1.6667rem;
 
-    position: absolute;
-    right: .8333rem;
-    bottom: .8333rem;
-
-    display: block;
+    float: right;
 
     padding: .1667rem .8333rem;
 
