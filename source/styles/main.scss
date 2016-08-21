@@ -31,6 +31,20 @@ $accent-color--soft: #fff381; // 2nd step of 5 steps to white
 $scheppers-geel-wit: #fffcdf; // last step of 5 steps to white
 $text-color-black: rgba(0,0,0,.87);
 $text-color-white: rgba(255,255,255,.95);
+@mixin clearfix()
+{
+    &:before,
+    &:after
+    {
+        display: table;
+
+        content: ' ';
+    }
+    &:after
+    {
+        clear: both;
+    }
+}
 @mixin rounded()
 {
     border-radius: 2px;
@@ -445,7 +459,7 @@ main
 .card
 {
     margin: 0 1.6667rem 0 0;
-    padding: .8335rem;
+    padding: .8333rem;
 
     background-color: $scheppers-geel-wit;
 
@@ -462,12 +476,20 @@ main
 
     color: $scheppers-blauw;
 }
+.card--action-card
+{
+    position: relative;
+
+    padding-bottom: 2.5rem;
+}
 .card__action
 {
     font-size: 1rem;
     line-height: 1.6667rem;
 
-    padding: .83335rem 1.6667rem;
+    position: absolute;
+    right: .8333rem;
+    bottom: .8333rem;
 
     color: $text-color-white;
     border: none;
