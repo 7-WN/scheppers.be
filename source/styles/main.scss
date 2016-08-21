@@ -114,6 +114,18 @@ em
 {
     font-style: italic;
 }
+dt
+{
+    margin-top: 1.6667rem;
+
+    color: $scheppers-blauw;
+}
+dd
+{
+    margin-top: 1.6667rem;
+
+    border: none !important;
+}
 a
 {
     text-decoration: none;
@@ -130,7 +142,51 @@ html
     color: $text-color-black;
     background-color: $scheppers-blauw-wit;
 }
+table
+{
+    border: 3px solid $scheppers-blauw--trans;
+}
 
+th
+{
+    font-weight: normal;
+
+    color: $scheppers-blauw;
+}
+th,
+td
+{
+    box-sizing: inherit;
+    padding: 0 .8333rem;
+
+    border-right: 1px solid $scheppers-blauw--trans;
+    border-bottom: 1px solid $scheppers-blauw--trans;
+}
+th:last-child,
+td:last-child
+{
+    border-right: none;
+}
+tr:last-child td
+{
+    border-bottom: none;
+}
+thead tr th
+{
+    border-bottom: 3px solid $scheppers-blauw--trans;
+}
+.t-col--1-2
+{
+    width: 50%;
+}
+.t-col--1-4
+{
+    width: 25%;
+}
+.t-col--nr
+{
+    text-align: center;
+}
 /**
 *   ~~~ 4. GRID ~~~
 */
@@ -159,6 +215,14 @@ html
 .col--2-3
 {
     flex: 0 1 calc(66.6667% - 2.2222rem);
+}
+.col--1-4
+{
+    flex: 0 1 calc(25% - .8333rem);
+}
+.col--3-4
+{
+    flex: 0 1 calc(75% - 2.5rem);
 }
 /**
 *   ~~~ 5. MODULES ~~~
@@ -446,13 +510,15 @@ main
 */
 .flex-container--text
 {
-    margin: 0 -3.45rem 0 0;
+    overflow-x: hidden;
+
+    margin-right: -3.45rem;
 }
 .col--text
 {
     padding: 0 1.6667rem;
 
-    border-right: 2px solid $scheppers-blauw;
+    border-right: 2px solid $scheppers-blauw--trans;
 }
 /**
 *   5.8 card
@@ -525,7 +591,11 @@ main
     top: 5rem;
     left: 16.6665vw;
 
+    overflow-x: hidden;
+    overflow-y: scroll;
+
     width: 66.6667vw;
+    max-height: 66.6667vh;
     margin: 0 auto;
     padding: .8333rem .8333rem 2.5rem .8333rem;
 
