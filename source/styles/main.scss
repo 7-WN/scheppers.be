@@ -649,6 +649,9 @@ main
 
     color: $text-color-white;
     background-color: $scheppers-blauw;
+
+    @include rounded();
+    @include shadow(1);
 }
 .page-footer__content
 {
