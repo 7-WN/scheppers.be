@@ -210,8 +210,9 @@ tr:last-child td
 }
 .col--1-1
 {
-    flex: 0 1 calc(100% - 1.6667rem);
     border-right: none !important;
+
+    flex: 0 1 calc(100% - 1.6667rem);
 }
 .col--1-2
 {
@@ -471,6 +472,22 @@ main
     background-image: url("../images/informatica.jpg");
 }
 #id-mode-creatie
+{
+    background-image: url("../images/mode-creatie.jpg");
+}
+#id-eerste-graad
+{
+    background-image: url("../images/schoolkinderen.jpg");
+}
+#id-tweede-graad
+{
+    background-image: url("../images/economie-handel.jpg");
+}
+#id-derde-graad
+{
+    background-image: url("../images/informatica.jpg");
+}
+#id-mode-se-n-se
 {
     background-image: url("../images/mode-creatie.jpg");
 }
