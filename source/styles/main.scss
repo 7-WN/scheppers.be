@@ -211,6 +211,7 @@ tr:last-child td
 .col--1-1
 {
     flex: 0 1 calc(100% - 1.6667rem);
+    border-right: none !important;
 }
 .col--1-2
 {
