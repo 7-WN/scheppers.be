@@ -142,6 +142,13 @@ html
     color: $text-color-black;
     background-color: $scheppers-blauw-wit;
 }
+img
+{
+    display: inline-block;
+
+    max-width: calc(100% - 3.3334rem);
+    padding: 1.6667rem;
+}
 table
 {
     width: 100%;
@@ -461,6 +468,10 @@ main
 {
     background-image: url("../images/schoolkinderen.jpg");
 }
+#id-jaarthema
+{
+    background-image: url("../images/jaarthema-2016-2017.png");
+}
 #id-visie
 {
     background-image: url("../images/visie.jpg");
@@ -714,6 +725,14 @@ main
 /**
 *   ~~~ 7. Utility ~~~
 */
+.pull-left
+{
+    float: left;
+}
+.pull-right
+{
+    float: right;
+}
 .vcenter
 {
     display: flex;
