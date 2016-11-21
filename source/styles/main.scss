@@ -7,16 +7,16 @@
 /* variables for normalize.scss */
 $base-font-size: 18px;
 /* slightly larger fonts */
-$base-line-height: 29px;
+$base-line-height: 30px;
 $base-unit: rem;
 $base-font-family: "Open Sans", Verdana, "Helvetia Neue", Helvetia, Arial, sans-serif;
-$h1-font-size: 3.24 * $base-font-size;
-$h2-font-size: 2.624 * $base-font-size;
-$h3-font-size: 1.62 * $base-font-size;
-$h4-font-size: 1.31 * $base-font-size;
+$h1-font-size: 3.998 * $base-font-size;
+$h2-font-size: 2.827 * $base-font-size;
+$h3-font-size: 1.618 * $base-font-size;
+$h4-font-size: 1.414 * $base-font-size;
 $h5-font-size: 1 * $base-font-size;
-$h6-font-size: .81 * $base-font-size;
-$indent-amount: 2.624rem;
+$h6-font-size: .707 * $base-font-size;
+$indent-amount: 2.618rem;
 $normalize-vertical-rhythm: true;
 @import "../../bower_components/normalize-scss/sass/_normalize";
 @include normalize();
