@@ -142,13 +142,7 @@ html
     color: $text-color-black;
     background-color: $scheppers-blauw-wit;
 }
-img
-{
-    display: inline-block;
 
-    max-width: calc(100% - 3.24rem);
-    padding: 1.62rem;
-}
 table
 {
     width: 100%;
@@ -688,7 +682,17 @@ main
     @include shadow(1);
 }
 /**
-*   5.10 page-footer
+ *  5.10 photos
+ */
+.photo
+{
+    display: inline-block;
+
+    max-width: calc(100% - 3.24rem);
+    padding: 1.62rem;
+}
+/**
+*   5.11 page-footer
 */
 .page-footer
 {
