@@ -7,7 +7,7 @@
 /* variables for normalize.scss */
 $base-font-size: 18px;
 /* slightly larger fonts */
-$base-line-height: 30px;
+$base-line-height: 29px;
 $base-unit: rem;
 $base-font-family: "Open Sans", Verdana, "Helvetia Neue", Helvetia, Arial, sans-serif;
 $h1-font-size: 3.24 * $base-font-size;
@@ -93,9 +93,6 @@ $text-color-white: rgba(255,255,255,.95);
 /**
 *   ~~~ 2. TYPOGRAPHY ~~~
 */
-html {
-    font-size: 18px;
-}
 h1,
 h2,
 h3,
