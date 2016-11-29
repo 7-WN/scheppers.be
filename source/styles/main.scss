@@ -160,6 +160,8 @@ a
 a:hover,
 a:active
 {
+    text-decoration: underline;
+
     color: $scheppers-blauw--trans;
 }
 a:visited
@@ -356,8 +358,11 @@ main
 
     color: $text-color-white;
 }
-.nav-bar__item-link:hover
+.nav-bar__item-link:hover,
+.nav-bar__item-link:active
 {
+    text-decoration: none;
+
     color: $scheppers-blauw-wit;
 }
 .nav-bar__item--icon
