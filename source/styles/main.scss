@@ -425,7 +425,10 @@ main
     display: block;
 
     min-width: 100%;
+    min-height: 100%;
     min-height: 100vh;
+
+    background-position: top center;
 }
 .intro__background-curtain
 {
@@ -439,7 +442,7 @@ main
     min-width: 100%;
     min-height: 100vh;
 
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, .1);
 }
 .intro__logo-wrapper
 {
@@ -482,7 +485,9 @@ main
 {
     display: inline-block;
 
-    width: 5em;
+    width: 3.3333em;
+
+    text-align: left;
 
     color: $accent-color;
 }
