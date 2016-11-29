@@ -26,6 +26,7 @@ $normalize-vertical-rhythm: true;
 $scheppers-blauw: #2a6bb0;
 $scheppers-blauw--trans: rgba(42, 107, 176, .87);
 $scheppers-blauw-wit: #dce6f2; // last step of 5 steps to white
+$scheppers-blauw-zwart: #1c4775; // middle step of 5 steps to black
 $scheppers-blauw-wit--trans: rgba(220, 230, 242, .88);
 $accent-color: #ffed42;
 $accent-color--soft: #fff381; // 2nd step of 5 steps to white
@@ -104,6 +105,30 @@ h6
 
     color: $scheppers-blauw;
 }
+h1
+{
+    font-size: 3.998em;
+}
+h2
+{
+    font-size: 2.827em;
+}
+h3
+{
+    font-size: 1.618em;
+}
+h4
+{
+    font-size: 1.414em;
+}
+h5
+{
+    font-size: 1em;
+}
+h6
+{
+    font-size: .707em;
+}
 strong
 {
     font-weight: 600;
@@ -129,6 +154,17 @@ dd
 a
 {
     text-decoration: none;
+
+    color: $scheppers-blauw;
+}
+a:hover,
+a:active
+{
+    color: $scheppers-blauw--trans;
+}
+a:visited
+{
+    color: $scheppers-blauw-zwart;
 }
 /**
 *   ~~~ 3. BASE LAYOUT ~~~
@@ -307,7 +343,8 @@ main
 
     flex-grow: 3;
 }
-.nav-bar__item-link
+.nav-bar__item-link,
+.nav-bar__item-link:visited
 {
     display: inline-block;
 
@@ -319,14 +356,20 @@ main
 
     color: $text-color-white;
 }
+.nav-bar__item-link:hover
+{
+    color: $scheppers-blauw-wit;
+}
 .nav-bar__item--icon
 {
     flex-grow: 1;
 }
-.nav-bar__item-link--active
+.nav-bar__item-link--active,
+.nav-bar__item-link--active:visited
 {
     opacity: 1;
     color: $text-color-black;
+    color: $scheppers-blauw;
     background-color: $accent-color--soft;
 }
 .nav-bar--secondary
@@ -346,7 +389,7 @@ main
 {
     padding: .81rem;
 
-    color: $text-color-black;
+    color: $scheppers-blauw;
 }
 /**
 *   --- 5.4 intro ---
