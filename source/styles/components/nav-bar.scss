@@ -1,11 +1,10 @@
 /**
- *   ~~~ Navigation Bar ~~~
+ *   ~~~ Header & Navigation Bar ~~~
  */
-/**
-*   --- site-header ---
-*/
 .site-header
 {
+    font-weight: 300;
+
     position: fixed;
     z-index: 100;
     top: 0;
@@ -22,39 +21,40 @@
 {
     float: left;
 
-    height: 3.24rem;
-    padding: .81rem;
+    height: $line-height;
+    padding: calc(#{$line-height} / 4) $line-height-half;
+
+    color: $text-color-white;
 }
 .site-header__logo img
 {
-    height: 3.24rem;
+    height: calc(#{$line-height} * 1.5);
+
+    vertical-align: middle;
 }
-/**
-*   --- site-nav ---
-*/
 .nav-bar
 {
-    display: flex;
+    clear: right;
+}
+.nav-bar--secondary
+{
+    padding-right: calc(#{$line-height} * 2); // compensate for the icon at the right of the primary nav-bar
 
-    justify-content: flex-end;
+    background-color: $accent-color--soft;
 }
 .nav-bar ul
 {
-    display: flex;
-    flex-direction: row;
+    height: calc(#{$line-height} * 2);
+    margin: 0 $line-height;
 
-    height: 5rem;
-    margin: 0 1.62rem;
-
-    justify-content: flex-end;
+    text-align: right;
 }
 .nav-bar__item
 {
     display: inline-block;
 
-    padding: 0 .81rem;
-
-    flex-grow: 3;
+    width: calc(#{$line-height} * 5);
+    padding: 0 $line-height-half;
 }
 .nav-bar__item-link,
 .nav-bar__item-link:visited
@@ -62,10 +62,10 @@
     display: inline-block;
 
     width: 100%;
-    height: 100%;
-    padding: 1.62rem;
+    padding: $line-height-half;
 
     text-align: center;
+    vertical-align: middle;
 
     color: $text-color-white;
 }
@@ -76,34 +76,16 @@
 
     color: $scheppers-blauw-wit;
 }
+.nav-bar__item-link--active,
+.nav-bar__item-link--active:visited,
+.nav-bar--secondary .nav-bar__item-link,
+.nav-bar--secondary .nav-bar__item-link:visited
+{
+    opacity: 1;
+    color: $scheppers-blauw;
+    background-color: $accent-color--soft;
+}
 .nav-bar__item--icon
 {
-    flex-grow: 1;
-}
-.nav-bar__item-link--active,
-.nav-bar__item-link--active:visited
-{
-    opacity: 1;
-    color: $text-color-black;
-    color: $scheppers-blauw;
-    background-color: $accent-color--soft;
-}
-.nav-bar--secondary
-{
-    height: 3.24rem;
-
-    opacity: 1;
-    background-color: $accent-color--soft;
-
-    justify-content: center;
-}
-.nav-bar--secondary ul
-{
-    height: 3.24rem;
-}
-.nav-bar--secondary .nav-bar__item-link
-{
-    padding: .81rem;
-
-    color: $scheppers-blauw;
+    width: $line-height;
 }
