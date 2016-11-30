@@ -19,19 +19,30 @@
 }
 .site-header__logo
 {
+    top: 0;
+
     float: left;
 
-    height: $line-height;
-    padding: calc(#{$line-height} / 4) $line-height-half;
+    height: calc(#{$line-height} * 2);
 
     color: $text-color-white;
 }
-.site-header__logo img
+.site-header__logo__image
 {
+    display: inline-block;
+
     height: calc(#{$line-height} * 1.5);
+    margin: calc(#{$line-height} / 4) $line-height-half;
 
     vertical-align: middle;
 }
+.site-header__logo__text
+{
+    display: inline-block;
+
+    padding: $line-height-half 0;
+}
+
 .nav-bar--secondary
 {
     padding-right: calc(#{$line-height} * 2); // compensate for the icon at the right of the primary nav-bar
@@ -51,6 +62,8 @@
 
     width: calc(#{$line-height} * 5); // fits for the content up till now
     padding: 0 $line-height-half;
+
+    vertical-align: middle;
 }
 .nav-bar__item-link,
 .nav-bar__item-link:visited
@@ -61,7 +74,6 @@
     padding: $line-height-half;
 
     text-align: center;
-    vertical-align: middle;
 
     color: $text-color-white;
 }
