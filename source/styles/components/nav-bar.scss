@@ -32,10 +32,6 @@
 
     vertical-align: middle;
 }
-.nav-bar
-{
-    clear: right;
-}
 .nav-bar--secondary
 {
     padding-right: calc(#{$line-height} * 2); // compensate for the icon at the right of the primary nav-bar
@@ -44,7 +40,7 @@
 }
 .nav-bar ul
 {
-    height: calc(#{$line-height} * 2);
+    height: calc(#{$line-height} * 2); // each nav-bar has a height of 2 standard line-heights (on a standard screen approx 36px)
     margin: 0 $line-height;
 
     text-align: right;
@@ -53,7 +49,7 @@
 {
     display: inline-block;
 
-    width: calc(#{$line-height} * 5);
+    width: calc(#{$line-height} * 5); // fits for the content up till now
     padding: 0 $line-height-half;
 }
 .nav-bar__item-link,
