@@ -68,4 +68,10 @@ $(document).ready(function() {
             clearInterval(bgTimer); // stop changing the backgroundimages in the after we have scrolled a bit
         }
     });
+
+    // in-view trigger active-states
+    inView(".in-view").on("enter", function(el) {
+        $(".nav-bar__item-link--secondary").removeClass("nav-bar__item-link--active");
+        $("#" + $(el).attr("data-btn")).addClass("nav-bar__item-link--active");
+    });
 });
