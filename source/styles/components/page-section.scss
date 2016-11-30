@@ -1,0 +1,55 @@
+/**
+*   ~~~ Page Sections ~~~
+*/
+.page-section
+{
+    padding: 3.24rem;
+
+    background-color: $scheppers-blauw-wit--trans;
+
+    @include shadow(1);
+}
+.page-section__content
+{
+    overflow: hidden;
+
+    width: 60rem;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1.62rem 0;
+
+    background-color: $scheppers-geel-wit;
+
+    @include rounded();
+    @include shadow(1);
+}
+.article__title,
+.page-section__title
+{
+    font-size: 2rem;
+    line-height: 3.24rem;
+
+    margin: 0;
+}
+.page-section__subtitle
+{
+    font-size: 1.62rem;
+    line-height: 3.24rem;
+
+    margin: 0;
+}
+/**
+*   --- text columns ---
+*/
+.flex-container--text
+{
+    overflow-x: hidden;
+
+    margin-right: -3.45rem;
+}
+.col--text
+{
+    padding: 0 3.24rem 0 1.62rem;
+
+    border-right: 2px solid $scheppers-blauw--trans;
+}

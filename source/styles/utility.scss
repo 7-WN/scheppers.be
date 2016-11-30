@@ -1,0 +1,22 @@
+/**
+*   ~~~ Utility Classes ~~~
+*/
+.hidden
+{
+    display: none;
+}
+.pull-left
+{
+    float: left;
+}
+.pull-right
+{
+    float: right;
+}
+.vcenter
+{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}

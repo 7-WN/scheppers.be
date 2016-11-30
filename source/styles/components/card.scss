@@ -1,0 +1,47 @@
+/**
+*    ~~~ Cards ~~~
+*/
+.card
+{
+    margin: 0 1.62rem 1.62rem 0;
+    padding: .81rem;
+
+    background-color: $scheppers-geel-wit;
+
+    @include rounded();
+    @include shadow(1);
+}
+.card__title
+{
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.62rem;
+
+    margin: 0;
+
+    color: $scheppers-blauw;
+}
+.card--action-card
+{
+    position: relative;
+
+    padding-bottom: 2.5rem;
+}
+.card__action
+{
+    font-size: 1rem;
+    line-height: 1.62rem;
+
+    position: absolute;
+    right: .81rem;
+    bottom: .81rem;
+
+    padding: .405em .81em;
+
+    color: $text-color-white;
+    border: none;
+    background-color: $scheppers-blauw;
+
+    @include rounded();
+    @include shadow(1);
+}

@@ -1,0 +1,85 @@
+/**
+*   ~~~ Typography ~~~
+*/
+html
+{
+    font-size: 18px;
+    line-height: 1.618em;
+
+    color: $text-color-black;
+    background-color: $scheppers-blauw-wit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    font-weight: 300;
+
+    color: $scheppers-blauw;
+}
+h1
+{
+    font-size: 3.998em;
+}
+h2
+{
+    font-size: 2.827em;
+}
+h3
+{
+    font-size: 1.618em;
+}
+h4
+{
+    font-size: 1.414em;
+}
+h5
+{
+    font-size: 1em;
+}
+h6
+{
+    font-size: .707em;
+}
+strong
+{
+    font-weight: 600;
+
+    color: $scheppers-blauw;
+}
+em
+{
+    font-style: italic;
+}
+dt
+{
+    margin-top: 1.62em;
+
+    color: $scheppers-blauw;
+}
+dd
+{
+    margin-top: 1.62em;
+
+    border: none !important;
+}
+a
+{
+    text-decoration: none;
+
+    color: $scheppers-blauw;
+}
+a:hover,
+a:active
+{
+    text-decoration: underline;
+
+    color: $scheppers-blauw--trans;
+}
+a:visited
+{
+    color: $scheppers-blauw-zwart;
+}
