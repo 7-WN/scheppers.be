@@ -20,7 +20,9 @@
     "normalize-scss": "normalize.scss#^5.0.3",
     "Morphext": "^2.4.4"
   },
-  "dependencies": {},
+  "dependencies": {
+    "in-view": "*"
+  },
   "resolutions": {
     "jquery": "^2.2.4"
   }
