@@ -13,7 +13,7 @@
     margin: 0;
     padding: 0;
 
-    background-color: $scheppers-blauw;
+    background-color: $accent-color--soft;
 
     @include shadow(1);
 }
@@ -42,12 +42,13 @@
 
     padding: $line-height-half 0;
 }
-
+.nav-bar--primary
+{
+    background-color: $scheppers-blauw;
+}
 .nav-bar--secondary
 {
     padding-right: calc(#{$line-height} * 2); // compensate for the icon at the right of the primary nav-bar
-
-    background-color: $accent-color--soft;
 }
 .nav-bar ul
 {
@@ -61,6 +62,7 @@
     display: inline-block;
 
     width: calc(#{$line-height} * 5); // fits for the content up till now
+    height: calc(#{$line-height} * 2); // need to put it here as well to prevent rounding errors
     padding: 0 $line-height-half;
 
     vertical-align: middle;
@@ -83,6 +85,10 @@
     text-decoration: none;
 
     color: $scheppers-blauw-wit;
+}
+.nav-bar__item-link--active
+{
+    font-weight: bold;
 }
 .nav-bar__item-link--active,
 .nav-bar__item-link--active:visited,
