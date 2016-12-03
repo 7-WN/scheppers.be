@@ -1,5 +1,5 @@
 /**
- *   ~~~ Base Layout ~~~
+ *   --- Base Layout ---
  */
 html
 {
@@ -9,7 +9,7 @@ html
 }
 main
 {
-    margin-top: 8.3333rem;
+    margin-top: calc(#{$line-height} * 4);
 }
 .landing-page main
 {
@@ -17,7 +17,7 @@ main
 }
 .container
 {
-    padding-bottom: 67vh;
+    padding-bottom: 66.6667vh;
 
     background-repeat: no-repeat;
     background-attachment: fixed;
