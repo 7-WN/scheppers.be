@@ -39,8 +39,6 @@ main
 }
 .col--1-1
 {
-    border-right: none !important;
-
     flex: 0 1 calc(100% - 1.62rem);
 }
 .col--1-2
@@ -62,4 +60,24 @@ main
 .col--3-4
 {
     flex: 0 1 calc(75% - 1.62rem);
+}
+
+/**
+*   --- text columns ---
+*/
+.flex-container--text
+{
+    overflow-x: hidden;
+
+    margin-right: calc(calc(#{$line-height} + 1.5px) * -3); // make the right-most border dissapear
+}
+.col--text
+{
+    padding: 0 calc(#{$line-height} * 3) 0 $line-height;
+
+    border-right: 2px solid $scheppers-blauw--trans;
+}
+.col--text.col--1-1
+{
+    border-right: none;
 }
