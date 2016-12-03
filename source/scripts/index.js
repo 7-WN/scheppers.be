@@ -26,7 +26,6 @@ $(document).ready(function() {
         $("#id-site-header").delay(1500).fadeIn("slow");
     } else { // when we arrive from an internal link
         $("#id-nav-bar__item--school").addClass("nav-bar__item-link--active"); // make the button active
-        $("#id-site-header__logo").show();
     }
     // Show the secondary nav-bar on the home page when the link is clicked
     $("#id-nav-bar__item--school").click(function() {
@@ -58,20 +57,31 @@ $(document).ready(function() {
     };
     var bgTimer = changeBackgrounds();
 
-    // Scroll events
-    var scherm = $(window);
-
-    // show the logo on the main nav-bar, when it is not visible in the main window anymore
-    scherm.scroll(function() {
-        if (scherm.scrollTop() > (scherm.height() / 2 - 90)) {
-            $("#id-site-header__logo").fadeIn();
-            clearInterval(bgTimer); // stop changing the backgroundimages in the after we have scrolled a bit
-        }
+    /**
+     *    inView effects
+     */
+    // Configuration
+    inView.offset({
+        top: 115
     });
 
-    // in-view trigger active-states
+    // When we scroll to the right page sections, make the corresponding nav-bar buttons active
     inView(".in-view").on("enter", function(el) {
         $(".nav-bar__item-link--secondary").removeClass("nav-bar__item-link--active");
         $("#" + $(el).attr("data-btn")).addClass("nav-bar__item-link--active");
+    });
+
+    // show the site-logo in the nav-bar when it dissapears from view and vice versa
+    inView("#id-intro__logo").on("enter", function(el) {
+        $("#id-site-header__logo").fadeOut();
+    });
+    inView("#id-intro__logo").on("exit", function(el) {
+        $("#id-site-header__logo").fadeIn();
+    });
+
+    // show the secondary nav-bar when we leave the intro section
+    inView(".intro").once("exit", function(el) {
+        $("#id-nav-bar--school").fadeIn("slow");
+        $("id-nav-bar__item--school").addClass("nav-bar__item-link--active");
     });
 });
