@@ -50,13 +50,13 @@ $(document).ready(function() {
         var backgroundImages = $(".intro__background-image");
         var backgroundCounter = 0;
         return setInterval(function() {
+            var backgroundImage = $(backgroundImages.get(backgroundCounter));
+            backgroundImage.fadeOut(0);
             if ($("#id-nav-bar--school").css("display") != "none") { // if the secondary nav-bar is visble, we adapt accordingly
                 $("#id-intro__background").css("top", "6.4720rem");
             } else if ($("#id-intro__background").css("top") == "0px") { // at the first run the site-header is visible, so we adapt the top and make the whole picture visible
                 $("#id-intro__background").css("top", "3.2360rem");
             }
-            var backgroundImage = $(backgroundImages.get(backgroundCounter));
-            backgroundImage.fadeOut(0);
             backgroundImages.css("z-index", "-99");
             backgroundImage.css("z-index", "-90");
             backgroundImage.fadeIn("slow");
