@@ -3,8 +3,14 @@
 */
 $scheppers-blauw: #2a6bb0;
 $scheppers-blauw--trans: rgba(42, 107, 176, .87);
+
+$scheppers-blauw-zwart: #1c4775; // second step of 5 steps to black
+$scheppers-blauw-zwart--trans: rgba(28, 71, 117, .87);
+
+$scheppers-zwart-blauw: #153558; // middle step of five to black
+$scheppers-zwart-blauw--trans: rgba(21, 53, 88, .66);
+
 $scheppers-blauw-wit: #dce6f2; // last step of 5 steps to white
-$scheppers-blauw-zwart: #1c4775; // middle step of 5 steps to black
 $scheppers-blauw-wit--trans: rgba(220, 230, 242, .88);
 
 $accent-color: #ffed42;

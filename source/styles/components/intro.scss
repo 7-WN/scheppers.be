@@ -8,6 +8,7 @@
 
     width: 100%;
     width: 100vw;
+    height: 100%;
     height: 100vh;
 }
 #id-intro__background
@@ -20,7 +21,9 @@
     overflow: hidden;
 
     width: 100%;
-    height: calc(100vh - 1rem);
+    height: 100%;
+    height: 100vh;
+    //height: calc(100vh - 1rem);
 }
 .intro__background-image
 {
@@ -32,10 +35,9 @@
     display: block;
 
     min-width: 100%;
+    min-width: 100vw;
     min-height: 100%;
     min-height: 100vh;
-
-    background-position: top center;
 }
 .intro__background-curtain
 {
@@ -47,46 +49,74 @@
     display: block;
 
     min-width: 100%;
+    min-width: 100vw;
+    min-height: 100%;
     min-height: 100vh;
 
     background-color: rgba(0, 0, 0, .1);
-}
-.intro__logo-wrapper
-{
-    width: 8.1rem;
-    margin: 0 auto 1.62rem;
-    padding: .81rem;
-
-    background-color: rgba(255,255,255,.8);
-
-    @include rounded();
-    @include shadow(1);
 }
 .intro__logo
 {
     display: block;
 
-    height: 6.48rem;
-    padding: .81rem;
+    width: calc(#{$line-height--em} * 5 * .876712329); // .876712329 is the ratio between the height and the width of the logo image
+    height: calc(#{$line-height--em} * 5);
+    padding: calc(#{$line-height-half--em} - .1111rem); // half a line-height - the border-width
 
     border: .1111rem solid $scheppers-blauw;
 }
+.intro__logo-wrapper
+{
+    width: calc(calc(#{$line-height--em} * 5 * .876712329) + #{$line-height--em}); // Width of the logo + padding
+    height: calc(#{$line-height--em} * 6);
+    margin: calc(#{$line-height} * 5) auto $line-height--em auto; // top 5 absolute line-heights; bottom 1 relative line-height
+    padding: $line-height-half--em;
+
+    background-color: $text-color-white;
+
+    @include rounded();
+    @include shadow(1);
+}
 .intro__content
 {
-    width: 51.84rem;
+    overflow: hidden;
+
     margin: 0 auto;
-    padding: 1.62rem;
+    padding: $line-height--em 0;
 
     text-align: center;
 
     color: $text-color-white;
-    border: 2px solid $text-color-white;
-    background-color: rgba(0, 0, 0, .3);
+    border-top: 2px solid $text-color-white;
+    border-bottom: 2px solid $text-color-white;
+    background-color: $scheppers-zwart-blauw--trans;
+}
+.intro__content h1,
+.intro__content h2
+{
+    // local reset of font-sizes for what follows, so that it is safe to work with ems
+    font-size: 1rem;
+    line-height: $line-height;
+
+    margin: 0;
+    padding: 0;
 }
 .intro__content__title,
 .intro__content__subtitle
 {
+    font-weight: 300;
+
     color: $text-color-white;
+}
+h1.intro__content__title
+{
+    font-size: calc(#{$line-height--em} * 3);
+    line-height: 100%; // = 3em
+}
+h2.intro__content__subtitle
+{
+    font-size: calc(#{$line-height--em} * 2);
+    line-height: 150%; // = 3em
 }
 #id-intro__text--replace
 {
