@@ -27,9 +27,9 @@ $(document).ready(function() {
         // Hide intro__content
         $("#id-intro__content").hide();
         // Fade in stuff after acceptable delays
-        $("#id-intro__logo-wrapper").delay(500).fadeIn("slow");
-        $("#id-intro__content").delay(1000).fadeIn("slow");
-        $("#id-site-header").delay(2000).fadeIn("slow");
+        $("#id-intro__logo-wrapper").delay(500).fadeIn(1000);
+        $("#id-intro__content").delay(1000).fadeIn(1000);
+        $("#id-site-header").delay(2000).fadeIn(1000);
     } else { // when we arrive from an internal link
         $("#id-nav-bar__item--school").addClass("nav-bar__item-link--active"); // make the button active
     }
