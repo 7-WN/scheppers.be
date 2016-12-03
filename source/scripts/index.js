@@ -22,8 +22,14 @@ $(document).ready(function() {
         $("#id-site-header").hide();
         // Hide secondary nav-bar on home page
         $("#id-nav-bar--school").hide();
-        // Fade in the site-header after a delay
-        $("#id-site-header").delay(1500).fadeIn("slow");
+        // Hide intro__logo
+        $("#id-intro__logo-wrapper").hide();
+        // Hide intro__content
+        $("#id-intro__content").hide();
+        // Fade in stuff after acceptable delays
+        $("#id-intro__logo-wrapper").delay(500).fadeIn("slow");
+        $("#id-intro__content").delay(1000).fadeIn("slow");
+        $("#id-site-header").delay(2000).fadeIn("slow");
     } else { // when we arrive from an internal link
         $("#id-nav-bar__item--school").addClass("nav-bar__item-link--active"); // make the button active
     }
@@ -82,6 +88,6 @@ $(document).ready(function() {
     // show the secondary nav-bar when we leave the intro section
     inView(".intro").once("exit", function(el) {
         $("#id-nav-bar--school").fadeIn("slow");
-        $("id-nav-bar__item--school").addClass("nav-bar__item-link--active");
+        $("#id-nav-bar__item--school").addClass("nav-bar__item-link--active");
     });
 });
