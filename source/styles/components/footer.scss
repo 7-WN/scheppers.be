@@ -11,6 +11,10 @@
     @include rounded();
     @include shadow(1);
 }
+.page-footer strong
+{
+    color: $text-color-white;
+}
 .page-footer__content
 {
     font-weight: 300;
