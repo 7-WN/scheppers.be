@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../bower_components/mdi/css/materialdesignicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="../bower_components/Morphext/dist/morphext.css">
     <link rel="stylesheet" href="styles/main.css">
@@ -25,18 +25,18 @@
                 <li class="nav-bar__item"><a href="praktisch.html" class="nav-bar__item-link">Praktisch</a></li>
                 <li class="nav-bar__item"><a href="blog.html" class="nav-bar__item-link">Nieuws/Blog</a></li>
                 <li class="nav-bar__item"><a href="contact.html" class="nav-bar__item-link">Contact</a></li>
-                <li class="nav-bar__item"><a href="http://www.facebook.com/scheppersinstituut/" class="nav-bar__item-link" target="_blank">Facebook</a></li>
-                <li class="nav-bar__item nav-bar__item--icon"><a href="http://scheppersinstituutbe.sharepoint.com/sites/Leerlingen" class="nav-bar__item-link"><i class="material-icons">lock</i></a></li>
+                <li class="nav-bar__item"><a href="https://www.facebook.com/scheppersinstituut/" class="nav-bar__item-link" target="_blank">Facebook</a></li>
+                <li class="nav-bar__item nav-bar__item--icon"><a href="http://scheppersinstituutbe.sharepoint.com/sites/Leerlingen" class="nav-bar__item-link"><i class="mdi mdi-lock"></i></a></li>
             </ul>
         </nav>
         <nav class="nav-bar nav-bar--secondary" id="id-nav-bar--school">
             <ul>
                 <li class="nav-bar__item"><a href="#id-in-het-kort" class="nav-bar__item-link nav-bar__item-link--secondary" id="btn-in-het-kort">In het kort</a></li>
-                <li class="nav-bar__item"><a href="#id-jaarthema" class="nav-bar__item-link nav-bar__item-link--secondary" id="btn-jaarthema">Jaarthema</a></li>
                 <li class="nav-bar__item"><a href="#id-visie" class="nav-bar__item-link nav-bar__item-link--secondary" id="btn-visie">Visie</a></li>
                 <li class="nav-bar__item"><a href="#id-economie-handel" class="nav-bar__item-link nav-bar__item-link--secondary" id="btn-economie-handel">Handel/Economie</a></li>
                 <li class="nav-bar__item"><a href="#id-informatica" class="nav-bar__item-link nav-bar__item-link--secondary" id="btn-informatica">Informatica</a></li>
                 <li class="nav-bar__item"><a href="#id-mode-creatie" class="nav-bar__item-link nav-bar__item-link--secondary" id="btn-mode-creatie">Mode/Creatie</a></li>
+                <li class="nav-bar__item"><a href="#id-humane" class="nav-bar__item-link nav-bar__item-link--secondary" id="btn-humane">Humane</a></li>
             </ul>
         </nav>
     </header>
@@ -82,24 +82,6 @@
                                 <li>Leerlingen of leerkrachten die op zoek zijn naar de inlogpagina van ons intranet, <a href="">klik hier</a> of op het icoontje met een hangslot rechtsbovenaan in de navigatiebalk.</li>
                             </ul>
                         </article>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- JAARTHEMA -->
-        <div class="container in-view" id="id-jaarthema" data-btn="btn-jaarthema">
-            <section class="page-section">
-                <div class="page-section__content">
-                    <div class="flex-container flex-container--text">
-                        <article class="col col--text col--1-2">
-                            <h3 class="article__title">Jaarthema</h3>
-                            <h4 class="article__subtitle">verschillen, groot gelijk</h4>
-                            <p>Dit schooljaar staat in het teken van diversiteit...</p>
-                        </article>
-                        <div class="col col--1-2">
-                            <img class="photo" src="images/jaarthema-2016-2017.png" alt="verschillen, groot gelijk" />
-                        </div>
                     </div>
                 </div>
             </section>
@@ -200,17 +182,35 @@
         </div>
 
         <!-- MODE/CREATIE -->
-        <div class="container in-view" id="id-mode-creatie" data-btn="btn-mode-recreatie">
+        <div class="container in-view" id="id-mode-creatie" data-btn="btn-mode-creatie">
             <section class="page-section">
                 <div class="page-section__content">
                     <div class="flex-container flex-container--text">
                         <article class="col col--text col--1-1">
                             <h3 class="article__title">Creatie en Mode</h3>
-                            <p>[DEZE TEKST MOET ZEKER NOG AANGEPAST WORDEN]</p>
-                            <p>Het Scheppersinstituut Deurne en Antwerpen zet natuurlijk ook de lange en prachtige traditie binnen het domein Mode/Creatie van Sancta Maria verder.</p>
-                            <p>De afdeling Creatie &amp; Mode is een TSO richting die ‘geknipt’ is voor iedereen die een uitdaging ziet in het zoeken naar originele oplossingen. Daarbij maken we steeds gebruik van soepele materialen. Dat kunnen stoffen zijn,
-                                maar ook papier, kunststoffen en zelfs buigzame metalen kunnen dienen. Op creativiteit staan immers geen grenzen. Onze inspiratie vinden we in kunst en cultuur, natuur, vormgevende technieken, materie ... Het pakket algemene
-                                vakken is voldoende sterk zodat deze richting een stevige basis vormt voor hoger onderwijs.</p>
+                            <p>Je kiest voor Creatie en mode omdat je creatief bent én een brede belangstelling hebt. De richting Creatie en mode is doorstromingsgericht. Dat betekent dat het de bedoeling is om aansluitend verder te studeren in een vorm
+                                van hoger onderwijs. Doordat je creatief gevormd wordt, maar tegelijk ook een brede waaier aan algemene vakken krijgt, heb je tal van mogelijkheden.</p>
+                            <p>Specifiek voor deze richting zijn de vakken creatie, vormgeving, praktijk en sociale &amp; communicatieve vaardigheden. In de lessen creatie wordt je creativiteit ten volle aangesproken om zo tot een uniek ontwerp te komen
+                                bij het vormgeven. Je haalt je inspiratie uit tijdschriften, trend-, kunst- en natuurboeken, foto- en videomateriaal, het internet, museum- en tentoonstellingsbezoek enz. Je leert creëren in soepele materialen voor een
+                                bepaalde doelgroep of rond een bepaald thema. In de lessen praktijk leer je je ontwerp ook uitvoeren. Op de jaarlijkse modehappening worden de creaties aan het publiek voorgesteld.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- HUMANE WETENSCHAPPEN -->
+        <div class="container in-view" id="id-humane" data-btn="btn-humane">
+            <section class="page-section">
+                <div class="page-section__content">
+                    <div class="flex-container flex-container--text">
+                        <article class="col col--text col--1-1">
+                            <h3 class="article__title">Humane Wetenschappen</h3>
+                            <p>Je kiest voor Humane wetenschappen omdat je belangstelling hebt voor de mens en de samenleving. Je leert kritische vragen stellen en omgaan met informatie: verzamelen, verwerken en rapporteren. Talen, wetenschappen en wiskunde
+                                maken daarom een belangrijk deel uit van het basispakket.</p>
+                            <p>Specifiek voor deze richting zijn de vakken gedragswetenschappen en cultuurwetenschappen. In het vak gedragswetenschappen staan het individu en de samenleving centraal. Je maakt er kennis met verschillende wetenschappelijke
+                                disciplines, zoals psychologie, sociologie en antropologie. Cultuurwetenschappen brengt je in contact met cultuurfenomenen. Zo maak je kennis met o.a. economie, recht, media, levensbeschouwingen en kunst én met wetenschappen
+                                die deze domeinen bestuderen.</p>
                         </article>
                     </div>
                 </div>
@@ -221,25 +221,26 @@
 
     <footer class="page-footer">
         <address class="page-footer__content">
-            <a href="mailto:info@scheppers.be">info@scheppers.be</a>
+            <i class="mdi mdi-email"></i> <a href="mailto:info@scheppers.be">info@scheppers.be</a><br>
+            <i class="mdi mdi-facebook-box"></i> <a href="https://fb.com/scheppersinstituut" target="_blank">fb.com/scheppersinstituut</a>
         </address>
         <address class="page-footer__content">
             Campus Sancta Maria Deurne<br>
             Pieter de Ridderstraat 5<br>
             2100 Deurne<br>
-            03 360 31 45
+            <i class="mdi mdi-phone"></i> 03 360 31 45
         </address>
         <address class="page-footer__content">
             Campus Sint-Eligius Antwerpen<br>
             Van Helmonstraat 29<br>
             2060 Antwerpen<br>
-            03 217 42 42
+            <i class="mdi mdi-phone"></i> 03 217 42 42
         </address>
         <address class="page-footer__content">
             Campus Sint-Eligius Deurne<br>
             Lakborslei 263<br>
             2100 Deurne<br>
-            03 326 33 59
+            <i class="mdi mdi-phone"></i> 03 326 33 59
         </address>
     </footer>
 

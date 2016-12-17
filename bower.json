@@ -21,7 +21,8 @@
     "Morphext": "^2.4.4"
   },
   "dependencies": {
-    "in-view": "*"
+    "in-view": "*",
+    "mdi": "^1.7.22"
   },
   "resolutions": {
     "jquery": "^2.2.4"
