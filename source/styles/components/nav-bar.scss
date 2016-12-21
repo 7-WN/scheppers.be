@@ -27,6 +27,14 @@
 
     color: $text-color-white;
 }
+.site-header__logo a
+{
+    color: $text-color-white;
+}
+.site-header__logo a:hover, .site-header__logo a:active
+{
+text-decoration: none;
+}
 .site-header__logo__image
 {
     display: inline-block;
