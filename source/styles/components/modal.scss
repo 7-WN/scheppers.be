@@ -21,16 +21,16 @@
 {
     position: fixed;
     z-index: 1000;
-    top: 5rem;
-    left: 16.6665vw;
+    top: 8vh;
+    left: 8vw;
 
     overflow-x: hidden;
     overflow-y: scroll;
 
-    width: 66.6667vw;
-    max-height: 66.6667vh;
+    width: 84vw;
+    max-height: 84vh;
     margin: 0 auto;
-    padding: .81rem;
+    padding: $line-height-half;
 
     background-color: $scheppers-geel-wit;
 
