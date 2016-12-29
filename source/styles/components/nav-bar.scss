@@ -1,6 +1,10 @@
 /**
  *   ~~~ Header & Navigation Bar ~~~
  */
+
+/**
+*    --- For all sizes ---
+*/
 .site-header
 {
     font-weight: 300;
@@ -13,7 +17,8 @@
     margin: 0;
     padding: 0;
 
-    background-color: $accent-color--soft;
+    color: $text-color-white;
+    background-color: $scheppers-blauw;
 
     @include shadow(1);
 }
@@ -24,8 +29,6 @@
     float: left;
 
     height: calc(#{$line-height} * 2);
-
-    color: $text-color-white;
 }
 .site-header__logo a
 {
@@ -51,70 +54,146 @@
 
     padding: $line-height-half 0;
 
-    @media(max-width: 1175px)
+    @media(min-width: 1040px) and (max-width: 1175px)
     {
-        // so we can break at a smaller size
+        // so we can break at a smaller size for desktop views
         display: none;
     }
 }
-.nav-bar--primary
-{
-    background-color: $scheppers-blauw;
-}
-.nav-bar--secondary
-{
-    padding-right: calc(#{$line-height} * 2); // compensate for the icon at the right of the primary nav-bar
-}
-.nav-bar ul
-{
-    height: calc(#{$line-height} * 2); // each nav-bar has a height of 2 standard line-heights (on a standard screen approx 36px)
-    margin: 0 $line-height;
 
-    text-align: right;
-}
-.nav-bar__item
-{
-    display: inline-block;
 
-    width: calc(#{$line-height} * 5); // fits for the content up till now
-    height: calc(#{$line-height} * 2); // need to put it here as well to prevent rounding errors
-    padding: 0 $line-height-half;
-
-    vertical-align: middle;
-}
-.nav-bar__item-link,
-.nav-bar__item-link:visited
+/**
+*    --- Smaller than desktop ---
+*/
+@media(max-width: 1039px)
 {
-    display: inline-block;
+    // Stuff that should never show at this screen size
+    .nav-bar
+    {
+        display: none !important;
+    }
 
-    width: 100%;
-    padding: $line-height-half;
+    // Special styles for this screen size
+    .site-header
+    {
+        font-size: 18px;
 
-    text-align: center;
+        height: 29px;
+    }
+    .site-header__logo__image
+    {
+        height: 23px;
+        margin: 3px 6px;
+    }
+    .site-header__logo__text
+    {
+        padding: 0;
+    }
+    .site-header__menu-button
+    {
+        float: right;
 
-    color: $text-color-white;
-}
-.nav-bar__item-link:hover,
-.nav-bar__item-link:active
-{
-    text-decoration: none;
+        color: $text-color-white;
+    }
 
-    color: $scheppers-blauw-wit;
+    // nav-panel
+    .nav-panel
+    {
+        position: fixed;
+        top: 29px;
+
+        min-width: 33%;
+        max-width: 98%;
+        min-height: calc(100vh - 29px);
+        padding: $line-height--em 0;
+
+        color: $text-color-white;
+        background-color: $scheppers-blauw--trans;
+    }
+    .nav-panel li
+    {
+        list-style: none;
+    }
+    .nav-panel a
+    {
+        color: $text-color-white;
+    }
 }
-.nav-bar__item-link--active
+
+
+/**
+*    --- Desktop size ---
+*/
+@media(min-width: 1040px)
 {
-    font-weight: bold;
-}
-.nav-bar__item-link--active,
-.nav-bar__item-link--active:visited,
-.nav-bar--secondary .nav-bar__item-link,
-.nav-bar--secondary .nav-bar__item-link:visited
-{
-    opacity: 1;
-    color: $scheppers-blauw;
-    background-color: $accent-color--soft;
-}
-.nav-bar__item--icon
-{
-    width: $line-height;
+    // Stuff that should never show at this screen size
+    .site-header__menu-button
+    {
+        display: none;
+    }
+    .nav-panel
+    {
+        display: none;
+    }
+
+    // Special styles for this screen size
+    .nav-bar--secondary
+    {
+        padding-right: calc(#{$line-height} * 2); // compensate for the icon at the right of the primary nav-bar
+
+        background-color: $accent-color--soft;
+    }
+    .nav-bar ul
+    {
+        height: calc(#{$line-height} * 2); // each nav-bar has a height of 2 standard line-heights (on a standard screen approx 36px)
+        margin: 0 $line-height;
+
+        text-align: right;
+    }
+    .nav-bar__item
+    {
+        display: inline-block;
+
+        width: calc(#{$line-height} * 5); // fits for the content up till now
+        height: calc(#{$line-height} * 2); // need to put it here as well to prevent rounding errors
+        padding: 0 $line-height-half;
+
+        vertical-align: middle;
+    }
+    .nav-bar__item-link,
+    .nav-bar__item-link:visited
+    {
+        display: inline-block;
+
+        width: 100%;
+        padding: $line-height-half;
+
+        text-align: center;
+
+        color: $text-color-white;
+    }
+    .nav-bar__item-link:hover,
+    .nav-bar__item-link:active
+    {
+        text-decoration: none;
+
+        color: $scheppers-blauw-wit;
+    }
+    .nav-bar__item-link--active
+    {
+        font-weight: bold;
+    }
+    .nav-bar__item-link--active,
+    .nav-bar__item-link--active:visited,
+    .nav-bar--secondary .nav-bar__item-link,
+    .nav-bar--secondary .nav-bar__item-link:visited
+    {
+        opacity: 1;
+        color: $scheppers-blauw;
+        background-color: $accent-color--soft;
+    }
+    .nav-bar__item--icon
+    {
+        width: $line-height;
+    }
 }

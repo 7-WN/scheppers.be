@@ -21,7 +21,7 @@ $(document).ready(function() {
         // Hide site-header
         $("#id-site-header").hide();
         // Hide secondary nav-bar on home page
-        $("#id-nav-bar--school").hide();
+        $(".nav-bar--secondary").hide();
         // Hide intro__logo
         $("#id-intro__logo-wrapper").hide();
         // Hide intro__content
@@ -32,6 +32,7 @@ $(document).ready(function() {
         $("#id-site-header").delay(2000).fadeIn(1000);
     } else { // when we arrive from an internal link
         $("#id-nav-bar__item--school").addClass("nav-bar__item-link--active"); // make the button active
+        // TODO: generalize this for other pages
     }
     // Show the secondary nav-bar on the home page when the link is clicked
     $("#id-nav-bar__item--school").click(function() {
