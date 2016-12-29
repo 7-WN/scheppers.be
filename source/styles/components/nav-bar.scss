@@ -31,9 +31,10 @@
 {
     color: $text-color-white;
 }
-.site-header__logo a:hover, .site-header__logo a:active
+.site-header__logo a:hover,
+.site-header__logo a:active
 {
-text-decoration: none;
+    text-decoration: none;
 }
 .site-header__logo__image
 {
@@ -49,6 +50,12 @@ text-decoration: none;
     display: inline-block;
 
     padding: $line-height-half 0;
+
+    @media(max-width: 1175px)
+    {
+        // so we can break at a smaller size
+        display: none;
+    }
 }
 .nav-bar--primary
 {
