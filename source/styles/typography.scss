@@ -8,6 +8,16 @@ html
 
     color: $text-color-black;
     background-color: $scheppers-blauw-wit;
+
+    @media (max-width: 1404px){
+        font-size: 17px;
+    }
+    @media (max-width: 1328px){
+        font-size: 16px;
+    }
+    @media (max-width: 1252px){
+        font-size: 15px;
+    }
 }
 h1,
 h2,
