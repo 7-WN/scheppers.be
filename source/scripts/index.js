@@ -95,4 +95,13 @@ $(document).ready(function() {
         $("#id-nav-bar--school").fadeIn("slow");
         $("#id-nav-bar__item--school").addClass("nav-bar__item-link--active");
     });
+
+    // scroll to the correct section when a nav-bar button is clicked
+    $(".nav-bar__item-link--secondary").on("click", function(el) {
+        var toHere = $(this).attr("href")
+        var top = $(toHere).offset().top - 90;
+        $("html, body").animate({
+            scrollTop: top
+        }, 1200);
+    });
 });
