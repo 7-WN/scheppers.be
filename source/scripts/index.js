@@ -98,7 +98,7 @@ $(document).ready(function() {
 
     // scroll to the correct section when a nav-bar button is clicked
     $(".nav-bar__item-link--secondary").on("click", function(el) {
-        var toHere = $(this).attr("href")
+        var toHere = $(this).attr("href");
         var top = $(toHere).offset().top - 90;
         $("html, body").animate({
             scrollTop: top
