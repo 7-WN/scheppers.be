@@ -105,5 +105,11 @@ a:visited
 }
 thead
 {
+    padding-top: $line-height--em;
+
     text-align: left;
+}
+thead:first-of-type
+{
+    padding-top: 0;
 }
