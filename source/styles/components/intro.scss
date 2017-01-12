@@ -61,7 +61,7 @@
 {
     display: block;
 
-    width: calc(#{$line-height--em} * 5 * .876712329); // .876712329 is the ratio between the height and the width of the logo image
+    width: calc(#{$line-height--em} * 4.383561645); // .876712329 is the ratio between the height and the width of the logo image * 5 = 4.383561645 (see height on the line below)
     height: calc(#{$line-height--em} * 5);
     padding: calc(#{$line-height-half--em} - .1111rem); // half a line-height - the border-width
 
@@ -69,7 +69,8 @@
 }
 .intro__logo-wrapper
 {
-    width: calc(calc(#{$line-height--em} * 5 * .876712329) + #{$line-height--em}); // Width of the logo + padding
+    width: 5.383561645em; // For less gifted browsers
+    width: calc(calc(#{$line-height--em} * 4.383561645) + #{$line-height--em}); // Width of the logo + padding
     height: calc(#{$line-height--em} * 6);
     margin: calc(#{$line-height} * 5) auto $line-height--em auto; // top 5 absolute line-heights; bottom 1 relative line-height
     padding: $line-height-half--em;
