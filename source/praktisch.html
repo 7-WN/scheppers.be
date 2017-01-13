@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600" rel="stylesheet">
+    <link href="../bower_components/mdi/css/materialdesignicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="../bower_components/Morphext/dist/morphext.css">
     <link rel="stylesheet" href="styles/main.css">
@@ -15,25 +15,26 @@
 <body>
     <header class="site-header" id="id-site-header">
         <div class="site-header__logo" id="id-site-header__logo">
-            <img src="images/schepperslogo-small.png" alt="Logo van het Scheppersinstituut Deurne en Antwerpen">
+            <a href="http://www.scheppers.be"><img class="site-header__logo__image" src="images/schepperslogo-small.png" alt="Logo van het Scheppersinstituut Deurne en Antwerpen">
+                <span class="site-header__logo__text">Scheppersinstituut</span></a>
         </div>
         <nav class="nav-bar nav-bar--primary">
             <ul>
-                <li class="nav-bar__item"><a href="index.html?internal=true" class="nav-bar__item-link nav-bar__item-link--primary">Onze school</a></li>
-                <li class="nav-bar__item"><a href="studierichtingen.html" class="nav-bar__item-link nav-bar__item-link--primary" data-nav-bar--secondary="id-nav-bar--studierichtingen">Studierichtingen</a></li>
-                <li class="nav-bar__item"><a href="praktisch.html" class="nav-bar__item-link nav-bar__item-link--primary nav-bar__item-link--active">Praktisch</a></li>
-                <li class="nav-bar__item"><a href="blog.html" class="nav-bar__item-link nav-bar__item-link--primary">Nieuws/Blog</a></li>
-                <li class="nav-bar__item"><a href="http://www.facebook.com/scheppersinstituut/" class="nav-bar__item-link nav-bar__item-link--external">Facebook</a></li>
-                <li class="nav-bar__item"><a href="contact.html" class="nav-bar__item-link nav-bar__item-link--primary">Contact</a></li>
-                <li class="nav-bar__item nav-bar__item--icon"><a href="http://scheppersinstituutbe.sharepoint.com/sites/Leerlingen" class="nav-bar__item-link nav-bar__item-link--primary"><i class="material-icons">lock</i></a></li>
+                <li class="nav-bar__item"><a href="index.html?internal=true" class="nav-bar__item-link" id="id-nav-bar__item--school">Onze school</a></li>
+                <li class="nav-bar__item"><a href="studierichtingen.html" class="nav-bar__item-link">Studierichtingen</a></li>
+                <li class="nav-bar__item"><a href="praktisch.html" class="nav-bar__item-link nav-bar__item-link--active">Praktisch</a></li>
+                <li class="nav-bar__item"><a href="blog.html" class="nav-bar__item-link">Nieuws/Blog</a></li>
+                <li class="nav-bar__item"><a href="contact.html" class="nav-bar__item-link">Contact</a></li>
+                <li class="nav-bar__item"><a href="https://www.facebook.com/scheppersinstituut/" class="nav-bar__item-link" target="_blank">Facebook</a></li>
+                <li class="nav-bar__item nav-bar__item--icon"><a href="http://scheppersinstituutbe.sharepoint.com/sites/Leerlingen" class="nav-bar__item-link"><i class="mdi mdi-lock"></i></a></li>
             </ul>
         </nav>
         <nav class="nav-bar nav-bar--secondary" id="id-nav-bar--studierichtingen">
             <ul>
-                <li class="nav-bar__item"><a href="#id-inschrijven" class="nav-bar__item-link nav-bar__item-link--secondary">Inschrijven</a></li>
-                <li class="nav-bar__item"><a href="#id-lestijden" class="nav-bar__item-link nav-bar__item-link--secondary">Lestijden</a></li>
-                <li class="nav-bar__item"><a href="#id-jaarkalender" class="nav-bar__item-link nav-bar__item-link--secondary">Jaarkalender</a></li>
-                <li class="nav-bar__item"><a href="#id-schoolreglement" class="nav-bar__item-link nav-bar__item-link--secondary">Schoolreglement</a></li>
+                <li class="nav-bar__item"><a href="#id-inschrijven" class="nav-bar__item-link nav-bar__item-link--secondary" id="btn-inschrijven">Inschrijven</a></li>
+                <li class="nav-bar__item"><a href="#id-lestijden" class="nav-bar__item-link nav-bar__item-link--secondary" id="btn-lestijden">Lestijden</a></li>
+                <li class="nav-bar__item"><a href="#id-jaarkalender" class="nav-bar__item-link nav-bar__item-link--secondary" id="btn-jaarkalender">Jaarkalender</a></li>
+                <li class="nav-bar__item"><a href="#id-schoolreglement" class="nav-bar__item-link nav-bar__item-link--secondary" id="btn-schoolreglement">Schoolreglement</a></li>
             </ul>
         </nav>
     </header>
@@ -41,7 +42,7 @@
     <main>
 
         <!-- INSCHRIJVEN -->
-        <div class="container" id="id-inschrijven">
+        <div class="container in-view" id="id-inschrijven" data-btn="btn-inschrijven">
             <section class="page-section">
                 <div class="page-section__content">
                     <div class="flex-container flex-container--text">
@@ -62,7 +63,7 @@
         </div>
 
         <!-- LESTIJDEN-->
-        <div class="container" id="id-lestijden">
+        <div class="container in-view" id="id-lestijden" data-btn="btn-lestijden">
             <section class="page-section">
                 <div class="page-section__content">
                     <div class="flex-container flex-container--text">
@@ -124,7 +125,7 @@
         </div>
 
         <!-- Jaarkalender -->
-        <div class="container" id="id-jaarkalender">
+        <div class="container in-view" id="id-jaarkalender" data-btn="btn-jaarkalender">
             <section class="page-section">
                 <div class="page-section__content">
                     <div class="flex-container flex-container--text">
@@ -140,7 +141,7 @@
         </div>
 
         <!-- SCHOOLREGLEMENT -->
-        <div class="container" id="id-schoolreglement">
+        <div class="container in-view" id="id-schoolreglement" data-btn="btn-schoolreglement">
             <section class="page-section">
                 <div class="page-section__content">
                     <div class="flex-container flex-container--text">
@@ -196,8 +197,9 @@
         </address>
     </footer>
 
-    <script src="../bower_components/jquery/dist/jquery.min.js "></script>
-    <script src="scripts/larsmodals.js "></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/in-view/dist/in-view.min.js"></script>
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>
