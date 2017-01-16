@@ -8,7 +8,7 @@ module.exports = function(grunt) {
             build: {
                 expand: true,
                 cwd: "source",
-                src: ["**/*.html", "scripts/**/*.js", "images/**/*", "documents/**/*"],
+                src: ["**/*.html", "**/*.php", "scripts/**/*.js", "images/**/*", "documents/**/*"],
                 dest: "build/"
             },
             extlib: {
