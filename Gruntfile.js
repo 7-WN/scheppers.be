@@ -37,8 +37,8 @@ module.exports = function(grunt) {
                 options: {
                     livereload: true
                 },
-                files: ["source/**/*.html", "source/scripts/**/*.js", "source/images/**/*"],
-                tasks: ["copy:build"]
+                files: ["source/**/*.html", "source/scripts/**/*.js", "source/images/**/*", "extlib/**/*"],
+                tasks: ["copy:build", "copy:extlib"]
             },
             sass: {
                 options: {
