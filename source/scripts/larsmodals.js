@@ -13,7 +13,6 @@ $(document).ready(function() {
     $(".modal-opener").each(function() {
         var target = $(this).attr("data-target") + "-modal-view";
         $(this).click(function() {
-            console.log(target);
             $("#curtain").fadeIn();
             $("#" + target).fadeIn("slow");
         });
