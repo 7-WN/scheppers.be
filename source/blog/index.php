@@ -42,14 +42,25 @@
 
     <main>
 
-        <div class="container" id="blog">
+        <div class="container" id="id-blog">
             <section class="page-section">
                 <div class="page-section__content__header">
                     <h2 class="page-section__title">De Scheppersblog</h2>
                 </div>
                 <div class="flex-container">
                     <!-- Pinned -->
-                        <!-- 1 full width -->
+                    <?php
+
+                    // perch_blog_custom(array(
+                    //     'category' => 'pinned',
+                    //     'template' => 'listing-full-width.html',
+                    //     'start' => 0,
+                    //     'count' => 1,
+                    // ))
+                        perch_layout('blog-listing', array(
+                            'category' => 'pinned',
+                        ));
+                    ?>
 
                         <!-- 2 half width -->
 

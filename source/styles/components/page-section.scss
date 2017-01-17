@@ -9,6 +9,10 @@
 
     @include shadow(1);
 }
+.page-section__content__header
+{
+    padding-bottom: $line-height;
+}
 .page-section__content
 {
     overflow: hidden;
