@@ -1,157 +1,86 @@
+<?php include('../perch/runtime.php'); ?>
 <!DOCTYPE html>
-<html lang="nl-BE">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
-    <link rel="stylesheet" href="../bower_components/Morphext/dist/morphext.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <title>Scheppersinstituut Deurne en Antwerpen</title>
+	<meta charset="utf-8">
+	<?php perch_blog_post_meta(perch_get('s')); ?>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.php" />
+	<?php perch_get_css(); ?>
+	<link rel="stylesheet" href="blog.css" type="text/css" />
 </head>
-
 <body>
-    <header class="site-header" id="id-site-header">
-        <div class="site-header__logo" id="id-site-header__logo">
-            <img src="images/schepperslogo-small.png" alt="Logo van het Scheppersinstituut Deurne en Antwerpen">
-        </div>
-        <nav class="nav-bar nav-bar--primary">
-            <ul>
-                <li class="nav-bar__item"><a href="index.html?internal=true" class="nav-bar__item-link nav-bar__item-link--primary">Onze school</a></li>
-                <li class="nav-bar__item"><a href="studierichtingen.html" class="nav-bar__item-link nav-bar__item-link--primary" data-nav-bar--secondary="id-nav-bar--studierichtingen">Studierichtingen</a></li>
-                <li class="nav-bar__item"><a href="praktisch.html" class="nav-bar__item-link nav-bar__item-link--primary">Praktisch</a></li>
-                <li class="nav-bar__item"><a href="blog.html" class="nav-bar__item-link nav-bar__item-link--primary nav-bar__item-link--active">Nieuws/Blog</a></li>
-                <li class="nav-bar__item"><a href="http://www.facebook.com/scheppersinstituut/" class="nav-bar__item-link nav-bar__item-link--external">Facebook</a></li>
-                <li class="nav-bar__item"><a href="contact.html" class="nav-bar__item-link nav-bar__item-link--primary">Contact</a></li>
-                <li class="nav-bar__item nav-bar__item--icon"><a href="http://scheppersinstituutbe.sharepoint.com/sites/Leerlingen" class="nav-bar__item-link nav-bar__item-link--primary"><i class="material-icons">lock</i></a></li>
-            </ul>
-        </nav>
-        <nav class="nav-bar nav-bar--secondary" id="id-nav-bar--studierichtingen">
-            <ul>
-                <li class="nav-bar__item"><a href="#id-eerste-graad" class="nav-bar__item-link nav-bar__item-link--secondary">Alles</a></li>
-                <li class="nav-bar__item"><a href="#id-eerste-graad" class="nav-bar__item-link nav-bar__item-link--secondary">Aankondigingen</a></li>
-                <li class="nav-bar__item"><a href="#id-eerste-graad" class="nav-bar__item-link nav-bar__item-link--secondary">1ste graad</a></li>
-                <li class="nav-bar__item"><a href="#id-tweede-graad" class="nav-bar__item-link nav-bar__item-link--secondary">2de graad</a></li>
-                <li class="nav-bar__item"><a href="#id-derde-graad" class="nav-bar__item-link nav-bar__item-link--secondary">3de graad</a></li>
-                <li class="nav-bar__item"><a href="#id-se-n-se" class="nav-bar__item-link nav-bar__item-link--secondary">Se-n-Se</a></li>
-            </ul>
-        </nav>
-    </header>
+	<header class="layout-header">
+		<div class="wrapper">
+			<div class="company-name">Perch Blog App - Company Name</div>
+			<img src="<?php perch_path('feathers/quill/img/logo.gif'); ?>" alt="Your Logo Here" class="logo"/>
+		</div>
+		<nav class="main-nav">
+			<?php perch_pages_navigation(array(
+					'levels'=>1
+				));
+			?>
+		</nav>
+	</header>
 
-    <main>
+	<!--  change cols2-nav-right to cols2-nav-left if you want the sidebar on the left -->
+	<div class="wrapper cols2-nav-right">
 
-        <div class="container" id="id-eerste-graad">
-            <section class="page-section">
-                <div class="page-section__content__header">
-                    <h2 class="page-section__title">Blog/Nieuws</h2>
-                </div>
-                <div class="flex-container">
+		<div class="primary-content">
 
-                    <article class="card col col--1-1">
-                        <h3 class="card__title">Eerste artikel</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus obcaecati ullam soluta, nulla quas magni dignissimos aut veniam modi possimus sunt officiis, ipsa quisquam laboriosam, facere corporis doloribus nesciunt incidunt.</p>
-                    </article>
 
-                    <article class="card col col--1-2">
-                        <h3 class="card__title">Tweede artikel</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </article>
+		    <div class="post">
+		    	<?php perch_blog_post(perch_get('s')); ?>
 
-                    <article class="card col col--1-2">
-                        <h3 class="card__title">Derde artikel</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </article>
+		    	<?php perch_blog_author_for_post(perch_get('s')); ?>
 
-                    <article class="card card--action-card col col--1-4">
-                        <h3 class="card__title">Samenvatting 1</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ...</p>
-                        <button type="button" class="card__action modal-opener" data-target="id-samenvatting-1">Verder lezen</button>
-                        <div class="modal" id="id-samenvatting-1">
-                            <h3 class="card__title">Samenvatting 1</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </article>
+		    	<div class="meta">
+		            <div class="cats">
+		                <?php perch_blog_post_categories(perch_get('s')); ?>
+		            </div>
+		            <div class="tags">
+		                <?php perch_blog_post_tags(perch_get('s')); ?>
+		            </div>
+		        </div>
 
-                    <article class="card card--action-card col col--1-4">
-                        <h3 class="card__title">Samenvatting 2</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ...</p>
-                        <button type="button" class="card__action modal-opener" data-target="id-samenvatting-2">Verder lezen</button>
-                        <div class="modal" id="id-samenvatting-2">
-                            <h3 class="card__title">Samenvatting 2</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </article>
+		    	<?php perch_blog_post_comments(perch_get('s')); ?>
 
-                    <article class="card card--action-card col col--1-4">
-                        <h3 class="card__title">Samenvatting 3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ...</p>
-                        <button type="button" class="card__action modal-opener" data-target="id-samenvatting-3">Verder lezen</button>
-                        <div class="modal" id="id-samenvatting-3">
-                            <h3 class="card__title">Samenvatting 3</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </article>
+		    	<?php perch_blog_post_comment_form(perch_get('s')); ?>
 
-                    <article class="card card--action-card col col--1-4">
-                        <h3 class="card__title">Samenvatting 4</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ...</p>
-                        <button type="button" class="card__action modal-opener" data-target="id-samenvatting-4">Verder lezen</button>
-                        <div class="modal" id="id-samenvatting-4">
-                            <h3 class="card__title">Samenvatting 4</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        </div>
-                    </article>
+		    </div>
+		</div>
 
-                </div>
-            </section>
-        </div>
+		<nav class="sidebar">
+		    <h2>Archive</h2>
+		    <!-- The following functions are different ways to display archives. You can use any or all of these.
 
-    </main>
+		    All of these functions can take a parameter of a template to overwrite the default template, for example:
 
-    <footer class="page-footer ">
-        <address class="page-footer__content ">
-            <a href="mailto:info@scheppers.be ">info@scheppers.be</a>
-        </address>
-        <address class="page-footer__content ">
-            Campus Sancta Maria<br>
-            Pieter de Ridderstraat 5<br>
-            2100 Deurne<br>
-            03 360 31 45
-        </address>
-        <address class="page-footer__content ">
-            Campus Sint-Eligius Antwerpen<br>
-            Van Helmonstraat 29<br>
-            2060 Antwerpen<br>
-            03 217 42 42
-        </address>
-        <address class="page-footer__content ">
-            Campus Sint-Eligius Deurne<br>
-            Lakborslei 263<br>
-            2100 Deurne<br>
-            03 326 33 59
-        </address>
-    </footer>
+		    perch_blog_categories('my_template.html');
 
-    <script src="../bower_components/jquery/dist/jquery.min.js "></script>
-    <script src="scripts/larsmodals.js "></script>
+		    -->
+		    <!--  By category listing -->
+		    <?php perch_blog_categories(); ?>
+		    <!--  By tag -->
+		    <?php perch_blog_tags(); ?>
+		    <!--  By year -->
+		    <?php perch_blog_date_archive_years(); ?>
+		    <!--  By year and then month - can take parameters for two templates. The first displays the years and the second the months see the default templates for examples -->
+		    <?php perch_blog_date_archive_months(); ?>
+    	</nav>
+	</div>
+	<footer class="layout-footer">
+		<div class="wrapper">
+			<ul class="social-links">
+				<li class="twitter"><a href="#" rel="me">Twitter</a></li>
+				<li class="facebook"><a href="#" rel="me">Facebook</a></li>
+				<li class="flickr"><a href="#" rel="me">Flickr</a></li>
+				<li class="linkedin"><a href="#" rel="me">LinkedIn</a></li>
+				<li class="rss"><a href="#">RSS</a></li>
+			</ul>
+			<small>Copyright &copy; <?php echo date('Y'); ?></small>
+		</div>
+	</footer>
+	<?php perch_get_javascript(); ?>
 </body>
-
 </html>
