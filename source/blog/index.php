@@ -93,11 +93,6 @@
         </address>
     </footer>
 
-    <div class="debug">
-
-        <?php perch:showall ?>
-    </div>
-
     <script src="../bower_components/jquery/dist/jquery.min.js "></script>
     <script src="scripts/larsmodals.js "></script>
 </body>
