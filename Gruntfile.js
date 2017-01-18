@@ -11,6 +11,12 @@ module.exports = function(grunt) {
                 src: ["**/*.html", "**/*.php", "scripts/**/*.js", "images/**/*", "documents/**/*"],
                 dest: "build/"
             },
+            bower: {
+                expand: true,
+                cwd: "bower_components",
+                src: ["**/*"],
+                dest: "build/lib"
+            },
             extlib: {
                 expand: true,
                 cwd: "extlib",
@@ -55,6 +61,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-sass");
     grunt.loadNpmTasks("grunt-contrib-watch");
 
-    grunt.registerTask("build", ["clean:build", "copy:build", "copy:extlib", "sass:build"]);
+    grunt.registerTask("build", ["clean:build", "copy:build", "copy:bower", "copy:extlib", "sass:build"]);
     grunt.registerTask("dev", ["build", "watch"]);
 };
