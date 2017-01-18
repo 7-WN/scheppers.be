@@ -1,7 +1,9 @@
 <?php
 
 perch_blog_custom(array(
-    'category' => perch_layout_var('category', true),
+    'filter' => perch_layout_var('filter', true),
+    'match' => perch_layout_var('match', true),
+    'value' => perch_layout_var('value', true),
     'template' => 'listing-full-width.html',
     'start' => 1,
     'count' => 1,
@@ -11,7 +13,9 @@ perch_blog_custom(array(
 ));
 
 perch_blog_custom(array(
-    'category' => perch_layout_var('category', true),
+    'filter' => perch_layout_var('filter', true),
+    'match' => perch_layout_var('match', true),
+    'value' => perch_layout_var('value', true),
     'template' => 'listing-half-width.html',
     'start' => 2,
     'count' => 2,
@@ -21,7 +25,9 @@ perch_blog_custom(array(
 ));
 
 perch_blog_custom(array(
-    'category' => perch_layout_var('category', true),
+    'filter' => perch_layout_var('filter', true),
+    'match' => perch_layout_var('match', true),
+    'value' => perch_layout_var('value', true),
     'template' => 'listing-third-width-summary.html',
     'start' => 4,
     'count' => 99,

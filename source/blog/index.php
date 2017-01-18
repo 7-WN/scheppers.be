@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="../styles/main.css">
     <title>Scheppersinstituut Deurne en Antwerpen</title>
 </head>
 
@@ -50,21 +50,12 @@
                 <div class="flex-container">
                     <!-- Pinned -->
                     <?php
-
-                    // perch_blog_custom(array(
-                    //     'category' => 'pinned',
-                    //     'template' => 'listing-full-width.html',
-                    //     'start' => 0,
-                    //     'count' => 1,
-                    // ))
                         perch_layout('blog-listing', array(
-                            'category' => 'pinned',
+                            'filter' => 'pinned',
+                            'match' => 'eq',
+                            'value' => 'yes',
                         ));
                     ?>
-
-                        <!-- 2 half width -->
-
-                        <!-- 1/3 width summarized -->
 
                     <!-- Recent -->
                         <!-- 1 full width -->
@@ -104,8 +95,8 @@
         </address>
     </footer>
 
-    <script src="../bower_components/jquery/dist/jquery.min.js "></script>
-    <script src="scripts/larsmodals.js "></script>
+    <script src="../lib/jquery/dist/jquery.min.js "></script>
+    <script src="../scripts/larsmodals.js "></script>
 </body>
 
 </html>
