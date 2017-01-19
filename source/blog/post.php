@@ -1,86 +1,92 @@
 <?php include('../perch/runtime.php'); ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl-BE">
+
 <head>
-	<meta charset="utf-8">
-	<?php perch_blog_post_meta(perch_get('s')); ?>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.php" />
-	<?php perch_get_css(); ?>
-	<link rel="stylesheet" href="blog.css" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Lars De Richter <lars.derichter@gmail.com>">
+    <meta name="sourcecode" content="https://github.com/7-WN/scheppers.be">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600" rel="stylesheet">
+    <link href="/lib/mdi/css/materialdesignicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Scheppersinstituut Deurne en Antwerpen</title>
 </head>
+
 <body>
-	<header class="layout-header">
-		<div class="wrapper">
-			<div class="company-name">Perch Blog App - Company Name</div>
-			<img src="<?php perch_path('feathers/quill/img/logo.gif'); ?>" alt="Your Logo Here" class="logo"/>
-		</div>
-		<nav class="main-nav">
-			<?php perch_pages_navigation(array(
-					'levels'=>1
-				));
-			?>
-		</nav>
-	</header>
+    <header class="site-header" id="id-site-header">
+        <div class="site-header__logo hidden" id="id-site-header__logo">
+            <a href="http://www.scheppers.be"><img class="site-header__logo__image" src="/images/schepperslogo-small.png" alt="Logo van het Scheppersinstituut Deurne en Antwerpen">
+                <span class="site-header__logo__text">Scheppersinstituut</span></a>
+        </div>
+        <nav class="nav-bar nav-bar--primary">
+            <ul>
+                <li class="nav-bar__item"><a href="index.html?internal=true" class="nav-bar__item-link" id="id-nav-bar__item--school">Onze school</a></li>
+                <li class="nav-bar__item"><a href="studierichtingen.html" class="nav-bar__item-link">Studierichtingen</a></li>
+                <li class="nav-bar__item"><a href="praktisch.html" class="nav-bar__item-link">Praktisch</a></li>
+                <li class="nav-bar__item"><a href="blog" class="nav-bar__item-link nav-bar__item-link--active">Nieuws/Blog</a></li>
+                <li class="nav-bar__item"><a href="contact.html" class="nav-bar__item-link">Contact</a></li>
+                <li class="nav-bar__item"><a href="https://www.facebook.com/scheppersinstituut/" class="nav-bar__item-link" target="_blank">Facebook</a></li>
+                <li class="nav-bar__item nav-bar__item--icon"><a href="http://scheppersinstituutbe.sharepoint.com/sites/Leerlingen" class="nav-bar__item-link"><i class="mdi mdi-lock"></i></a></li>
+            </ul>
+        </nav>
+        <nav class="nav-bar nav-bar--secondary" id="id-nav-bar--blog">
+            <ul>
+                <li class="nav-bar__item"><a href="#id-eerste-graad" class="nav-bar__item-link nav-bar__item-link--secondary">Alles</a></li>
+                <li class="nav-bar__item"><a href="#id-eerste-graad" class="nav-bar__item-link nav-bar__item-link--secondary">Aankondigingen</a></li>
+                <li class="nav-bar__item"><a href="#id-eerste-graad" class="nav-bar__item-link nav-bar__item-link--secondary">1ste graad</a></li>
+                <li class="nav-bar__item"><a href="#id-tweede-graad" class="nav-bar__item-link nav-bar__item-link--secondary">2de graad</a></li>
+                <li class="nav-bar__item"><a href="#id-derde-graad" class="nav-bar__item-link nav-bar__item-link--secondary">3de graad</a></li>
+                <li class="nav-bar__item"><a href="#id-se-n-se" class="nav-bar__item-link nav-bar__item-link--secondary">Se-n-Se</a></li>
+            </ul>
+        </nav>
+    </header>
 
-	<!--  change cols2-nav-right to cols2-nav-left if you want the sidebar on the left -->
-	<div class="wrapper cols2-nav-right">
+    <main>
 
-		<div class="primary-content">
+        <!-- Artikel-->
+        <div class="container in-view">
+            <section class="page-section">
+                <div class="page-section__content">
+                    <div class="flex-container flex-container--text">
 
 
-		    <div class="post">
 		    	<?php perch_blog_post(perch_get('s')); ?>
 
-		    	<?php perch_blog_author_for_post(perch_get('s')); ?>
+            </div>
+            </div>
+        </section>
+    </div>
 
-		    	<div class="meta">
-		            <div class="cats">
-		                <?php perch_blog_post_categories(perch_get('s')); ?>
-		            </div>
-		            <div class="tags">
-		                <?php perch_blog_post_tags(perch_get('s')); ?>
-		            </div>
-		        </div>
+    </main>
 
-		    	<?php perch_blog_post_comments(perch_get('s')); ?>
+    <footer class="page-footer">
+    <address class="page-footer__content">
+        <i class="mdi mdi-email"></i> <a href="mailto:info@scheppers.be">info@scheppers.be</a><br>
+        <i class="mdi mdi-facebook-box"></i> <a href="https://fb.com/scheppersinstituut" target="_blank">fb.com/scheppersinstituut</a>
+    </address>
+    <address class="page-footer__content">
+        <strong>Campus Sancta Maria Deurne</strong><br>
+        Pieter de Ridderstraat 5<br>
+        2100 Deurne<br>
+        <i class="mdi mdi-phone"></i> 03 360 31 45
+    </address>
+    <address class="page-footer__content">
+        <strong>Campus Sint-Eligius Antwerpen</strong><br>
+        Van Helmonstraat 29<br>
+        2060 Antwerpen<br>
+        <i class="mdi mdi-phone"></i> 03 217 42 42
+    </address>
+    <address class="page-footer__content">
+        <strong>Campus Sint-Eligius Deurne</strong><br>
+        Lakborslei 263<br>
+        2100 Deurne<br>
+        <i class="mdi mdi-phone"></i> 03 326 33 59
+    </address>
+    </footer>
 
-		    	<?php perch_blog_post_comment_form(perch_get('s')); ?>
-
-		    </div>
-		</div>
-
-		<nav class="sidebar">
-		    <h2>Archive</h2>
-		    <!-- The following functions are different ways to display archives. You can use any or all of these.
-
-		    All of these functions can take a parameter of a template to overwrite the default template, for example:
-
-		    perch_blog_categories('my_template.html');
-
-		    -->
-		    <!--  By category listing -->
-		    <?php perch_blog_categories(); ?>
-		    <!--  By tag -->
-		    <?php perch_blog_tags(); ?>
-		    <!--  By year -->
-		    <?php perch_blog_date_archive_years(); ?>
-		    <!--  By year and then month - can take parameters for two templates. The first displays the years and the second the months see the default templates for examples -->
-		    <?php perch_blog_date_archive_months(); ?>
-    	</nav>
-	</div>
-	<footer class="layout-footer">
-		<div class="wrapper">
-			<ul class="social-links">
-				<li class="twitter"><a href="#" rel="me">Twitter</a></li>
-				<li class="facebook"><a href="#" rel="me">Facebook</a></li>
-				<li class="flickr"><a href="#" rel="me">Flickr</a></li>
-				<li class="linkedin"><a href="#" rel="me">LinkedIn</a></li>
-				<li class="rss"><a href="#">RSS</a></li>
-			</ul>
-			<small>Copyright &copy; <?php echo date('Y'); ?></small>
-		</div>
-	</footer>
-	<?php perch_get_javascript(); ?>
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/scripts/index.js"></script>
 </body>
+
 </html>

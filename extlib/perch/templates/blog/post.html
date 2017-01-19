@@ -1,33 +1,32 @@
-<article class="h-entry">
-    <h1>
+<article class="col col--text col--1-1">
+    <h2 class="article_title">
         <a href="<perch:blog id="postURL" type="hidden" />" rel="bookmark" class="p-name">
-            <perch:blog id="postTitle" type="text" label="Title" required="true" size="xl autowidth" order="1" />
-        </a>
-    </h1>
-    <p class="meta">
-        <time class="dt-published" datetime="<perch:blog id=" postDateTime " type="date " label="Date " time="true " format="Y-m-d H:i:s " divider-before="Publishing " />">
-            <perch:blog id="postDateTime" type="date" time="true" format="%d %B %Y" />
-        </time>
-        <perch:if exists="authorGivenName">
-            by <span class="p-author h-card"><perch:blog id="authorGivenName" type="hidden" /> <perch:blog id="authorFamilyName" type="hidden" /></span>
-        </perch:if>
-        <perch:categories id="categories" set="blog" label="Categories" display-as="checkboxes">
-            <a href="archive.php?cat=<perch:category id=" catSlug " type="slug " />" class="p-category">
-                <perch:category id="catTitle" type="text" />
-            </a>
-        </perch:categories>
-        <perch:blog id="pinned" type="checkbox" label="Pin to top" value="yes" suppress="true" />
+        <perch:blog id="postTitle" label="title" type="smarttext" />
+    </a>
+    </h2>
+    <perch:blog id="postDescHTML" type="textarea" label="Article text" editor="redactor" html="true" size="xxl autowidth" required="true" />
+    <perch:blog id="is-album" type="checkbox" value="true" label="Is album?" suppressed="true" divider-before="Photo Album" />
+    <perch:blocks>
+        <perch:block type="album__image" label="Album image">
+            <figure class="album__image">
+                <img src='<perch:blog id="album_image" type="image" width="400" label="Image" />' alt='<perch:blog id="alt" type="text" label="alt" />'>
+                <figcaption>
+                    <perch:blog id="caption" type="smarttext" label="Caption" />
+                </figcaption>
+            </figure>
+        </perch:block>
+    </perch:blocks>
+    <div class="article-footer">
+        <p>
+            Gepubliceerd op: <time class="dt-published" datetime='<perch:blog id="postDateTime" type="date" label="Date" time="true" format="Y-m-d H:i:s" divider-before="Publishing" />'> <perch:blog id="postDateTime" type="date" time="true" format="%d %B %Y"
+            /></time><br> In categorieën:
+            <perch:categories id="categories" set="blog" label="Categories" display-as="checkboxes">
+                <a href='archive.php?cat=<perch:category id="catSlug" type="slug" />' class="p-category">
+                    <perch:category id="catTitle" type="text" />
+                </a>
+            </perch:categories>
+            <perch:blog id="pinned" type="checkbox" label="Pinned" value="yes" suppress="true" />
+        </p>
 
-    </p>
-    <perch:if exists="image">
-        <div>
-            <img src="<perch:blog id=" image " type="image " width="320 " height="240 " crop="true " label="Image " order="4 " />" alt="<perch:blog id=" postTitle " />" />
-        </div>
-    </perch:if>
-    <div class="description e-content">
-        <perch:blog id="postDescHTML" type="textarea" label="Post" order="2" editor="redactor" html="true" size="xxl autowidth" required="true" />
     </div>
 </article>
-
-<perch:blog id="excerpt" type="textarea" label="Excerpt" order="3" suppress="true" size="s" required="true" help="Enkel tekst" />
-<perch:blog id="image" type="image" width="50" height="50" crop="true" suppress="true" />
