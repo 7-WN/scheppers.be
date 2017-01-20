@@ -5,16 +5,17 @@
     </a>
     </h2>
     <perch:blog id="slug" type="slug" for="heading" editable="true" label="URL name (no spaces!)" suppress="true" help="If empty, this is created automatically. No two articles can have the same date and URL name!" />
-    <perch:blog id="postDescHTML" type="textarea" label="Article text" editor="redactor" html="true" size="xxl autowidth" editor-config="blog" image-width="1200" />
+    <perch:blog id="postDescHTML" type="textarea" label="Article text" editor="redactor" html="true" size="xxl autowidth" editor-config="blog" image-width="1200" help="Uploaded images should be at leazst 1200 pixels wide." />
     <perch:blog id="excerpt" type="textarea" label="Excerpt (text only)" help="If this is empty, the first 25 words of the article text will be used." size="s" />
-    <perch:blog id="bgImage" type="image" label="Background image" width="1600" suppress="true" help="This image will be used as background image on the article page. If this is empty, the default will be used (jaarthema)." />
-    <perch:blog id="thumbImage" type="image" label="Thumbnail image" width="240" suppress="true" help="This image is used in the excerpt/listing view of the article." />
+    <perch:blog id="bgImage" type="image" label="Background image" width="1600" suppress="true" help="This image will be used as background image on the article page. If this is empty, the default will be used (jaarthema). The system will resize this automatically. Upload should preferably be 1600 pixels wide or more."
+    />
+    <perch:blog id="thumbImage" type="image" label="Thumbnail image" width="240" suppress="true" help="This image is used in the excerpt/listing view of the article. The system will resize this automatically. Upload should be at least 240 pixels wide." />
     <perch:blog id="is-album" type="checkbox" value="true" label="Is album?" suppressed="true" help="Check this if the article is an album instead of a 'normal' blog post. To add images to the album, click '+ Album image' below." divider-before="Photo Album"
     />
     <perch:blocks>
         <perch:block type="album__image" label="Album image">
             <figure class="album__image">
-                <img src='<perch:blog id="album_image" type="image" width="1200" label="Image" />' alt='<perch:blog id="alt" type="text" label="Title" help="This is the text for the alt attribute in the code (what you see when you hover over the image or if it cannot load)."/>'>
+                <img src='<perch:blog id="album_image" type="image" width="1200" label="Image" help="The system will resize the images automatically. Uploads should be 1200 or more pixels wide." />' alt='<perch:blog id="alt" type="text" label="Title" help="This is the text for the alt attribute in the code (what you see when you hover over the image or if it cannot load)."/>'>
                 <figcaption>
                     <perch:blog id="caption" type="smarttext" label="Caption" help="Descriptive text to show underneath the image." />
                 </figcaption>
