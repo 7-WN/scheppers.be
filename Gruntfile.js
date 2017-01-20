@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
     grunt.initConfig({
         clean: {
-            build: ["build/*"],
+            build: ["build/*", "!build/adm/resources"],
             release: ["release/*"]
         },
         copy: {
