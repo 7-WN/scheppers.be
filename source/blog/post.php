@@ -1,4 +1,4 @@
-<?php include('../perch/runtime.php'); ?>
+<?php include('../adm/runtime.php'); ?>
 <!DOCTYPE html>
 <html lang="nl-BE">
 
@@ -8,15 +8,15 @@
     <meta name="author" content="Lars De Richter <lars.derichter@gmail.com>">
     <meta name="sourcecode" content="https://github.com/7-WN/scheppers.be">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600" rel="stylesheet">
-    <link href="/lib/mdi/css/materialdesignicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/main.css">
+    <link href="../lib/mdi/css/materialdesignicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main.css">
     <title>Scheppersinstituut Deurne en Antwerpen</title>
 </head>
 
 <body>
     <header class="site-header" id="id-site-header">
         <div class="site-header__logo" id="id-site-header__logo">
-            <a href="http://www.scheppers.be"><img class="site-header__logo__image" src="/images/schepperslogo-small.png" alt="Logo van het Scheppersinstituut Deurne en Antwerpen">
+            <a href="http://www.scheppers.be"><img class="site-header__logo__image" src="../images/schepperslogo-small.png" alt="Logo van het Scheppersinstituut Deurne en Antwerpen">
                 <span class="site-header__logo__text">Scheppersinstituut</span></a>
         </div>
         <nav class="nav-bar nav-bar--primary">
@@ -88,8 +88,8 @@
     </address>
     </footer>
 
-    <script src="/lib/jquery/dist/jquery.min.js"></script>
-    <script src="/scripts/index.js"></script>
+    <script src="../lib/jquery/dist/jquery.min.js"></script>
+    <script src="../scripts/index.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-<?php include('../perch/runtime.php'); ?>
+<?php include('../adm/runtime.php'); ?>
 <!DOCTYPE html>
 <html lang="nl-BE">
 
@@ -14,7 +14,7 @@
 <body>
     <header class="site-header" id="id-site-header">
         <div class="site-header__logo" id="id-site-header__logo">
-            <a href="http://www.scheppers.be"><img class="site-header__logo__image" src="/images/schepperslogo-small.png" alt="Logo van het Scheppersinstituut Deurne en Antwerpen">
+            <a href="http://www.scheppers.be"><img class="site-header__logo__image" src="../images/schepperslogo-small.png" alt="Logo van het Scheppersinstituut Deurne en Antwerpen">
                 <span class="site-header__logo__text">Scheppersinstituut</span></a>
         </div>
         <nav class="nav-bar nav-bar--primary">
