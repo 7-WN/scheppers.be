@@ -7,8 +7,8 @@ perch_blog_custom(array(
     'template' => 'listing-full-width.html',
     'start' => 1,
     'count' => 1,
-    'sort' => 'postDateTime',
-    'sort-order' => 'DESC',
+    'sort' => perch_layout_var('sort', true) ,
+    'sort-order' => perch_layout_var('sort-order', true),
     'paginate' => false,
 ));
 
@@ -19,8 +19,8 @@ perch_blog_custom(array(
     'template' => 'listing-half-width.html',
     'start' => 2,
     'count' => 2,
-    'sort' => 'postDateTime',
-    'sort-order' => 'DESC',
+    'sort' => perch_layout_var('sort', true),
+    'sort-order' => perch_layout_var('sort-order', true),
     'paginate' => false,
 ));
 
@@ -30,9 +30,9 @@ perch_blog_custom(array(
     'value' => perch_layout_var('value', true),
     'template' => 'listing-third-width-summary.html',
     'start' => 4,
-    'count' => 99,
-    'sort' => 'postDateTime',
-    'sort-order' => 'DESC',
+    'count' => 12,
+    'sort' => perch_layout_var('sort', true),
+    'sort-order' => perch_layout_var('sort-order', true),
     'paginate' => false,
 ));
 

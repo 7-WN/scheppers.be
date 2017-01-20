@@ -15,17 +15,17 @@
 
 <body>
     <header class="site-header" id="id-site-header">
-        <div class="site-header__logo hidden" id="id-site-header__logo">
+        <div class="site-header__logo" id="id-site-header__logo">
             <a href="http://www.scheppers.be"><img class="site-header__logo__image" src="/images/schepperslogo-small.png" alt="Logo van het Scheppersinstituut Deurne en Antwerpen">
                 <span class="site-header__logo__text">Scheppersinstituut</span></a>
         </div>
         <nav class="nav-bar nav-bar--primary">
             <ul>
-                <li class="nav-bar__item"><a href="index.html?internal=true" class="nav-bar__item-link" id="id-nav-bar__item--school">Onze school</a></li>
-                <li class="nav-bar__item"><a href="studierichtingen.html" class="nav-bar__item-link">Studierichtingen</a></li>
+                <li class="nav-bar__item"><a href="/index.html?internal=true" class="nav-bar__item-link" id="id-nav-bar__item--school">Onze school</a></li>
+                <li class="nav-bar__item"><a href="/studierichtingen.html" class="nav-bar__item-link">Studierichtingen</a></li>
                 <li class="nav-bar__item"><a href="praktisch.html" class="nav-bar__item-link">Praktisch</a></li>
-                <li class="nav-bar__item"><a href="blog" class="nav-bar__item-link nav-bar__item-link--active">Nieuws/Blog</a></li>
-                <li class="nav-bar__item"><a href="contact.html" class="nav-bar__item-link">Contact</a></li>
+                <li class="nav-bar__item"><a href="/blog" class="nav-bar__item-link nav-bar__item-link--active">Nieuws/Blog</a></li>
+                <li class="nav-bar__item"><a href="/contact.html" class="nav-bar__item-link">Contact</a></li>
                 <li class="nav-bar__item"><a href="https://www.facebook.com/scheppersinstituut/" class="nav-bar__item-link" target="_blank">Facebook</a></li>
                 <li class="nav-bar__item nav-bar__item--icon"><a href="http://scheppersinstituutbe.sharepoint.com/sites/Leerlingen" class="nav-bar__item-link"><i class="mdi mdi-lock"></i></a></li>
             </ul>
@@ -45,18 +45,21 @@
     <main>
 
         <!-- Artikel-->
-        <div class="container in-view">
+        <div class='container in-view' <?php
+            if(perch_blog_post_field(perch_get('s'), 'bgImage', true)) {
+                echo( "style='background-image: url(\"" . perch_blog_post_field(perch_get('s'), 'bgImage', true) . "\")'" );
+            }
+        ?> >
             <section class="page-section">
                 <div class="page-section__content">
                     <div class="flex-container flex-container--text">
 
+                        <?php perch_blog_post(perch_get('s')); ?>
 
-		    	<?php perch_blog_post(perch_get('s')); ?>
-
-            </div>
-            </div>
-        </section>
-    </div>
+                    </div>
+                </div>
+            </section>
+        </div>
 
     </main>
 

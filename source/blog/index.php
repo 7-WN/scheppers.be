@@ -48,21 +48,27 @@
                     <h2 class="page-section__title">De Scheppersblog</h2>
                 </div>
                 <div class="flex-container">
-                    <!-- Pinned -->
+                    <h3>Belangrijke berichten</h3>
                     <?php
                         perch_layout('blog-listing', array(
                             'filter' => 'pinned',
                             'match' => 'eq',
                             'value' => 'yes',
+                            'sort' => 'pinned-order',
+                            'sort-order' => 'ASC',
                         ));
                     ?>
 
-                    <!-- Recent -->
-                        <!-- 1 full width -->
-
-                        <!-- 2 half width -->
-
-                        <!-- 6 * 1/3 width summarized -->
+                    <h3>Alle berichten</h3>
+                    <?php
+                        perch_layout('blog-listing', array(
+                            'filter' => 'pinned',
+                            'match' => 'neq',
+                            'value' => 'yes',
+                            'sort' => 'postDateTime',
+                            'sort-order' => 'DESC',
+                        ));
+                    ?>
 
                     <!-- Link to archive -->
                 </div>

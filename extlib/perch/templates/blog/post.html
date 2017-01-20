@@ -1,15 +1,17 @@
 <article class="col col--text col--1-1">
     <h2 class="article_title">
         <a href="<perch:blog id="postURL" type="hidden" />" rel="bookmark" class="p-name">
-        <perch:blog id="postTitle" label="title" type="smarttext" />
+        <perch:blog id="postTitle" label="Title" type="smarttext" />
     </a>
     </h2>
-    <perch:blog id="postDescHTML" type="textarea" label="Article text" editor="redactor" html="true" size="xxl autowidth" required="true" editor-config="blog" />
+    <perch:blog id="postDescHTML" type="textarea" label="Article text" editor="redactor" html="true" size="xxl autowidth" editor-config="blog" />
+    <perch:blog id="bgImage" type="image" label="Background image" width="1600" suppress="true" />
+    <perch:blog id="thumbImage" type="image" label="Thumbnail image" width="300" suppress="true" />
     <perch:blog id="is-album" type="checkbox" value="true" label="Is album?" suppressed="true" divider-before="Photo Album" />
     <perch:blocks>
         <perch:block type="album__image" label="Album image">
             <figure class="album__image">
-                <img src='<perch:blog id="album_image" type="image" width="400" label="Image" />' alt='<perch:blog id="alt" type="text" label="alt" />'>
+                <img src='<perch:blog id="album_image" type="image" width="400" label="Image" />' alt='<perch:blog id="alt" type="text" label="Title" />'>
                 <figcaption>
                     <perch:blog id="caption" type="smarttext" label="Caption" />
                 </figcaption>
@@ -26,6 +28,7 @@
                 </a>
             </perch:categories>
             <perch:blog id="pinned" type="checkbox" label="Pinned" value="yes" suppress="true" />
+            <perch:blog id="pinned-order" type="text" label="Pinned order" help="A number. Pinned articles will be sorted by number in ascending order." suppress="true" />
         </p>
 
     </div>
