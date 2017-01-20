@@ -58,7 +58,9 @@
                             'sort-order' => 'ASC',
                         ));
                     ?>
+                </div>
 
+                <div class="flex-container">
                     <h3>Alle berichten</h3>
                     <?php
                         perch_layout('blog-listing', array(
