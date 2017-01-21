@@ -2,8 +2,14 @@
     <h3>
         <perch:blog id="postTitle" />
     </h3>
+    <img src='<perch:blog id="thumbImage" width="240"/>' alt="" style="max-width: calc(50% - 1em); float:left; margin-right: 1em">
     <p>
+        <perch:if exist="excerpt" />
         <perch:blog id="excerpt" />
+        <perch:else />
+        <perch:blog id="postDescHTML" escape="true" striptags="true" words="25" />
+        </perch:if>
+
     </p>
     <a class="card__action" href='<perch:blog id="postURL" />'>Verder lezen</a>
 </article>
