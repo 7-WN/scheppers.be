@@ -1,10 +1,11 @@
 <article class="col col--text col--1-1">
+    <perch:blog id="postURL" type="hidden" suppress="true" />
     <h2 class="article_title">
         <a href="<perch:blog id="postURL" type="hidden" />" rel="bookmark" class="p-name">
         <perch:blog id="postTitle" label="Title" type="smarttext" required="true" />
     </a>
     </h2>
-    <perch:blog id="slug" type="slug" for="heading" editable="true" label="URL name (no spaces!)" suppress="true" help="If empty, this is created automatically. No two articles can have the same date and URL name!" />
+
     <perch:blog id="postDescHTML" type="textarea" label="Article text" editor="redactor" html="true" size="xxl autowidth" editor-config="blog" image-width="1200" help="Uploaded images should be at leazst 1200 pixels wide." />
     <perch:blog id="excerpt" type="textarea" label="Excerpt (text only)" help="If this is empty, the first 25 words of the article text will be used." size="s" />
     <perch:blog id="bgImage" type="image" label="Background image" width="1600" suppress="true" help="This image will be used as background image on the article page. If this is empty, the default will be used (jaarthema). The system will resize this automatically. Upload should preferably be 1600 pixels wide or more."
