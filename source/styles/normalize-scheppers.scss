@@ -20,3 +20,8 @@ $indent-amount: 2.618rem;
 $normalize-vertical-rhythm: true;
 @import "../../bower_components/normalize-scss/sass/_normalize";
 @include normalize();
+
+img
+{
+    max-width: 100%;
+}
