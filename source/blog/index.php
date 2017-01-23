@@ -23,7 +23,7 @@
                 <li class="nav-bar__item"><a href="../studierichtingen.html" class="nav-bar__item-link">Studierichtingen</a></li>
                 <li class="nav-bar__item"><a href="../praktisch.html" class="nav-bar__item-link">Praktisch</a></li>
                 <li class="nav-bar__item"><a href="index.php" class="nav-bar__item-link nav-bar__item-link--active">Nieuws/Blog</a></li>
-                <li class="nav-bar__item"><a href="contact.html" class="nav-bar__item-link">Contact</a></li>
+                <li class="nav-bar__item"><a href="../contact.php" class="nav-bar__item-link">Contact</a></li>
                 <li class="nav-bar__item"><a href="https://www.facebook.com/scheppersinstituut/" class="nav-bar__item-link" target="_blank">Facebook</a></li>
                 <li class="nav-bar__item nav-bar__item--icon"><a href="http://scheppersinstituutbe.sharepoint.com/sites/Leerlingen" class="nav-bar__item-link"><i class="mdi mdi-lock"></i></a></li>
             </ul>

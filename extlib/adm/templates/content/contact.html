@@ -1,0 +1,40 @@
+<perch:form id="contact" method="post" app="perch_forms">
+
+    <perch:content id="intro" type="textarea" label="Intro" markdown="true" editor="markitup" size="m" />
+
+    <table>
+        <tr>
+            <td class="t-col--1-3 align--right">
+                <perch:label for="name">Naam</perch:label>
+            </td>
+            <td class="t-col--2 3">
+                <perch:input type="text" id="name" required="true" label="Naam" />
+                <perch:error for="name" type="required">Vul een naam in!</perch:error>
+            </td>
+        </tr>
+        <tr>
+            <td class="t-col--1-3 align--right">
+                <perch:label for="email">E-mail</perch:label>
+            </td>
+            <td class="t-col--2-3">
+                <perch:input type="email" id="email" required="true" label="E-mail" />
+                <perch:error for="email" type="required">Vul een e-mailadres in!</perch:error>
+                <perch:error for="email" type="format">Controleer het e-mailadres!</perch:error>
+            </td>
+        </tr>
+        <tr>
+            <td class="t-col--1-3 align--right">
+                <perch:label for="message">Bericht</perch:label>
+            </td>
+            <td class="t-col--2-3">
+                <perch:input type="textarea" id="message" required="true" label="Bericht" rows="10" cols="60" />
+                <perch:error for="message" type="required">Voeg een bericht toe!</perch:error>
+            </td>
+        </tr>
+    </table>
+    <perch:input type="submit" id="submit" value="Verstuur" class="card__action" />
+
+    <perch:success>
+        <perch:content id="success" type="textarea" label="Thank you message" markdown="true" editor="markitup" />
+    </perch:success>
+</perch:form>
