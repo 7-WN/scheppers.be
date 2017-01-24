@@ -28,8 +28,8 @@
             <perch:categories id="categories" set="blog" label="Categories" display-as="checkboxes" help="An article can have multiple categories. Articles with the category 'Belangrijk' will be shown at the top of the Blog front page. Articles with the category 'Fotoalbum' will be treated as albums of foto's. Add fotos witrh the '+ Album Image' button above."
             />
             <a href='archive.php?cat=<perch:category id="catSlug" type="slug" />' class="p-category">
-                <perch:category id="catTitle" type="text" />
-            </a>
+                <perch:category id="catTitle" type="text" />,
+            </a>&nbsp;
             </perch:categories>
             <perch:blog id="pinned-order" type="text" label="'Belangrijk' front page order" help="A number. Articles with category 'Belangrijk' will be sorted by this number in ascending order." suppress="true" />
         </p>
