@@ -11,9 +11,7 @@
     <perch:blog id="bgImage" type="image" label="Background image" width="1600" suppress="true" help="This image will be used as background image on the article page. If this is empty, the default will be used (jaarthema). The system will resize this automatically. Upload should preferably be 1600 pixels wide or more."
     />
     <perch:blog id="thumbImage" type="image" label="Thumbnail image" width="240" suppress="true" help="This image is used in the excerpt/listing view of the article. The system will resize this automatically. Upload should be at least 240 pixels wide." />
-    <perch:blog id="is-album" type="checkbox" value="true" label="Is album?" suppressed="true" help="Check this if the article is an album instead of a 'normal' blog post. To add images to the album, click '+ Album image' below." divider-before="Photo Album"
-    />
-    <perch:blocks>
+    <perch:blocks divider-before="Photo Album">
         <perch:block type="album__image" label="Album image">
             <figure class="album__image">
                 <img src='<perch:blog id="album_image" type="image" width="1200" label="Image" help="The system will resize the images automatically. Uploads should be 1200 or more pixels wide." />' alt='<perch:blog id="alt" type="text" label="Title" help="This is the text for the alt attribute in the code (what you see when you hover over the image or if it cannot load)."/>'>
@@ -27,13 +25,13 @@
         <p>
             Gepubliceerd op: <time class="dt-published" datetime='<perch:blog id="postDateTime" type="date" label="Date" time="true" format="Y-m-d H:i:s" divider-before="Publishing" />'> <perch:blog id="postDateTime" type="date" time="true" format="%d %B %Y"
             /></time><br> In categorieën:
-            <perch:categories id="categories" set="blog" label="Categories" display-as="checkboxes" />
+            <perch:categories id="categories" set="blog" label="Categories" display-as="checkboxes" help="An article can have multiple categories. Articles with the category 'Belangrijk' will be shown at the top of the Blog front page. Articles with the category 'Fotoalbum' will be treated as albums of foto's. Add fotos witrh the '+ Album Image' button above."
+            />
             <a href='archive.php?cat=<perch:category id="catSlug" type="slug" />' class="p-category">
                 <perch:category id="catTitle" type="text" />
             </a>
             </perch:categories>
-            <perch:blog id="pinned" type="checkbox" label="Pinned" value="yes" suppress="true" />
-            <perch:blog id="pinned-order" type="text" label="Pinned order" help="A number. Pinned articles will be sorted by number in ascending order." suppress="true" />
+            <perch:blog id="pinned-order" type="text" label="'Belangrijk' front page order" help="A number. Articles with category 'Belangrijk' will be sorted by this number in ascending order." suppress="true" />
         </p>
 
     </div>

@@ -51,9 +51,7 @@
                     <h3>Belangrijke berichten</h3>
                     <?php
                         perch_layout('blog-listing', array(
-                            'filter' => 'pinned',
-                            'match' => 'eq',
-                            'value' => 'yes',
+                            'category' => 'Belangrijk',
                             'sort' => 'pinned-order',
                             'sort-order' => 'ASC',
                         ));
@@ -64,9 +62,7 @@
                     <h3>Alle berichten</h3>
                     <?php
                         perch_layout('blog-listing', array(
-                            'filter' => 'pinned',
-                            'match' => 'neq',
-                            'value' => 'yes',
+                            'category' => '!Belangrijk',
                             'sort' => 'postDateTime',
                             'sort-order' => 'DESC',
                         ));
