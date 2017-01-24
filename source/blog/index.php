@@ -30,12 +30,12 @@
         </nav>
         <nav class="nav-bar nav-bar--secondary" id="id-nav-bar--blog">
             <ul>
-                <li class="nav-bar__item"><a href="#id-eerste-graad" class="nav-bar__item-link nav-bar__item-link--secondary">Alles</a></li>
-                <li class="nav-bar__item"><a href="#id-eerste-graad" class="nav-bar__item-link nav-bar__item-link--secondary">Aankondigingen</a></li>
-                <li class="nav-bar__item"><a href="#id-eerste-graad" class="nav-bar__item-link nav-bar__item-link--secondary">1ste graad</a></li>
-                <li class="nav-bar__item"><a href="#id-tweede-graad" class="nav-bar__item-link nav-bar__item-link--secondary">2de graad</a></li>
-                <li class="nav-bar__item"><a href="#id-derde-graad" class="nav-bar__item-link nav-bar__item-link--secondary">3de graad</a></li>
-                <li class="nav-bar__item"><a href="#id-se-n-se" class="nav-bar__item-link nav-bar__item-link--secondary">Se-n-Se</a></li>
+                <li class="nav-bar__item"><a href="archive.php?cat=aankondigingen" class="nav-bar__item-link nav-bar__item-link--secondary">Aankondigingen</a></li>
+                <li class="nav-bar__item"><a href="archive.php?cat=eerste-graad" class="nav-bar__item-link nav-bar__item-link--secondary">1ste graad</a></li>
+                <li class="nav-bar__item"><a href="archive.php?cat=tweede-graad" class="nav-bar__item-link nav-bar__item-link--secondary">2de graad</a></li>
+                <li class="nav-bar__item"><a href="archive.php?cat=derde-graad" class="nav-bar__item-link nav-bar__item-link--secondary">3de graad</a></li>
+                <li class="nav-bar__item"><a href="archive.php?cat=se-n-se" class="nav-bar__item-link nav-bar__item-link--secondary">Se-n-Se</a></li>
+                <li class="nav-bar__item"><a href="archive.php?cat=fotoalbums" class="nav-bar__item-link nav-bar__item-link--secondary">Foto’s</a></li>
             </ul>
         </nav>
     </header>
@@ -51,7 +51,7 @@
                     <h3>Belangrijke berichten</h3>
                     <?php
                         perch_layout('blog-listing', array(
-                            'category' => 'Belangrijk',
+                            'category' => 'belangrijk',
                             'sort' => 'pinned-order',
                             'sort-order' => 'ASC',
                         ));
@@ -62,7 +62,7 @@
                     <h3>Alle berichten</h3>
                     <?php
                         perch_layout('blog-listing', array(
-                            'category' => '!Belangrijk',
+                            'category' => '!belangrijk',
                             'sort' => 'postDateTime',
                             'sort-order' => 'DESC',
                         ));
