@@ -123,9 +123,18 @@ label
 }
 .align--left
 {
+    padding-left: 1em;
+
     text-align: left;
 }
 .align--right
 {
+    padding-right: 1em;
+
     text-align: right;
+}
+th,
+td
+{
+    vertical-align: top;
 }
