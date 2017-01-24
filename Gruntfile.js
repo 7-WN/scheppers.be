@@ -8,7 +8,7 @@ module.exports = function(grunt) {
             build: {
                 expand: true,
                 cwd: "source",
-                src: ["**/*.html", "**/*.php", "scripts/**/*.js", "images/**/*", "documents/**/*"],
+                src: ["**/*.html", "**/*.php", "scripts/**/*.js", "images/**/*", "documents/**/*", "**/.htaccess"],
                 dest: "build/"
             },
             bower: {
