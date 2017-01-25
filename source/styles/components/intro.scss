@@ -69,7 +69,7 @@
 }
 .intro__logo-wrapper
 {
-    width: 5.383561645em; // For less gifted browsers
+    width: 8.710602742em; // For less gifted browsers
     width: calc(calc(#{$line-height--em} * 4.383561645) + #{$line-height--em}); // Width of the logo + padding
     height: calc(#{$line-height--em} * 6);
     margin: calc(#{$line-height} * 5) auto $line-height--em auto; // top 5 absolute line-heights; bottom 1 relative line-height
