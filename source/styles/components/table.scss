@@ -1,3 +1,9 @@
+table thead:not(:first-child) tr th
+{
+    //line-height: calc(2*#{$line-height--em});
+    //height: calc(2*#{$line-height--em});
+    padding-top: $line-height--em;
+}
 .t-col--1-1
 {
     width: 100%;
