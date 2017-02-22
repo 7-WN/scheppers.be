@@ -57,7 +57,7 @@
                         <i class="mdi mdi-phone"></i> 03 217 42 42</address>
                     </article>
                     <article class="col col--text col--1-2">
-                        <h4>Kaart</h4>
+                        <br><br>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.6606215820398!2d4.433845515671999!3d51.22532727958973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f7a6b9da5045%3A0x73a261df0ad9b8c9!2sVan+Helmontstraat+29%2C+2060+Antwerpen!5e0!3m2!1snl!2sbe!4v1484301938205"
                             width="480" height="320" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </article>
@@ -72,7 +72,7 @@
                         <i class="mdi mdi-phone"></i> 03 360 31 45</address>
                     </article>
                     <article class="col col--text col--1-2">
-                        <h4>Kaart</h4>
+                        <br><br>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.7586822817007!2d4.459492915671912!3d51.223520979589516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f783c94d364d%3A0x35ab5b5208da9575!2sPieter+de+Ridderstraat+5%2C+2100+Antwerpen!5e0!3m2!1snl!2sbe!4v1484302269245"
                             width="480" height="320" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </article>
@@ -88,7 +88,7 @@
                         <i class="mdi mdi-phone"></i> 03 326 33 59</address>
                     </article>
                     <article class="col col--text col--1-2">
-                        <h4>Kaart</h4>
+                        <br><br>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.5578514340496!2d4.452183215672048!3d51.227220279590085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f79b1456dc17%3A0x2b752cb18e36b01b!2sLakborslei+263%2C+2100+Antwerpen!5e0!3m2!1snl!2sbe!4v1484302516212"
                             width="480" height="320" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </article>
