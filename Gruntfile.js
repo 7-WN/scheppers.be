@@ -43,8 +43,22 @@ module.exports = function(grunt) {
                 options: {
                     livereload: true
                 },
-                files: ["source/**/*.html", "source/**/*.php", "source/scripts/**/*.js", "source/images/**/*", "extlib/**/*"],
-                tasks: ["copy:build", "copy:extlib"]
+                files: ["source/**/*.html", "source/**/*.php", "source/scripts/**/*.js", "source/images/**/*"],
+                tasks: ["copy:build"]
+            },
+            copy_bower: {
+                options: {
+                    livereload: true
+                },
+                files: ["bower_components/**/*"],
+                tasks: ["copy:bower"]
+            },
+            copy_extlib: {
+                options: {
+                    livereload: true
+                },
+                files: ["extlib/**/*"],
+                tasks: ["copy:extlib"]
             },
             sass: {
                 options: {
