@@ -98,7 +98,7 @@
 .intro__content h2
 {
     // local reset of font-sizes for what follows, so that it is safe to work with ems
-    font-size: 1rem;
+    font-size:$font-size-s;
     line-height: $line-height;
 
     margin: 0;
