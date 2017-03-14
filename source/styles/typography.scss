@@ -37,27 +37,27 @@ h6
 }
 h1
 {
-    font-size: 3.998em;
+    font-size: $font-size-xxl;
 }
 h2
 {
-    font-size: 2.827em;
+    font-size: $font-size-xl;
 }
 h3
 {
-    font-size: 1.618em;
+    font-size: $font-size-l;
 }
 h4
 {
-    font-size: 1.414em;
+    font-size: $font-size-m;
 }
 h5
 {
-    font-size: 1em;
+    font-size: $font-size-s;
 }
 h6
 {
-    font-size: .707em;
+    font-size: $font-size-xs;
 }
 p,
 ul

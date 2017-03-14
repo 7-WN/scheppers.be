@@ -13,7 +13,7 @@
 }
 .card__title
 {
-    font-size: 1rem;
+    font-size: $font-size-s;
     font-weight: 600;
     line-height: 1.62rem;
 
@@ -31,7 +31,7 @@
 .card__action:hover,
 a.card__action
 {
-    font-size: 1rem;
+    font-size: $font-size-s;
     line-height: 1.62rem;
 
     position: absolute;
