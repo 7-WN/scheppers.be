@@ -1,0 +1,65 @@
+@media screen and (min-width:1200px)
+{
+    #nav-button,
+    #site-wrapper,
+    #site-canvas,
+    #site-menu
+    {
+        display: none;
+    }
+}
+@media screen and (max-width:1200px)
+{
+nav, #id-nav-bar--school
+    {
+        display: none;
+    }
+}
+
+#nav-button
+{
+    color: #ffed42;
+    border-color: #2a6bb0;
+    background-color: #2a6bb0;
+}
+#site-wrapper
+{
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 800px; /* Temp: Simulates a tall page. */
+}
+#site-canvas
+{
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+    /*
+    padding: 5% 0; /* Temp: Just spacing.
+    */
+
+    -webkit-transition: .3s ease all;
+            transition: .3s ease all;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+}
+#site-menu
+{
+    position: absolute;
+    top: 0;
+    left: -300px;
+
+    width: 300px;
+    height: 100%;
+    padding: 15px;
+
+    background-color: #2a6bb0;
+}
+#site-wrapper.show-nav #site-canvas
+{
+    -webkit-transform: translateX(300px);
+            transform: translateX(300px);
+}
