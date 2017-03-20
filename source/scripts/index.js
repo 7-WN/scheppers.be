@@ -121,22 +121,27 @@ $(document).ready(function() {
     });
 });
 
-//Responsive nav Tibo
-$(function() {
-    $('.toggle-nav').click(function() {
-        // Calling a function in case you want to expand upon this.
-        toggleNav();
-    });
+// Toggle nav-panel
+$("#nav-panel-toggle").click(function() {
+    $("#id-nav-panel").toggleClass("nav-panel--visible");
 });
 
-function toggleNav() {
-    if ($('#site-wrapper').hasClass('show-nav')) {
-        // Do things on Nav Close
-        $('#site-wrapper').removeClass('show-nav');
-    } else {
-        // Do things on Nav Open
-        $('#site-wrapper').addClass('show-nav');
-    }
-
-    //$('#site-wrapper').toggleClass('show-nav');
-}
+// //Responsive nav Tibo
+// $(function() {
+//     $('.toggle-nav').click(function() {
+//         // Calling a function in case you want to expand upon this.
+//         toggleNav();
+//     });
+// });
+//
+// function toggleNav() {
+//     if ($('#site-wrapper').hasClass('show-nav')) {
+//         // Do things on Nav Close
+//         $('#site-wrapper').removeClass('show-nav');
+//     } else {
+//         // Do things on Nav Open
+//         $('#site-wrapper').addClass('show-nav');
+//     }
+//
+//     //$('#site-wrapper').toggleClass('show-nav');
+// }

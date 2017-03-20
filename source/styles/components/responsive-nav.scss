@@ -1,7 +1,28 @@
+.nav-panel
+{
+    position: absolute;
+    top: 0;
+    left: -66%;
+
+    width: 66%;
+    height: 100vh;
+
+    transition: .3s ease left;
+
+    background-color: $scheppers-blauw--trans;
+}
+.nav-panel--visible
+{
+    left: 0;
+}
+
+
+
 @media screen and (min-width:1200px)
 {
     .nav-bar__item--lg-hide,
-    .site-header__logo
+    .site-header__logo,
+    .nav-panel
     {
         display: none;
     }
@@ -19,6 +40,8 @@
         display: inline-block;
     }
 }
+
+
 
 // #nav-button
 // {
