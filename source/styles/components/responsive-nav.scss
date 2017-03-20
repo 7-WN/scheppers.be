@@ -1,21 +1,38 @@
 .nav-panel
 {
-    position: absolute;
-    top: 0;
-    left: -66%;
+    position: fixed;
+    top: calc(#{$line-height} * 2);
+    left: -40%;
 
-    width: 66%;
+    width: 40%;
     height: 100vh;
 
     transition: .3s ease left;
-
     background-color: $scheppers-blauw--trans;
 }
 .nav-panel--visible
 {
     left: 0;
 }
+.nav-panel__item
+{
+    list-style-type: none;
+}
 
+.nav-panel__item .nav-panel__item-link
+{
+    color: $text-color-white;
+    text-decoration: none
+}
+.nav-panel__item .nav-panel__item-link:hover
+{
+    color:$scheppers-blauw-wit;
+}
+.nav-panel__item .nav-panel__item-link:active
+{
+    color:$scheppers-blauw;
+    background-color: $accent-color--soft
+}
 
 
 @media screen and (min-width:1200px)
