@@ -1,3 +1,8 @@
+var schepLarge;
+if ($(window).width() > 1200) {
+    schepLarge = true;
+}
+
 // Parsing url params see: http://www.jquerybyexample.net/2012/06/get-url-parameters-using-jquery.html
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
@@ -84,12 +89,17 @@ $(document).ready(function() {
         $("#" + $(el).attr("data-btn")).addClass("nav-bar__item-link--active");
     });
 
+
     // show the site-logo in the nav-bar when it dissapears from view and vice versa
     inView("#id-intro__logo").on("enter", function(el) {
-        $("#id-site-header__logo").fadeOut();
+        if (schepLarge) {
+            $("#id-site-header__logo").fadeOut();
+        }
     });
     inView("#id-intro__logo").on("exit", function(el) {
-        $("#id-site-header__logo").fadeIn();
+        if (schepLarge) {
+            $("#id-site-header__logo").fadeIn();
+        }
     });
 
     // show the secondary nav-bar when we leave the intro section
@@ -97,6 +107,7 @@ $(document).ready(function() {
         $("#id-nav-bar--school").fadeIn("slow");
         $("#id-nav-bar__item--school").addClass("nav-bar__item-link--active");
     });
+
 
     // scroll to the correct section when a nav-bar button is clicked
     $(".nav-bar__item-link--secondary").on("click", function(el) {

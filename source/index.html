@@ -16,7 +16,7 @@
 
 <body class="landing-page">
     <header class="site-header" id="id-site-header">
-        <div class="site-header__logo hidden" id="id-site-header__logo">
+        <div class="site-header__logo" id="id-site-header__logo">
             <a href="http://www.scheppers.be"><img class="site-header__logo__image" src="images/schepperslogo-small.png" alt="Logo van het Scheppersinstituut Deurne en Antwerpen">
                 <span class="site-header__logo__text">Scheppersinstituut</span></a>
         </div>
@@ -28,7 +28,8 @@
                 <li class="nav-bar__item"><a href="blog" class="nav-bar__item-link">Nieuws/Blog</a></li>
                 <li class="nav-bar__item"><a href="contact.php" class="nav-bar__item-link">Contact</a></li>
                 <li class="nav-bar__item"><a href="https://www.facebook.com/scheppersinstituut/" class="nav-bar__item-link" target="_blank">Facebook</a></li>
-                <li class="nav-bar__item nav-bar__item--icon"><a href="http://scheppersinstituutbe.sharepoint.com/sites/Leerlingen" class="nav-bar__item-link"><i class="mdi mdi-lock"></i></a></li>
+                <li class="nav-bar__item nav-bar__item--icon nav-bar__item--sm-show"><a href="http://scheppersinstituutbe.sharepoint.com/sites/Leerlingen" class="nav-bar__item-link"><i class="mdi mdi-lock"></i></a></li>
+                <li class="nav-bar__item nav-bar__item--icon nav-bar__item--lg-hide"><a href="#" class="nav-bar__item-link"><i class="mdi mdi-menu"></i></a></li>
             </ul>
         </nav>
         <nav class="nav-bar nav-bar--secondary" id="id-nav-bar--school">
@@ -42,6 +43,10 @@
             </ul>
         </nav>
 
+
+    </header>
+
+    <aside class="hidden">
         <!-- Responsive nav Tibo-->
         <nav class="nav-bar nav-bar--responsive">
             <div id="site-wrapper">
@@ -99,7 +104,7 @@
 
             </div>
         </nav>
-    </header>
+    </aside>
 
     <main>
 
