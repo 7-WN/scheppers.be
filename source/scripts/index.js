@@ -104,8 +104,10 @@ $(document).ready(function() {
 
     // show the secondary nav-bar when we leave the intro section
     inView(".intro").once("exit", function(el) {
-        $("#id-nav-bar--school").fadeIn("slow");
-        $("#id-nav-bar__item--school").addClass("nav-bar__item-link--active");
+        if (schepLarge) {
+            $("#id-nav-bar--school").fadeIn("slow");
+            $("#id-nav-bar__item--school").addClass("nav-bar__item-link--active");
+        }
     });
 
 
