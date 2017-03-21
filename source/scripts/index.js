@@ -126,6 +126,26 @@ $("#nav-panel-toggle").click(function() {
     $("#id-nav-panel").toggleClass("nav-panel--visible");
 });
 
+//close nav-panel on click
+$(".nav-panel__item-link").click(function() {
+    $("#id-nav-panel").toggleClass("nav-panel--hidden")
+});
+
+// scroll to the correct section when a nav-panel button is clicked
+$(".nav-panel__item-link").on("click", function(el) {
+    var toHere = $(this).attr("href");
+    var top = $(toHere).offset().top - 90;
+    $("html, body").animate({
+        scrollTop: top
+    }, 1200);
+});
+
+// When we scroll to the right page sections, make the corresponding nav-panel buttons active
+inView(".in-view").on("enter", function(el) {
+    $(".nav-panel__item-link").removeClass("nav-panel__item-link:active");
+    $("#" + $(el).attr("data-btn")).addClass("nav-panel__item-link:active");
+});
+
 // //Responsive nav Tibo
 // $(function() {
 //     $('.toggle-nav').click(function() {
