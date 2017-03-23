@@ -1,6 +1,7 @@
 .nav-panel
 {
     position: fixed;
+    z-index: 500;
     top: calc(#{$line-height} * 2);
     left: -40%;
 
@@ -8,6 +9,7 @@
     height: 100vh;
 
     transition: .3s ease left;
+
     background-color: $scheppers-blauw--trans;
 }
 .nav-panel--visible
@@ -25,17 +27,19 @@
 
 .nav-panel__item .nav-panel__item-link
 {
+    text-decoration: none;
+
     color: $text-color-white;
-    text-decoration: none
 }
 .nav-panel__item .nav-panel__item-link:hover
 {
-    color:$scheppers-blauw-wit;
+    color: $scheppers-blauw-wit;
 }
-.nav-panel__item .nav-panel__item-link:active
+.nav-panel__item .nav-panel__item-link:active,
+.nav-panel__item .nav-panel__item-link--active
 {
-    color:$scheppers-blauw;
-    background-color: $accent-color--soft
+    color: $scheppers-blauw;
+    background-color: $accent-color--soft;
 }
 
 
