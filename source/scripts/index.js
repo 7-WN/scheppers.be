@@ -134,7 +134,7 @@ $(".nav-panel__item-link").click(function() {
 // scroll to the correct section when a nav-panel button is clicked
 $(".nav-panel__item-link").on("click", function(el) {
     var toHere = $(this).attr("href");
-    var top = $(toHere).offset().top - 90;
+    var top = $(toHere).offset().top - 49;
     $("html, body").animate({
         scrollTop: top
     }, 1200);
