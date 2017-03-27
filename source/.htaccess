@@ -4,3 +4,10 @@ Options FollowSymLinks
     RewriteEngine on
     RewriteRule ^blog/([a-zA-Z0-9-/]+)$ /blog/post.php?s=$1 [L]
 </IfModule>
+
+<IfModule mod_headers.c>
+    Header unset ETag FileETag None
+    Header unset Last-Modified
+    Header set Cache-Control "max-age=600"
+   Header set Cache-Control "public, no-transform"
+</IfModule>
