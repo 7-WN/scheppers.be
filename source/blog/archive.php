@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../lib/mdi/css/materialdesignicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/main.css">
     <title>Scheppersinstituut Deurne en Antwerpen</title>
 </head>
@@ -113,6 +114,8 @@
 
     <script src="../lib/jquery/dist/jquery.min.js "></script>
     <script src="../scripts/larsmodals.js "></script>
+    <script src="../lib/in-view/dist/in-view.min.js"></script>
+    <script src="../scripts/index.js"></script
 </body>
 
 </html>
