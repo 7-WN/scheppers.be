@@ -28,7 +28,8 @@
                 <li class="nav-bar__item"><a href="blog" class="nav-bar__item-link">Nieuws/Blog</a></li>
                 <li class="nav-bar__item"><a href="contact.php" class="nav-bar__item-link">Contact</a></li>
                 <li class="nav-bar__item"><a href="https://www.facebook.com/scheppersinstituut/" class="nav-bar__item-link" target="_blank">Facebook</a></li>
-                <li class="nav-bar__item nav-bar__item--icon"><a href="http://scheppersinstituutbe.sharepoint.com/sites/Leerlingen" class="nav-bar__item-link"><i class="mdi mdi-lock"></i></a></li>
+                <li class="nav-bar__item nav-bar__item--icon nav-bar__item--sm-show"><a href="http://scheppersinstituutbe.sharepoint.com/sites/Leerlingen" class="nav-bar__item-link"><i class="mdi mdi-lock"></i></a></li>
+                <li class="nav-bar__item nav-bar__item--icon nav-bar__item--lg-hide"><a href="#" class="nav-bar__item-link" id="nav-panel-toggle"><i class="mdi mdi-menu"></i></a></li>
             </ul>
         </nav>
         <nav class="nav-bar nav-bar--secondary" id="id-nav-bar--studierichtingen">
@@ -40,7 +41,24 @@
             </ul>
         </nav>
     </header>
-
+    <aside class="nav-panel" id="id-nav-panel">
+        <nav class="nav-panel__menu">
+            <ul>
+                <li class="nav-panel__item"><a href="index.html?internal=true" class="nav-panel__item-link">Onze school</a></li>
+                <li class="nav-panel__item"><a href="studierichtingen.html" class="nav-panel__item-link">Studierichtingen</a></li>
+                <li class="nav-panel__item nav-panel__item--active"><a href="praktisch.html" class="nav-panel__item-link">Praktisch</a></li>
+                <ul>
+                    <li class="nav-panel__item"><a href="#id-inschrijven" class="nav-panel__item-link" id="pan-btn-inschrijven">Inschrijven</a></li>
+                    <li class="nav-panel__item"><a href="#id-lestijden" class="nav-panel__item-link" id="pan-btn-lestijden">Lestijden</a></li>
+                    <li class="nav-panel__item"><a href="#id-jaarkalender" class="nav-panel__item-link" id="pan-btn-jaarkalender">Jaarkalender</a></li>
+                    <li class="nav-panel__item"><a href="#id-schoolreglement" class="nav-panel__item-link" id="pan-btn-schoolreglement">Schoolreglement</a></li>
+                </ul>
+                <li class="nav-panel__item"><a href="blog" class="nav-panel__item-link">Nieuws/blog</a></li>
+                <li class="nav-panel__item"><a href="contact.php" class="nav-panel__item-link">Contact</a></li>
+                <li class="nav-panel__item"><a href="https://www.facebook.com/scheppersinstituut/" target="_blank" class="nav-panel__item-link">Facebook</a></li>
+            </ul>
+        </nav>
+    </aside>
     <main>
 
         <!-- INSCHRIJVEN -->

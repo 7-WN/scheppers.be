@@ -11,6 +11,13 @@ main
 {
     margin-top: calc(#{$line-height} * 4);
 }
+@media screen and (max-width:1200px)
+{
+    main
+    {
+        margin-top: calc(#{$line-height} * 2);
+    }
+}
 .landing-page main
 {
     margin-top: 0;

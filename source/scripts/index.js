@@ -1,3 +1,8 @@
+var schepLarge;
+if ($(window).width() > 1200) {
+    schepLarge = true;
+}
+
 // Parsing url params see: http://www.jquerybyexample.net/2012/06/get-url-parameters-using-jquery.html
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
@@ -81,22 +86,32 @@ $(document).ready(function() {
     // When we scroll to the right page sections, make the corresponding nav-bar buttons active
     inView(".in-view").on("enter", function(el) {
         $(".nav-bar__item-link--secondary").removeClass("nav-bar__item-link--active");
+        $(".nav-panel__item-link").removeClass("nav-panel__item-link--active");
         $("#" + $(el).attr("data-btn")).addClass("nav-bar__item-link--active");
+        $("#pan-" + $(el).attr("data-btn")).addClass("nav-panel__item-link--active");
     });
+
 
     // show the site-logo in the nav-bar when it dissapears from view and vice versa
     inView("#id-intro__logo").on("enter", function(el) {
-        $("#id-site-header__logo").fadeOut();
+        if (schepLarge) {
+            $("#id-site-header__logo").fadeOut();
+        }
     });
     inView("#id-intro__logo").on("exit", function(el) {
-        $("#id-site-header__logo").fadeIn();
+        if (schepLarge) {
+            $("#id-site-header__logo").fadeIn();
+        }
     });
 
     // show the secondary nav-bar when we leave the intro section
     inView(".intro").once("exit", function(el) {
-        $("#id-nav-bar--school").fadeIn("slow");
-        $("#id-nav-bar__item--school").addClass("nav-bar__item-link--active");
+        if (schepLarge) {
+            $("#id-nav-bar--school").fadeIn("slow");
+            $("#id-nav-bar__item--school").addClass("nav-bar__item-link--active");
+        }
     });
+
 
     // scroll to the correct section when a nav-bar button is clicked
     $(".nav-bar__item-link--secondary").on("click", function(el) {
@@ -107,3 +122,45 @@ $(document).ready(function() {
         }, 1200);
     });
 });
+
+// Toggle nav-panel
+$("#nav-panel-toggle").click(function() {
+    $("#id-nav-panel").toggleClass("nav-panel--visible");
+    return false;
+});
+
+// scroll to the correct section when a nav-panel button is clicked
+$(".nav-panel__item-link").on("click", function(el) {
+    var toHere = $(this).attr("href");
+    var top = $(toHere).offset().top - 49;
+    $("#id-nav-panel").toggleClass("nav-panel--visible");
+    $("html, body").animate({
+        scrollTop: top
+    }, 1200);
+});
+
+// When we scroll to the right page sections, make the corresponding nav-panel buttons active
+inView(".in-view").on("enter", function(el) {
+    $(".nav-panel__item-link").removeClass("nav-panel__item-link:active");
+    $("#" + $(el).attr("data-btn")).addClass("nav-panel__item-link:active");
+});
+
+// //Responsive nav Tibo
+// $(function() {
+//     $('.toggle-nav').click(function() {
+//         // Calling a function in case you want to expand upon this.
+//         toggleNav();
+//     });
+// });
+//
+// function toggleNav() {
+//     if ($('#site-wrapper').hasClass('show-nav')) {
+//         // Do things on Nav Close
+//         $('#site-wrapper').removeClass('show-nav');
+//     } else {
+//         // Do things on Nav Open
+//         $('#site-wrapper').addClass('show-nav');
+//     }
+//
+//     //$('#site-wrapper').toggleClass('show-nav');
+// }

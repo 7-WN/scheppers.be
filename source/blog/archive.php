@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../lib/mdi/css/materialdesignicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/main.css">
     <title>Scheppersinstituut Deurne en Antwerpen</title>
 </head>
@@ -28,7 +29,8 @@
                 <li class="nav-bar__item"><a href="index.php" class="nav-bar__item-link nav-bar__item-link--active">Nieuws/Blog</a></li>
                 <li class="nav-bar__item"><a href="../contact.php" class="nav-bar__item-link">Contact</a></li>
                 <li class="nav-bar__item"><a href="https://www.facebook.com/scheppersinstituut/" class="nav-bar__item-link" target="_blank">Facebook</a></li>
-                <li class="nav-bar__item nav-bar__item--icon"><a href="http://scheppersinstituutbe.sharepoint.com/sites/Leerlingen" class="nav-bar__item-link"><i class="mdi mdi-lock"></i></a></li>
+                <li class="nav-bar__item nav-bar__item--icon nav-bar__item--sm-show"><a href="http://scheppersinstituutbe.sharepoint.com/sites/Leerlingen" class="nav-bar__item-link"><i class="mdi mdi-lock"></i></a></li>
+                <li class="nav-bar__item nav-bar__item--icon nav-bar__item--lg-hide"><a href="#" class="nav-bar__item-link" id="nav-panel-toggle"><i class="mdi mdi-menu"></i></a></li>
             </ul>
         </nav>
         <nav class="nav-bar nav-bar--secondary" id="id-nav-bar--blog">
@@ -42,6 +44,27 @@
             </ul>
         </nav>
     </header>
+
+    <aside class="nav-panel" id="id-nav-panel">
+        <nav class="nav-panel__menu">
+            <ul>
+                <li class="nav-panel__item"><a href="index.html?internal=true" class="nav-panel__item-link">Onze school</a></li>
+                <li class="nav-panel__item"><a href="studierichtingen.html" class="nav-panel__item-link">Studierichtingen</a></li>
+                <li class="nav-panel__item"><a href="praktisch.html" class="nav-panel__item-link">Praktisch</a></li>
+                <li class="nav-panel__item nav-panel__item--active"><a href="blog" class="nav-panel__item-link">Nieuws/blog</a></li>
+                <ul>
+                    <li class="nav-panel__item"><a href="#" class="nav-panel__item-link">Aankondigingen</a></li>
+                    <li class="nav-panel__item"><a href="#" class="nav-panel__item-link">Eerste graad</a></li>
+                    <li class="nav-panel__item"><a href="#" class="nav-panel__item-link">Tweede graad</a></li>
+                    <li class="nav-panel__item"><a href="#" class="nav-panel__item-link">Derde graad</a></li>
+                    <li class="nav-panel__item"><a href="#" class="nav-panel__item-link">Se-n-Se</a></li>
+                    <li class="nav-panel__item"><a href="#" class="nav-panel__item-link">Foto's</a></li>
+                </ul>
+                <li class="nav-panel__item"><a href="contact.php" class="nav-panel__item-link">Contact</a></li>
+                <li class="nav-panel__item"><a href="https://www.facebook.com/scheppersinstituut/" target="_blank" class="nav-panel__item-link">Facebook</a></li>
+            </ul>
+        </nav>
+    </aside>
 
     <main>
 
@@ -91,6 +114,8 @@
 
     <script src="../lib/jquery/dist/jquery.min.js "></script>
     <script src="../scripts/larsmodals.js "></script>
+    <script src="../lib/in-view/dist/in-view.min.js"></script>
+    <script src="../scripts/index.js"></script
 </body>
 
 </html>

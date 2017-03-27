@@ -16,7 +16,7 @@
 
 <body class="landing-page">
     <header class="site-header" id="id-site-header">
-        <div class="site-header__logo hidden" id="id-site-header__logo">
+        <div class="site-header__logo" id="id-site-header__logo">
             <a href="http://www.scheppers.be"><img class="site-header__logo__image" src="images/schepperslogo-small.png" alt="Logo van het Scheppersinstituut Deurne en Antwerpen">
                 <span class="site-header__logo__text">Scheppersinstituut</span></a>
         </div>
@@ -28,7 +28,8 @@
                 <li class="nav-bar__item"><a href="blog" class="nav-bar__item-link">Nieuws/Blog</a></li>
                 <li class="nav-bar__item"><a href="contact.php" class="nav-bar__item-link">Contact</a></li>
                 <li class="nav-bar__item"><a href="https://www.facebook.com/scheppersinstituut/" class="nav-bar__item-link" target="_blank">Facebook</a></li>
-                <li class="nav-bar__item nav-bar__item--icon"><a href="http://scheppersinstituutbe.sharepoint.com/sites/Leerlingen" class="nav-bar__item-link"><i class="mdi mdi-lock"></i></a></li>
+                <li class="nav-bar__item nav-bar__item--icon nav-bar__item--sm-show"><a href="http://scheppersinstituutbe.sharepoint.com/sites/Leerlingen" class="nav-bar__item-link"><i class="mdi mdi-lock"></i></a></li>
+                <li class="nav-bar__item nav-bar__item--icon nav-bar__item--lg-hide"><a href="#" class="nav-bar__item-link" id="nav-panel-toggle"><i class="mdi mdi-menu"></i></a></li>
             </ul>
         </nav>
         <nav class="nav-bar nav-bar--secondary" id="id-nav-bar--school">
@@ -41,7 +42,30 @@
                 <li class="nav-bar__item"><a href="#id-humane" class="nav-bar__item-link nav-bar__item-link--secondary" id="btn-humane" title="Humane Wetenschappen volgen aan het Scheppersinstituut Deurne en Antwerpen">Humane</a></li>
             </ul>
         </nav>
+
+
     </header>
+
+    <aside class="nav-panel" id="id-nav-panel">
+        <nav class="nav-panel__menu">
+            <ul>
+                <li class="nav-panel__item nav-panel__item--active"><a href="index.html?internal=true" class="nav-panel__item-link">Onze school</a></li>
+                <ul>
+                    <li class="nav-panel__item"><a href="#id-in-het-kort" id="pan-btn-in-het-kort" class="nav-panel__item-link" title="Het Scheppersinstituut Deurne en Antwerpen in het kort">In het kort</a></li>
+                    <li class="nav-panel__item"><a href="#id-visie" id="pan-btn-visie" class="nav-panel__item-link" title="De visie van het Scheppersinstituut Deurne en Antwerpen">Visie</a></li>
+                    <li class="nav-panel__item"><a href="#id-economie-handel" id="pan-btn-economie-handel" class="nav-panel__item-link" title="Handel/Economie/Talen volgen aan het Scheppersinstituut Deurne en Antwerpen">Economie ASO/TSO/BSO</a></li>
+                    <li class="nav-panel__item"><a href="#id-informatica" id="pan-btn-informatica" class="nav-panel__item-link" title="Informatica volgen aan het Scheppersinstituut Deurne en Antwerpen">Informatica</a></li>
+                    <li class="nav-panel__item"><a href="#id-mode-creatie" id="pan-btn-mode-creatie" class="nav-panel__item-link" title="Mode/Creatie volgen aan het Scheppersinstituut Deurne en Antwerpen">Mode/Creatie</a></li>
+                    <li class="nav-panel__item"><a href="#id-humane" id="pan-btn-humane" class="nav-panel__item-link" title="Humane Wetenschappen volgen aan het Scheppersinstituut Deurne en Antwerpen">Humane</a></li>
+                </ul>
+                <li class="nav-panel__item"><a href="studierichtingen.html" class="nav-panel__item-link">Studierichtingen</a></li>
+                <li class="nav-panel__item"><a href="praktisch.html" class="nav-panel__item-link">Praktisch</a></li>
+                <li class="nav-panel__item"><a href="blog" class="nav-panel__item-link">Nieuws/blog</a></li>
+                <li class="nav-panel__item"><a href="contact.php" class="nav-panel__item-link">Contact</a></li>
+                <li class="nav-panel__item"><a href="https://www.facebook.com/scheppersinstituut/" target="_blank" class="nav-panel__item-link">Facebook</a></li>
+            </ul>
+        </nav>
+    </aside>
 
     <main>
 
