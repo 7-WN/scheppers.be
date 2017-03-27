@@ -1,5 +1,7 @@
 .nav-panel
 {
+    font-weight: 300;
+
     position: fixed;
     z-index: 500;
     top: calc(#{$line-height} * 2);
@@ -25,25 +27,45 @@
 {
     list-style-type: none;
 }
-.nav-panel__item .nav-panel__item-link
+.nav-panel__item--active .nav-panel__item-link
 {
-    color: $text-color-white;
-    text-decoration: none;
-}
-
- .nav-panel__item:hover, .nav-panel__item-link:hover
-{
-    text-decoration: none;
-    color: $scheppers-blauw;
-    background-color: $accent-color--soft;
-}
-
-.nav-panel__item .nav-panel__item-link--active
-{
-    color: $scheppers-blauw;
-    background-color: $accent-color--soft;
+    font-size: $font-size-m;
     font-weight: bold;
-    padding: 2px;
+
+    color: $accent-color;
+}
+.nav-panel__item-link
+{
+    line-height: 200%;
+
+    padding: 2px 6px;
+
+    text-decoration: none;
+
+    color: $text-color-white;
+}
+
+.nav-panel__item:hover
+{
+    text-decoration: none;
+
+    color: $scheppers-blauw;
+    background-color: $accent-color--soft;
+}
+.nav-panel__item:hover .nav-panel__item-link
+{
+    text-decoration: none;
+
+    color: $scheppers-blauw;
+}
+
+
+.nav-panel__item-link--active
+{
+    font-weight: bold;
+
+    color: $scheppers-blauw;
+    background-color: $accent-color--soft;
 }
 
 
