@@ -42,6 +42,27 @@
         </nav>
     </header>
 
+    <aside class="nav-panel" id="id-nav-panel">
+        <nav class="nav-panel__menu">
+            <ul>
+                <li class="nav-panel__item"><a href="index.html?internal=true" class="nav-panel__item-link">Onze school</a></li>
+                <li class="nav-panel__item"><a href="studierichtingen.html" class="nav-panel__item-link">Studierichtingen</a></li>
+                <li class="nav-panel__item"><a href="praktisch.html" class="nav-panel__item-link">Praktisch</a></li>
+                <li class="nav-panel__item nav-panel__item--active"><a href="blog" class="nav-panel__item-link">Nieuws/blog</a></li>
+                <ul>
+                    <li class="nav-panel__item"><a href="#" class="nav-panel__item-link">Aankondigingen</a></li>
+                    <li class="nav-panel__item"><a href="#" class="nav-panel__item-link">Eerste graad</a></li>
+                    <li class="nav-panel__item"><a href="#" class="nav-panel__item-link">Tweede graad</a></li>
+                    <li class="nav-panel__item"><a href="#" class="nav-panel__item-link">Derde graad</a></li>
+                    <li class="nav-panel__item"><a href="#" class="nav-panel__item-link">Se-n-Se</a></li>
+                    <li class="nav-panel__item"><a href="#" class="nav-panel__item-link">Foto's</a></li>
+                </ul>
+                <li class="nav-panel__item"><a href="contact.php" class="nav-panel__item-link">Contact</a></li>
+                <li class="nav-panel__item"><a href="https://www.facebook.com/scheppersinstituut/" target="_blank" class="nav-panel__item-link">Facebook</a></li>
+            </ul>
+        </nav>
+    </aside>
+
     <main>
 
         <!-- Artikel-->

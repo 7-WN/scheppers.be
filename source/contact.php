@@ -40,6 +40,23 @@
         </nav>
     </header>
 
+    <aside class="nav-panel" id="id-nav-panel">
+        <nav class="nav-panel__menu">
+            <ul>
+                <li class="nav-panel__item"><a href="index.html?internal=true" class="nav-panel__item-link">Onze school</a></li>
+                <li class="nav-panel__item"><a href="studierichtingen.html" class="nav-panel__item-link">Studierichtingen</a></li>
+                <li class="nav-panel__item"><a href="praktisch.html" class="nav-panel__item-link">Praktisch</a></li>
+                <li class="nav-panel__item"><a href="blog" class="nav-panel__item-link">Nieuws/blog</a></li>
+                <li class="nav-panel__item nav-panel__item--active"><a href="contact.php" class="nav-panel__item-link">Contact</a></li>
+                <ul>
+                    <li class="nav-panel__item"><a href="#id-adres" class="nav-panel__item-link">Adressen</a></li>
+                    <li class="nav-panel__item"><a href="#id-contact" class="nav-panel__item-link">Contact</a></li>
+                </ul>
+                <li class="nav-panel__item"><a href="https://www.facebook.com/scheppersinstituut/" target="_blank" class="nav-panel__item-link">Facebook</a></li>
+            </ul>
+        </nav>
+    </aside>
+
     <main>
 
         <!-- Adresgegevens -->
