@@ -20,26 +20,30 @@
 {
     left: -40%;
 }
+
 .nav-panel__item
 {
     list-style-type: none;
 }
-
 .nav-panel__item .nav-panel__item-link
 {
-    text-decoration: none;
-
     color: $text-color-white;
+    text-decoration: none;
 }
-.nav-panel__item .nav-panel__item-link:hover
+
+ .nav-panel__item:hover, .nav-panel__item-link:hover
 {
-    color: $scheppers-blauw-wit;
+    text-decoration: none;
+    color: $scheppers-blauw;
+    background-color: $accent-color--soft;
 }
-.nav-panel__item .nav-panel__item-link:active,
+
 .nav-panel__item .nav-panel__item-link--active
 {
     color: $scheppers-blauw;
     background-color: $accent-color--soft;
+    font-weight: bold;
+    padding: 2px;
 }
 
 
