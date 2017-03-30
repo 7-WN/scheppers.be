@@ -1,3 +1,15 @@
 <article class="blog-article card card--action-card col col--1-2">
-    <perch:template path="includes/listing__post.html" />
+    <h3>
+        <a href="<perch:blog id="postURL" />"  class="p-name"><perch:blog id="postTitle" /></a>
+    </h3>
+    <img src='<perch:blog id="thumbImage" width="240"/>' alt="" style="max-width: 24rem; float:left; margin-right: 1em">
+    <p>
+        <perch:if exists="excerpt" suppress="true" />
+        <perch:blog id="excerpt" />
+        <perch:else />
+        <perch:blog id="postDescHTML" escape="true" striptags="true" words="25" />
+        </perch:if>
+
+    </p>
+    <a class="card__action" href='<perch:blog id="postURL" />'>Verder lezen</a>
 </article>
