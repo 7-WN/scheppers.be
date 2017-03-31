@@ -11,11 +11,17 @@
     <perch:blog id="bgImage" type="image" label="Background image" width="1600" suppress="true" help="This image will be used as background image on the article page. If this is empty, the default will be used (jaarthema). The system will resize this automatically. Upload should preferably be 1600 pixels wide or more."
     />
     <perch:blog id="thumbImage" type="image" label="Thumbnail image" width="240" suppress="true" help="This image is used in the excerpt/listing view of the article. The system will resize this automatically. Upload should be at least 240 pixels wide." />
-    <div id="gallery" class="gallery">
+    <div class="rebox">
         <perch:blocks divider-before="Photo Album">
             <perch:block type="album__image" label="Album image">
                 <figure class="album__image">
-                    <a href='<perch:blog id="album_image" type="image" width="1200" label="Image" help="The system will resize the images automatically. Uploads should be 1200 or more pixels wide." />' title='<perch:blog id="caption" type="smarttext" label="Caption" help="Descriptive text to show underneath the image." />'><img src='<perch:blog id="album_image" type="image" width="1200" label="Image" help="The system will resize the images automatically. Uploads should be 1200 or more pixels wide." />' alt='<perch:blog id="alt" type="text" label="Title" help="This is the text for the alt attribute in the code (what you see when you hover over the image or if it cannot load)."/>'></a>
+                    <div class="rebox-contents">
+                        <a href="#" class="rebox-close rebox-button">×</a>
+                        <a href="#" class="rebox-prev rebox-button">←</a>
+                        <a href="#" class="rebox-next rebox-button">→</a>
+                        <img class="rebox-content" src='<perch:blog id="album_image" type="image" width="1200" label="Image" help="The system will resize the images automatically. Uploads should be 1200 or more pixels wide." />' alt='<perch:blog id="alt" type="text" label="Title" help="This is the text for the alt attribute in the code (what you see when you hover over the image or if it cannot load)."/>'>
+                    </div>
+
                     <figcaption>
                         <perch:blog id="caption" type="smarttext" label="Caption" help="Descriptive text to show underneath the image." />
                     </figcaption>
