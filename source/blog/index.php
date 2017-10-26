@@ -122,7 +122,16 @@
     <script src="../lib/jquery/dist/jquery.min.js "></script>
     <script src="../scripts/larsmodals.js "></script>
     <script src="../lib/in-view/dist/in-view.min.js"></script>
-    <script src="../scripts/index.js"></script
+    <script src="../scripts/index.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108736060-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-108736060-1');
+    </script>
 </body>
 
 </html>
