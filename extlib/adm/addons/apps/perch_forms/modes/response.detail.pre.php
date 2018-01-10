@@ -1,13 +1,14 @@
 <?php
    
     $Responses = new PerchForms_Responses($API);
+    $Forms = new PerchForms_Forms($API);
 
-    $HTML = $API->get('HTML');
 	
 	$message = false;
 	
 	if (isset($_GET['id']) && $_GET['id']!='') {
-	    $Response = $Responses->find($_GET['id']);
+        $Response = $Responses->find($_GET['id']);
+	    $ResponseForm = $Forms->find($Response->formID());
 	}else{
 	    PerchUtil::redirect($API->app_path());
 	}
@@ -15,7 +16,8 @@
     
     if (isset($_GET['file']) && $_GET['file']!='') {
         $files = $Response->files();
-        $file = $files->$_GET['file'];
+        $gf = $_GET['file'];
+        $file = $files->$gf;
         
         if (file_exists($file->path)) {
             header('Content-Type: '.$file->mime);
@@ -40,6 +42,3 @@
         }
         
     }
-
-
-?>

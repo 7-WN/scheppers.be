@@ -3,11 +3,15 @@
 class PerchResourceBucket
 {
 	protected $name;
+	protected $label;
 	protected $type;
+	protected $role;
 	protected $web_path;
 	protected $file_path;
 
 	protected $error;
+
+	protected $allow_non_uploads = false;
 
 	public function __construct($details)
 	{
@@ -17,6 +21,27 @@ class PerchResourceBucket
 		$this->type      = $details['type'];
 		$this->web_path  = $details['web_path'];
 		$this->file_path = $details['file_path'];
+
+		if (isset($details['label'])) {
+			$this->label = $details['label'];
+		} else {
+			$this->label = ucwords($this->name);
+		}
+
+		if (isset($details['role'])) {
+			$this->role = $details['role'];
+		}
+	}
+
+	public function to_array()
+	{
+		return [
+			'name'      => $this->name,
+			'type'      => $this->type,
+			'web_path'  => $this->web_path,
+			'file_path' => $this->file_path,
+			'remote'    => $this->is_remote(),
+		];
 	}
 
 	public function get_name()
@@ -24,9 +49,19 @@ class PerchResourceBucket
 		return $this->name;
 	}
 
+	public function get_label()
+	{
+		return $this->label;
+	}
+
 	public function get_type()
 	{
 		return $this->type;
+	}
+
+	public function get_role()
+	{
+		return $this->role;
 	}
 
 	public function get_web_path()
@@ -42,6 +77,11 @@ class PerchResourceBucket
 	public function is_remote()
 	{
 		return $this->type!='file';
+	}
+
+	public function get_web_path_for_file($file)
+	{
+		return $this->get_web_path() .'/'.$file;
 	}
 
 	/**
@@ -78,8 +118,14 @@ class PerchResourceBucket
 		    $target     = PerchUtil::file_path($this->file_path.'/'.$filename);
 
 		}
+
+		if ($this->allow_non_uploads) {
+			copy($file, $target);
+			PerchUtil::set_file_permissions($target);
+		} else {
+			PerchUtil::move_uploaded_file($file, $target);	
+		}
 		
-		PerchUtil::move_uploaded_file($file, $target);
 
 		return array(
 				'name' => $filename,
@@ -121,18 +167,9 @@ class PerchResourceBucket
 		return $a;
 	}
 
-	public function old_get_files_with_prefix($prefix, $subpath=false)
+	public function enable_non_uploaded_files()
 	{
-		$out = array();
-		$files = PerchUtil::get_dir_contents($this->get_file_path().$subpath);
-		if (PerchUtil::count($files)) {
-			foreach($files as $file) {
-				if (substr($file, 0, strlen($prefix))==$prefix) {
-					$out[] = $file;
-				}
-			}
-		}
-		return $out;
+		$this->allow_non_uploads = true;
 	}
 
 }

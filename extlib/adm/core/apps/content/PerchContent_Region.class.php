@@ -40,10 +40,11 @@ class PerchContent_Region extends PerchBase
      * @return void
      * @author Drew McLellan
      */
-    public function get_items_for_editing($item_id=false)
+    public function get_items_for_editing($item_id=false, $Paging=false)
     {
         $Items = new PerchContent_Items;
-        return $Items->get_flat_for_region($this->id(), $this->regionLatestRev(), $item_id);
+        $Template = new PerchTemplate('content/'.$this->regionTemplate(), 'content');
+        return $Items->get_flat_for_region($this->id(), $this->regionLatestRev(), $item_id, $Paging, $Template);
     }
 
     /**
@@ -486,6 +487,8 @@ class PerchContent_Region extends PerchBase
     {
         if ($rev===false) $rev = $this->regionLatestRev();
 
+        PerchUtil::mb_fallback();
+
         $Items = new PerchContent_Items();
 
         // clear out old items
@@ -548,8 +551,8 @@ class PerchContent_Region extends PerchBase
                                     $data['regionID']   = (int) $this->id();
                                     $data['pageID']     = (int) $Item->pageID();
                                     $data['itemRev']    = (int) $Item->itemRev();
-                                    $data['indexKey']   = $this->db->pdb(substr($index_item['key'], 0, 64));
-                                    $data['indexValue'] = $this->db->pdb(substr($index_item['value'], 0, 255));
+                                    $data['indexKey']   = $this->db->pdb(mb_substr($index_item['key'], 0, 64));
+                                    $data['indexValue'] = $this->db->pdb(mb_substr($index_item['value'], 0, 255));
 
                                     $values[] = '('.implode(',', $data).')';
 
@@ -693,7 +696,12 @@ class PerchContent_Region extends PerchBase
         $column_ids = $this->get_option('column_ids');
 
         if ($column_ids) {
-            $cols = explode(',', $column_ids);
+            if (is_array($column_ids)) {
+                $cols = $column_ids;
+            } else {
+                $cols = explode(',', $column_ids);    
+            }
+            
 
             $Template = new PerchTemplate('content/'.$this->regionTemplate(), 'content');
 
@@ -758,6 +766,22 @@ class PerchContent_Region extends PerchBase
         if (isset($url_vars[$matches[1]])){
             return $url_vars[$matches[1]];
         }
+    }
+
+    public function to_api_array()
+    {
+        $out = [
+            'id'           => (int)$this->id(),
+            'key'          => $this->regionKey(),
+            'page'         => $this->regionPage(),
+            'page_id'      => (int)$this->pageID(),
+            'order'        => (int)$this->regionOrder(),
+            'template'     => $this->regionTemplate(),
+            'rev'          => (int)$this->regionLatestRev(),
+            'last_updated' => $this->regionUpdated(),
+        ];
+
+        return $out;
     }
     
     private function _get_next_item_id()
