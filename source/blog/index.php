@@ -95,28 +95,38 @@
 
     </main>
 
-    <footer class="page-footer ">
-        <address class="page-footer__content ">
-            <a href="mailto:info@scheppers.be ">info@scheppers.be</a>
-        </address>
-        <address class="page-footer__content ">
-            Campus Sancta Maria<br>
-            Pieter de Ridderstraat 5<br>
-            2100 Deurne<br>
-            03 360 31 45
-        </address>
-        <address class="page-footer__content ">
-            Campus Sint-Eligius Antwerpen<br>
-            Van Helmonstraat 29<br>
-            2060 Antwerpen<br>
-            03 217 42 42
-        </address>
-        <address class="page-footer__content ">
-            Campus Sint-Eligius Deurne<br>
-            Lakborslei 263<br>
-            2100 Deurne<br>
-            03 326 33 59
-        </address>
+    <footer class="page-footer">
+        <div class="flex">
+            <address class="page-footer__content">
+                <strong>Campus Sancta Maria Deurne</strong><br>
+                Pieter de Ridderstraat 5<br>
+                2100 Deurne<br>
+                <i class="mdi mdi-phone"></i> 03 360 31 45
+            </address>
+            <address class="page-footer__content">
+                <strong>Campus Sint-Eligius Antwerpen</strong><br>
+                Van Helmonstraat 29<br>
+                2060 Antwerpen<br>
+                <i class="mdi mdi-phone"></i> 03 217 42 42
+            </address>
+            <address class="page-footer__content">
+                <strong>Campus Sint-Eligius Deurne</strong><br>
+                Lakborslei 263<br>
+                2100 Deurne<br>
+                <i class="mdi mdi-phone"></i> 03 326 33 59
+            </address>
+            <address class="page-footer__content">
+                <i class="mdi mdi-email"></i> <a href="mailto:info@scheppers.be">info@scheppers.be</a><br>
+                <i class="mdi mdi-facebook-box"></i> <a href="https://fb.com/scheppersinstituut" target="_blank">fb.com/scheppersinstituut</a>
+            </address>
+        </div>
+        <hr>
+        <div class="page-footer__disclaimer">
+            &copy; Scheppersinstituut —
+            <a href="/disclaimer.pdf">disclaimer</a> —
+            <a href="/privacybeleid.pdf">privacybeleid</a> —
+            <a href="/cookiebeleid.pdf">cookiebeleid</a>
+        </div>
     </footer>
 
     <script src="../lib/jquery/dist/jquery.min.js "></script>
