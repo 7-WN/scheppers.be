@@ -1,24 +1,20 @@
 /**
 *   ~~~ Typography ~~~
 */
-html
-{
+html {
     font-size: 18px;
     line-height: 1.618em;
 
     color: $text-color-black;
     background-color: $scheppers-blauw-wit;
 
-    @media (max-width: 1404px)
-    {
+    @media (max-width: 1404px) {
         font-size: 17px;
     }
-    @media (max-width: 1328px)
-    {
+    @media (max-width: 1328px) {
         font-size: 16px;
     }
-    @media (max-width: 1252px)
-    {
+    @media (max-width: 1252px) {
         font-size: 15px;
     }
 }
@@ -27,74 +23,62 @@ h2,
 h3,
 h4,
 h5,
-h6
-{
+h6 {
     font-weight: 300;
 
     margin: 0;
 
     color: $scheppers-blauw;
 }
-h1
-{
+h1 {
     font-size: $font-size-xxl;
 }
-h2
-{
+h2 {
     font-size: $font-size-xl;
 }
-h3
-{
+h3 {
     font-size: $font-size-l;
 }
-h4
-{
+h4 {
     font-size: $font-size-m;
 }
-h5
-{
-    font-size: $font-size-s;
+h5 {
+    font-size: $font-size-m;
+    font-style: italic;
+    line-height: 3.236rem;
 }
-h6
-{
+h6 {
     font-size: $font-size-xs;
 }
 p,
-ul
-{
+ul {
     margin: 0 0 $line-height--em 0;
 }
-strong
-{
+strong {
     font-weight: 600;
 
     color: $scheppers-blauw;
 }
-em
-{
+em {
     font-style: italic;
 }
-dt
-{
+dt {
     margin-top: 1.62em;
 
     color: $scheppers-blauw;
 }
-dd
-{
+dd {
     margin-top: 1.62em;
 
     border: none !important;
 }
-a
-{
+a {
     text-decoration: none;
 
     color: $scheppers-blauw;
 }
 a:hover,
-a:active
-{
+a:active {
     text-decoration: underline;
 
     color: $scheppers-blauw--trans;
@@ -103,38 +87,31 @@ a:active
 // {
 //     color: $scheppers-blauw;
 // }
-thead
-{
+thead {
     padding-top: $line-height--em;
 
     text-align: left;
 }
-thead:first-of-type
-{
+thead:first-of-type {
     padding-top: 0;
 }
-address
-{
+address {
     font-style: normal;
 }
-label
-{
+label {
     vertical-align: top;
 }
-.align--left
-{
+.align--left {
     padding-left: 1em;
 
     text-align: left;
 }
-.align--right
-{
+.align--right {
     padding-right: 1em;
 
     text-align: right;
 }
 th,
-td
-{
+td {
     vertical-align: top;
 }
