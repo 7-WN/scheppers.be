@@ -1,869 +1,757 @@
 <!DOCTYPE html>
 <html lang="nl-BE">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-            name="author"
-            content="Lars De Richter <lars.derichter@gmail.com>"
-        />
-        <meta
-            name="sourcecode"
-            content="https://github.com/7-WN/scheppers.be"
-        />
-        <link
-            href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600"
-            rel="stylesheet"
-        />
-        <link href="lib/mdi/css/materialdesignicons.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="lib/animate.css/animate.min.css" />
-        <link rel="stylesheet" href="lib/Morphext/dist/morphext.css" />
-        <link rel="stylesheet" href="styles/main.css" />
-        <title>Scheppersinstituut Deurne en Antwerpen</title>
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Lars De Richter <lars.derichter@gmail.com>" />
+    <meta name="sourcecode" content="https://github.com/7-WN/scheppers.be" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600"
+      rel="stylesheet"
+    />
+    <link href="lib/mdi/css/materialdesignicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="lib/animate.css/animate.min.css" />
+    <link rel="stylesheet" href="lib/Morphext/dist/morphext.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>Scheppersinstituut Deurne en Antwerpen</title>
+  </head>
 
-    <body>
-        <header class="site-header" id="id-site-header">
-            <div class="site-header__logo" id="id-site-header__logo">
-                <a href="http://www.scheppers.be"
-                    ><img
-                        class="site-header__logo__image"
-                        src="images/schepperslogo-small.png"
-                        alt="Logo van het Scheppersinstituut Deurne en Antwerpen"
-                    />
-                    <span class="site-header__logo__text"
-                        >Scheppersinstituut</span
-                    ></a
-                >
-            </div>
-            <nav class="nav-bar nav-bar--primary">
+  <body>
+    <header class="site-header" id="id-site-header">
+      <div class="site-header__logo" id="id-site-header__logo">
+        <a href="http://www.scheppers.be"
+          ><img
+            class="site-header__logo__image"
+            src="images/schepperslogo-small.png"
+            alt="Logo van het Scheppersinstituut Deurne en Antwerpen"
+          />
+          <span class="site-header__logo__text">Scheppersinstituut</span></a
+        >
+      </div>
+      <nav class="nav-bar nav-bar--primary">
+        <ul>
+          <li class="nav-bar__item">
+            <a
+              href="index.html?internal=true"
+              class="nav-bar__item-link"
+              id="id-nav-bar__item--school"
+              >Onze school</a
+            >
+          </li>
+          <li class="nav-bar__item">
+            <a href="studierichtingen.html" class="nav-bar__item-link"
+              >Studierichtingen</a
+            >
+          </li>
+          <li class="nav-bar__item">
+            <a
+              href="praktisch.html"
+              class="nav-bar__item-link nav-bar__item-link--active"
+              >Praktisch</a
+            >
+          </li>
+          <li class="nav-bar__item">
+            <a href="blog" class="nav-bar__item-link">Nieuws/Blog</a>
+          </li>
+          <li class="nav-bar__item">
+            <a href="contact.php" class="nav-bar__item-link">Contact</a>
+          </li>
+          <li class="nav-bar__item">
+            <a
+              href="https://www.facebook.com/scheppersinstituut/"
+              class="nav-bar__item-link"
+              target="_blank"
+              >Facebook</a
+            >
+          </li>
+          <li class="nav-bar__item nav-bar__item--icon nav-bar__item--sm-show">
+            <a
+              href="http://scheppersinstituutbe.sharepoint.com/sites/Leerlingen"
+              class="nav-bar__item-link"
+              ><i class="mdi mdi-lock"></i
+            ></a>
+          </li>
+          <li class="nav-bar__item nav-bar__item--icon nav-bar__item--lg-hide">
+            <a href="#" class="nav-bar__item-link" id="nav-panel-toggle"
+              ><i class="mdi mdi-menu"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="nav-bar nav-bar--secondary" id="id-nav-bar--studierichtingen">
+        <ul>
+          <li class="nav-bar__item">
+            <a
+              href="#id-inschrijven"
+              class="nav-bar__item-link nav-bar__item-link--secondary"
+              id="btn-inschrijven"
+              >Inschrijven</a
+            >
+          </li>
+          <li class="nav-bar__item">
+            <a
+              href="#id-infomomenten"
+              class="nav-bar__item-link nav-bar__item-link--secondary"
+              id="btn-infomomenten"
+              >Infomomenten</a
+            >
+          </li>
+          <li class="nav-bar__item">
+            <a
+              href="#id-lestijden"
+              class="nav-bar__item-link nav-bar__item-link--secondary"
+              id="btn-lestijden"
+              >Lestijden</a
+            >
+          </li>
+          <li class="nav-bar__item">
+            <a
+              href="#id-jaarkalender"
+              class="nav-bar__item-link nav-bar__item-link--secondary"
+              id="btn-jaarkalender"
+              >Jaarkalender</a
+            >
+          </li>
+          <li class="nav-bar__item">
+            <a
+              href="#id-schoolreglement"
+              class="nav-bar__item-link nav-bar__item-link--secondary"
+              id="btn-schoolreglement"
+              >Schoolreglement</a
+            >
+          </li>
+          <li class="nav-bar__item">
+            <a
+              href="#id-gdpr"
+              class="nav-bar__item-link nav-bar__item-link--secondary"
+              id="btn-gdpr"
+              >GDPR</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <aside class="nav-panel" id="id-nav-panel">
+      <nav class="nav-panel__menu">
+        <ul>
+          <li class="nav-panel__item">
+            <a href="index.html?internal=true" class="nav-panel__item-link"
+              >Onze school</a
+            >
+          </li>
+          <li class="nav-panel__item">
+            <a href="studierichtingen.html" class="nav-panel__item-link"
+              >Studierichtingen</a
+            >
+          </li>
+          <li class="nav-panel__item nav-panel__item--active">
+            <a href="praktisch.html" class="nav-panel__item-link">Praktisch</a>
+          </li>
+          <ul>
+            <li class="nav-panel__item">
+              <a
+                href="#id-inschrijven"
+                class="nav-panel__item-link"
+                id="pan-btn-inschrijven"
+                >Inschrijven</a
+              >
+            </li>
+            <li class="nav-panel__item">
+              <a
+                href="#id-lestijden"
+                class="nav-panel__item-link"
+                id="pan-btn-lestijden"
+                >Lestijden</a
+              >
+            </li>
+            <li class="nav-panel__item">
+              <a
+                href="#id-jaarkalender"
+                class="nav-panel__item-link"
+                id="pan-btn-jaarkalender"
+                >Jaarkalender</a
+              >
+            </li>
+            <li class="nav-panel__item">
+              <a
+                href="#id-schoolreglement"
+                class="nav-panel__item-link"
+                id="pan-btn-schoolreglement"
+                >Schoolreglement</a
+              >
+            </li>
+          </ul>
+          <li class="nav-panel__item">
+            <a href="blog" class="nav-panel__item-link">Nieuws/blog</a>
+          </li>
+          <li class="nav-panel__item">
+            <a href="contact.php" class="nav-panel__item-link">Contact</a>
+          </li>
+          <li class="nav-panel__item">
+            <a
+              href="https://www.facebook.com/scheppersinstituut/"
+              target="_blank"
+              class="nav-panel__item-link"
+              >Facebook</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <!-- INSCHRIJVEN -->
+      <div
+        class="container in-view"
+        id="id-inschrijven"
+        data-btn="btn-inschrijven"
+      >
+        <section class="page-section">
+          <div class="page-section__content">
+            <div class="flex-container flex-container--text">
+              <article class="col col--text col--1-1">
+                <h3 class="article__title">
+                  Inschrijven voor het eerste jaar A en B
+                </h3>
+                <h4 class="article__subtitle">
+                  Stap 1: Aanmelden via
+                  <a href="http://www.meldjeaan.be/">meldjeaan.be</a>
+                </h4>
+                <h5>Broers en zussen</h5>
+                <p>
+                  meld je aan van woensdag 13 februari 2019 (9.30 uur) tot en
+                  met woensdag 27 februari 2019 (17.00 uur) via
+                  <a href="http://www.meldjeaan.be/">www.meldjeaan.be</a>
+                </p>
+                <h5>Nog geen broer of zus op school?</h5>
+                <p>
+                  meld je aan van vrijdag 15 maart 2019 (9.30 uur) tot en met
+                  vrijdag 5 april 2019 (17.00 uur) via
+                  <a href="http://www.meldjeaan.be/">www.meldjeaan.be</a>
+                </p>
+
+                <h4 class="article__subtitle">
+                  Stap 2: Inschrijven op school
+                </h4>
+                <p>
+                  Na het aanmelden ontvang je een ‘ticket’ (broers en zussen: 11
+                  maart, niet-broers en zussen: 2 mei). Daarop staat in welke
+                  school je kan inschrijven. Breng dit ticket en de
+                  identiteitskaart van de leerling mee naar de inschrijving. Je
+                  ontvangt een bewijs van inschrijving.
+                </p>
+                <h5>
+                  Broers en zussen met Meld-je-aan-ticket:
+                </h5>
+                <p>
+                  schrijf je in van maandag 18 maart 2019 tot en met vrijdag 5
+                  april 2019
+                </p>
+                <h5>
+                  Niet-broers en zussen met Meld-je-aan-ticket:
+                </h5>
+                <p>
+                  schrijf je in van vrijdag 10 mei 2019 tot en met dinsdag 4
+                  juni 2019
+                </p>
+                <h5>vanaf vrijdag 10 mei 2019, 9.30 uur</h5>
+                <p>
+                  inschrijven zonder Meld-Je-Aan ticket (indien er nog vrije
+                  plaatsen zijn)
+                </p>
+
+                <h4 class="article__subtitle">
+                  Stap 3: Intakegesprek
+                </h4>
+                <p>
+                  tussen 28 juni 2019 en 4 juli 2019 verwachten we alle
+                  ingeschreven eerstejaars en hun ouders, mét het rapport van de
+                  lagere school school voor een intakegesprek. Dit
+                  kennismakingsgesprek duurt ongeveer een half uur.
+                </p>
+
+                <h3 class="article__title">
+                  Inschrijvingen vanaf tweede jaar:
+                </h3>
+
+                <h4 class="article__subtitle">
+                  Vanaf dinsdag 23 april 2019
+                </h4>
+                <p>
+                  Inschrijven kan rechtstreeks op school. Maak wel vooraf een
+                  afspraak met de leerlingencoördinator (zie hieronder).
+                </p>
+
+                <h3 class="article__title">Afspraak maken</h3>
+                Een afspraak maken kan via:
                 <ul>
-                    <li class="nav-bar__item">
-                        <a
-                            href="index.html?internal=true"
-                            class="nav-bar__item-link"
-                            id="id-nav-bar__item--school"
-                            >Onze school</a
-                        >
-                    </li>
-                    <li class="nav-bar__item">
-                        <a
-                            href="studierichtingen.html"
-                            class="nav-bar__item-link"
-                            >Studierichtingen</a
-                        >
-                    </li>
-                    <li class="nav-bar__item">
-                        <a
-                            href="praktisch.html"
-                            class="nav-bar__item-link nav-bar__item-link--active"
-                            >Praktisch</a
-                        >
-                    </li>
-                    <li class="nav-bar__item">
-                        <a href="blog" class="nav-bar__item-link"
-                            >Nieuws/Blog</a
-                        >
-                    </li>
-                    <li class="nav-bar__item">
-                        <a href="contact.php" class="nav-bar__item-link"
-                            >Contact</a
-                        >
-                    </li>
-                    <li class="nav-bar__item">
-                        <a
-                            href="https://www.facebook.com/scheppersinstituut/"
-                            class="nav-bar__item-link"
-                            target="_blank"
-                            >Facebook</a
-                        >
-                    </li>
-                    <li
-                        class="nav-bar__item nav-bar__item--icon nav-bar__item--sm-show"
-                    >
-                        <a
-                            href="http://scheppersinstituutbe.sharepoint.com/sites/Leerlingen"
-                            class="nav-bar__item-link"
-                            ><i class="mdi mdi-lock"></i
-                        ></a>
-                    </li>
-                    <li
-                        class="nav-bar__item nav-bar__item--icon nav-bar__item--lg-hide"
-                    >
-                        <a
-                            href="#"
-                            class="nav-bar__item-link"
-                            id="nav-panel-toggle"
-                            ><i class="mdi mdi-menu"></i
-                        ></a>
-                    </li>
+                  <li>
+                    <strong>Campus Sint-Eligius Antwerpen, alle klassen:</strong
+                    ><br />
+                    Mevrouw Demolder,
+                    <i class="mdi mdi-phone"></i> 03 217 42 42
+                  </li>
+                  <li>
+                    <strong>Campus Sancta Maria Deurne, eerste graad:</strong
+                    ><br />
+                    De heer Lambert,
+                    <i class="mdi mdi-phone"></i> 03 360 31 44
+                  </li>
+                  <li>
+                    <strong>Campus Sancta Maria Deurne, tweede graad:</strong
+                    ><br />
+                    Mevrouw Bousard,
+                    <i class="mdi mdi-phone"></i> 03 360 31 41
+                  </li>
+                  <li>
+                    <strong>Campus Sint-Eligius Deurne, derde graad:</strong
+                    ><br />
+                    Mevrouw Vermeiren,
+                    <i class="mdi mdi-phone"></i> 03 326 74 80
+                  </li>
                 </ul>
-            </nav>
-            <nav
-                class="nav-bar nav-bar--secondary"
-                id="id-nav-bar--studierichtingen"
-            >
+                <p>
+                  Of via ons
+                  <a href="contact.php#id-contact">contactformulier</a>
+                </p>
+                <h3 class="article__title">Zomeropening</h3>
+                <p>
+                  Tijdens de maanden juli en augustus is de school open van
+                  maandag 1 tot en met vrijdag 5 juli 2019 en van donderdag 22
+                  tot en met vrijdag 30 augustus 2019
+                </p>
+                <p>
+                  <strong
+                    >Belangrijk: het aantal plaatsen is beperkt en sommige
+                    richtingen zijn snel volzet. Wij raden dan ook aan om zo
+                    snel mogelijk in te schrijven.</strong
+                  >
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- INFOMOMENTEN -->
+      <div
+        class="container in-view"
+        id="id-infomomenten"
+        data-btn="btn-infomomenten"
+      >
+        <section class="page-section">
+          <div class="page-section__content">
+            <div class="flex-container flex-container--text">
+              <article class="col col--text col--1-1">
+                <h3 class="article__title">Infomomenten</h3>
+                <h4 class="article__subtitle">
+                  Infoavond eerste jaar
+                </h4>
+                <p>
+                  maandag 11 maart 2019<br />
+                  17.00 uur tot 20.00 uur (doorlopend)<br />
+                  campus Sint-Eligius Antwerpen &amp; campus Sancta Maria Deurne
+                </p>
+                <h4 class="article__subtitle">
+                  Infomiddag Se-n-Se
+                </h4>
+                <p>
+                  maandag 29 april<br />
+                  17.00 uur tot 20.00 uur (doorlopend)<br />
+                  campus Sint-Eligius Antwerpen
+                </p>
+                <p>
+                  vrijdag 28 juni 2019<br />
+                  13.00 uur tot 16.00 uur (doorlopend)<br />
+                  campus Sint-Eligius Antwerpen
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- LESTIJDEN -->
+      <div class="container in-view" id="id-lestijden" data-btn="btn-lestijden">
+        <section class="page-section">
+          <div class="page-section__content">
+            <div class="flex-container flex-container--text">
+              <article class="col col--text col--1-1">
+                <h3 class="article__title">Lestijden</h3>
+                <p>
+                  In de meeste richtingen staan 32 lesuren op het programma. Op
+                  maandag, dinsdag, donderdag en vrijdag worden 7 lesuren
+                  gegeven, op woensdag is er enkel les in de voormiddag. Klassen
+                  met meer dan 32 lesuren kunnen één of twee keer per week een
+                  8ste lesuur hebben.
+                </p>
+                <p>
+                  Voor alle campussen geldt volgend tijdschema:
+                </p>
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="t-col--1-2" colspan="2">
+                        Voormiddag
+                      </th>
+                      <th class="t-col--1-2" colspan="2">
+                        Namiddag
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="t-col--1-4">08.30u</td>
+                      <td class="t-col--1-4">
+                        1ste lesuur
+                      </td>
+                      <td class="t-col--1-4">13.10u</td>
+                      <td class="t-col--1-4">
+                        5de lesuur
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="t-col--1-4">09.20u</td>
+                      <td class="t-col--1-4">
+                        2de lesuur
+                      </td>
+                      <td class="t-col--1-4">14.00u</td>
+                      <td class="t-col--1-4">
+                        6de lesuur
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="t-col--1-4">10.10u</td>
+                      <td class="t-col--1-4">
+                        speeltijd
+                      </td>
+                      <td class="t-col--1-4">14.50u</td>
+                      <td class="t-col--1-4">
+                        speeltijd
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="t-col--1-4">10.30u</td>
+                      <td class="t-col--1-4">
+                        3de lesuur
+                      </td>
+                      <td class="t-col--1-4">15.10u</td>
+                      <td class="t-col--1-4">
+                        7de lesuur
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="t-col--1-4">11.20u</td>
+                      <td class="t-col--1-4">
+                        4de lesuur
+                      </td>
+                      <td class="t-col--1-4">16.00u</td>
+                      <td class="t-col--1-4">
+                        einde of 8ste lesuur
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="t-col--1-4">12.10u</td>
+                      <td class="t-col--1-4">
+                        middagpauze
+                      </td>
+                      <td class="t-col--1-4">16.50u</td>
+                      <td class="t-col--1-4">einde</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Jaarkalender -->
+      <div
+        class="container in-view"
+        id="id-jaarkalender"
+        data-btn="btn-jaarkalender"
+      >
+        <section class="page-section">
+          <div class="page-section__content">
+            <div class="flex-container flex-container--text">
+              <article class="col col--text col--1-1">
+                <h3 class="article__title">Jaarkalender</h3>
+                <h4>
+                  Onze belangrijkste vrije dagen op een rijtje
+                </h4>
                 <ul>
-                    <li class="nav-bar__item">
-                        <a
-                            href="#id-inschrijven"
-                            class="nav-bar__item-link nav-bar__item-link--secondary"
-                            id="btn-inschrijven"
-                            >Inschrijven</a
-                        >
-                    </li>
-                    <li class="nav-bar__item">
-                        <a
-                            href="#id-infomomenten"
-                            class="nav-bar__item-link nav-bar__item-link--secondary"
-                            id="btn-infomomenten"
-                            >Infomomenten</a
-                        >
-                    </li>
-                    <li class="nav-bar__item">
-                        <a
-                            href="#id-lestijden"
-                            class="nav-bar__item-link nav-bar__item-link--secondary"
-                            id="btn-lestijden"
-                            >Lestijden</a
-                        >
-                    </li>
-                    <li class="nav-bar__item">
-                        <a
-                            href="#id-jaarkalender"
-                            class="nav-bar__item-link nav-bar__item-link--secondary"
-                            id="btn-jaarkalender"
-                            >Jaarkalender</a
-                        >
-                    </li>
-                    <li class="nav-bar__item">
-                        <a
-                            href="#id-schoolreglement"
-                            class="nav-bar__item-link nav-bar__item-link--secondary"
-                            id="btn-schoolreglement"
-                            >Schoolreglement</a
-                        >
-                    </li>
-                    <li class="nav-bar__item">
-                        <a
-                            href="#id-gdpr"
-                            class="nav-bar__item-link nav-bar__item-link--secondary"
-                            id="btn-gdpr"
-                            >GDPR</a
-                        >
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <aside class="nav-panel" id="id-nav-panel">
-            <nav class="nav-panel__menu">
-                <ul>
-                    <li class="nav-panel__item">
-                        <a
-                            href="index.html?internal=true"
-                            class="nav-panel__item-link"
-                            >Onze school</a
-                        >
-                    </li>
-                    <li class="nav-panel__item">
-                        <a
-                            href="studierichtingen.html"
-                            class="nav-panel__item-link"
-                            >Studierichtingen</a
-                        >
-                    </li>
-                    <li class="nav-panel__item nav-panel__item--active">
-                        <a href="praktisch.html" class="nav-panel__item-link"
-                            >Praktisch</a
-                        >
-                    </li>
-                    <ul>
-                        <li class="nav-panel__item">
-                            <a
-                                href="#id-inschrijven"
-                                class="nav-panel__item-link"
-                                id="pan-btn-inschrijven"
-                                >Inschrijven</a
-                            >
-                        </li>
-                        <li class="nav-panel__item">
-                            <a
-                                href="#id-lestijden"
-                                class="nav-panel__item-link"
-                                id="pan-btn-lestijden"
-                                >Lestijden</a
-                            >
-                        </li>
-                        <li class="nav-panel__item">
-                            <a
-                                href="#id-jaarkalender"
-                                class="nav-panel__item-link"
-                                id="pan-btn-jaarkalender"
-                                >Jaarkalender</a
-                            >
-                        </li>
-                        <li class="nav-panel__item">
-                            <a
-                                href="#id-schoolreglement"
-                                class="nav-panel__item-link"
-                                id="pan-btn-schoolreglement"
-                                >Schoolreglement</a
-                            >
-                        </li>
-                    </ul>
-                    <li class="nav-panel__item">
-                        <a href="blog" class="nav-panel__item-link"
-                            >Nieuws/blog</a
-                        >
-                    </li>
-                    <li class="nav-panel__item">
-                        <a href="contact.php" class="nav-panel__item-link"
-                            >Contact</a
-                        >
-                    </li>
-                    <li class="nav-panel__item">
-                        <a
-                            href="https://www.facebook.com/scheppersinstituut/"
-                            target="_blank"
-                            class="nav-panel__item-link"
-                            >Facebook</a
-                        >
-                    </li>
-                </ul>
-            </nav>
-        </aside>
-        <main>
-            <!-- INSCHRIJVEN -->
-            <div
-                class="container in-view"
-                id="id-inschrijven"
-                data-btn="btn-inschrijven"
-            >
-                <section class="page-section">
-                    <div class="page-section__content">
-                        <div class="flex-container flex-container--text">
-                            <article class="col col--text col--1-1">
-                                <h3 class="article__title">
-                                    Inschrijven voor het eerste jaar A en B
-                                </h3>
-                                <h4 class="article__subtitle">
-                                    Stap 1: Aanmelden via
-                                    <a href="http://www.meldjeaan.be/"
-                                        >meldjeaan.be</a
-                                    >
-                                </h4>
-                                <h5>Broers en zussen</h5>
-                                <p>
-                                    meld je aan van woensdag 13 februari 2019
-                                    (9.30 uur) tot en met woensdag 27 februari
-                                    2019 (17.00 uur) via
-                                    <a href="http://www.meldjeaan.be/"
-                                        >www.meldjeaan.be</a
-                                    >
-                                </p>
-                                <h5>Nog geen broer of zus op school?</h5>
-                                <p>
-                                    meld je aan van vrijdag 15 maart 2019 (9.30
-                                    uur) tot en met vrijdag 5 april 2019 (17.00
-                                    uur) via
-                                    <a href="http://www.meldjeaan.be/"
-                                        >www.meldjeaan.be</a
-                                    >
-                                </p>
-
-                                <h4 class="article__subtitle">
-                                    Stap 2: Inschrijven op school
-                                </h4>
-                                <p>
-                                    Na het aanmelden ontvang je een ‘ticket’
-                                    (broers en zussen: 11 maart, niet-broers en
-                                    zussen: 2 mei). Daarop staat in welke school
-                                    je kan inschrijven. Breng dit ticket en de
-                                    identiteitskaart van de leerling mee naar de
-                                    inschrijving. Je ontvangt een bewijs van
-                                    inschrijving.
-                                </p>
-                                <h5>
-                                    Broers en zussen met Meld-je-aan-ticket:
-                                </h5>
-                                <p>
-                                    schrijf je in van maandag 18 maart 2019 tot
-                                    en met vrijdag 5 april 2019
-                                </p>
-                                <h5>
-                                    Niet-broers en zussen met
-                                    Meld-je-aan-ticket:
-                                </h5>
-                                <p>
-                                    schrijf je in van vrijdag 10 mei 2019 tot en
-                                    met dinsdag 4 juni 2019
-                                </p>
-                                <h5>vanaf vrijdag 10 mei 2019, 9.30 uur</h5>
-                                <p>
-                                    inschrijven zonder Meld-Je-Aan ticket
-                                    (indien er nog vrije plaatsen zijn)
-                                </p>
-
-                                <h4 class="article__subtitle">
-                                    Stap 3: Intakegesprek
-                                </h4>
-                                <p>
-                                    tussen 28 juni 2019 en 4 juli 2019
-                                    verwachten we alle ingeschreven eerstejaars
-                                    en hun ouders, mét het rapport van de lagere
-                                    school school voor een intakegesprek. Dit
-                                    kennismakingsgesprek duurt ongeveer een half
-                                    uur.
-                                </p>
-
-                                <h3 class="article__title">
-                                    Inschrijvingen vanaf tweede jaar:
-                                </h3>
-
-                                <h4 class="article__subtitle">
-                                    Vanaf dinsdag 23 april 2019
-                                </h4>
-                                <p>
-                                    Inschrijven kan rechtstreeks op school. Maak
-                                    wel vooraf een afspraak met de
-                                    leerlingencoördinator (zie hieronder).
-                                </p>
-
-                                <h3 class="article__title">Afspraak maken</h3>
-                                Een afspraak maken kan via:
-                                <ul>
-                                    <li>
-                                        <strong
-                                            >Campus Sint-Eligius Antwerpen, alle
-                                            klassen:</strong
-                                        ><br />
-                                        Mevrouw Demolder,
-                                        <i class="mdi mdi-phone"></i> 03 217 42
-                                        42
-                                    </li>
-                                    <li>
-                                        <strong
-                                            >Campus Sancta Maria Deurne, eerste
-                                            graad:</strong
-                                        ><br />
-                                        De heer Lambert,
-                                        <i class="mdi mdi-phone"></i> 03 360 31
-                                        44
-                                    </li>
-                                    <li>
-                                        <strong
-                                            >Campus Sancta Maria Deurne, tweede
-                                            graad:</strong
-                                        ><br />
-                                        Mevrouw Bousard,
-                                        <i class="mdi mdi-phone"></i> 03 360 31
-                                        41
-                                    </li>
-                                    <li>
-                                        <strong
-                                            >Campus Sint-Eligius Deurne, derde
-                                            graad:</strong
-                                        ><br />
-                                        Mevrouw Vermeiren,
-                                        <i class="mdi mdi-phone"></i> 03 326 74
-                                        80
-                                    </li>
-                                </ul>
-                                <p>
-                                    Of via ons
-                                    <a href="contact.php#id-contact"
-                                        >contactformulier</a
-                                    >
-                                </p>
-                                <h3 class="article__title">Zomeropening</h3>
-                                <p>
-                                    Tijdens de maanden juli en augustus is de
-                                    school open van maandag 1 tot en met vrijdag
-                                    5 juli 2019 en van donderdag 22 tot en met
-                                    vrijdag 30 augustus 2019
-                                </p>
-                                <p>
-                                    <strong
-                                        >Belangrijk: het aantal plaatsen is
-                                        beperkt en sommige richtingen zijn snel
-                                        volzet. Wij raden dan ook aan om zo snel
-                                        mogelijk in te schrijven.</strong
-                                    >
-                                </p>
-                            </article>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <!-- INFOMOMENTEN -->
-            <div
-                class="container in-view"
-                id="id-infomomenten"
-                data-btn="btn-infomomenten"
-            >
-                <section class="page-section">
-                    <div class="page-section__content">
-                        <div class="flex-container flex-container--text">
-                            <article class="col col--text col--1-1">
-                                <h3 class="article__title">Infomomenten</h3>
-                                <h4 class="article__subtitle">
-                                    Infoavond eerste jaar
-                                </h4>
-                                <p>
-                                    maandag 11 maart 2019<br />
-                                    17.00 uur tot 20.00 uur (doorlopend)<br />
-                                    campus Sint-Eligius Antwerpen &amp; campus
-                                    Sancta Maria Deurne
-                                </p>
-                                <h4 class="article__subtitle">
-                                    Infomiddag Se-n-Se
-                                </h4>
-                                <p>
-                                    maandag 29 april<br />
-                                    17.00 uur tot 20.00 uur (doorlopend)<br />
-                                    campus Sint-Eligius Antwerpen
-                                </p>
-                                <p>
-                                    vrijdag 28 juni 2019<br />
-                                    13.00 uur tot 16.00 uur (doorlopend)<br />
-                                    campus Sint-Eligius Antwerpen
-                                </p>
-                            </article>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <!-- LESTIJDEN -->
-            <div
-                class="container in-view"
-                id="id-lestijden"
-                data-btn="btn-lestijden"
-            >
-                <section class="page-section">
-                    <div class="page-section__content">
-                        <div class="flex-container flex-container--text">
-                            <article class="col col--text col--1-1">
-                                <h3 class="article__title">Lestijden</h3>
-                                <p>
-                                    In de meeste richtingen staan 32 lesuren op
-                                    het programma. Op maandag, dinsdag,
-                                    donderdag en vrijdag worden 7 lesuren
-                                    gegeven, op woensdag is er enkel les in de
-                                    voormiddag. Klassen met meer dan 32 lesuren
-                                    kunnen één of twee keer per week een 8ste
-                                    lesuur hebben.
-                                </p>
-                                <p>
-                                    Voor alle campussen geldt volgend
-                                    tijdschema:
-                                </p>
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th class="t-col--1-2" colspan="2">
-                                                Voormiddag
-                                            </th>
-                                            <th class="t-col--1-2" colspan="2">
-                                                Namiddag
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="t-col--1-4">08.30u</td>
-                                            <td class="t-col--1-4">
-                                                1ste lesuur
-                                            </td>
-                                            <td class="t-col--1-4">13.10u</td>
-                                            <td class="t-col--1-4">
-                                                5de lesuur
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="t-col--1-4">09.20u</td>
-                                            <td class="t-col--1-4">
-                                                2de lesuur
-                                            </td>
-                                            <td class="t-col--1-4">14.00u</td>
-                                            <td class="t-col--1-4">
-                                                6de lesuur
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="t-col--1-4">10.10u</td>
-                                            <td class="t-col--1-4">
-                                                speeltijd
-                                            </td>
-                                            <td class="t-col--1-4">14.50u</td>
-                                            <td class="t-col--1-4">
-                                                speeltijd
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="t-col--1-4">10.30u</td>
-                                            <td class="t-col--1-4">
-                                                3de lesuur
-                                            </td>
-                                            <td class="t-col--1-4">15.10u</td>
-                                            <td class="t-col--1-4">
-                                                7de lesuur
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="t-col--1-4">11.20u</td>
-                                            <td class="t-col--1-4">
-                                                4de lesuur
-                                            </td>
-                                            <td class="t-col--1-4">16.00u</td>
-                                            <td class="t-col--1-4">
-                                                einde of 8ste lesuur
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="t-col--1-4">12.10u</td>
-                                            <td class="t-col--1-4">
-                                                middagpauze
-                                            </td>
-                                            <td class="t-col--1-4">16.50u</td>
-                                            <td class="t-col--1-4">einde</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </article>
-                        </div>
-                    </div>
-                </section>
-            </div>
-
-            <!-- Jaarkalender -->
-            <div
-                class="container in-view"
-                id="id-jaarkalender"
-                data-btn="btn-jaarkalender"
-            >
-                <section class="page-section">
-                    <div class="page-section__content">
-                        <div class="flex-container flex-container--text">
-                            <article class="col col--text col--1-1">
-                                <h3 class="article__title">Jaarkalender</h3>
-                                <h4>
-                                    Onze belangrijkste vrije dagen op een rijtje
-                                </h4>
-                                <ul>
-                                    <li>
-                                        <strong>Herfstvakantie:</strong> za. 27
-                                        okt. 2018 tot zo. 4 nov. 2018
-                                    </li>
-                                    <!--
+                  <li>
+                    <strong>Herfstvakantie:</strong> za. 27 okt. 2018 tot zo. 4
+                    nov. 2018
+                  </li>
+                  <!--
                                         <li><strong>Wapenstilstand:</strong> za 2017-11-11</li>
                                     -->
-                                    <li>
-                                        <strong>Kerstvakantie:</strong> za. 22
-                                        december 2018  tot zo. 6 januari 2019
-                                    </li>
-                                    <li>
-                                        <strong>Pedagogische studiedag:</strong>
-                                        vrijdag 8 febr. 2019
-                                    </li>
-                                    <li>
-                                        <strong>Facultatieve vrije dag:</strong>
-                                        ma. 11 febr. 2019
-                                    </li>
-                                    <li>
-                                        <strong>Krokusvakantie:</strong> za. 2
-                                        mrt 2019 tot zo. 10 mrt. 2019
-                                    </li>
-                                    <li>
-                                        <strong>Paasvakantie:</strong> za. 6
-                                        april 2019 tot ma. 22 april 2019
-                                    </li>
-                                    <li>
-                                        <strong>Dag van de arbeid:</strong> wo.
-                                        1 mei 2019
-                                    </li>
-                                    <li>
-                                        <strong>Hemelvaartsdag:</strong> do. 30
-                                        mei 2019
-                                    </li>
-                                    <li>
-                                        <strong>Brugdag: </strong> vr. 31 mei
-                                        2019
-                                    </li>
-                                    <li>
-                                        <strong>Pinkstermaandag:</strong> ma. 10
-                                        juni 2019
-                                    </li>
-                                </ul>
-                                <h4>De volledige jaarkalender</h4>
-                                <p>
-                                    <a
-                                        href="documents/jaarkalender_2018-2019.pdf"
-                                        >Download de volledige jaarkalender</a
-                                    >
-                                    voor een overzicht van alle belangrijke data
-                                    op onze school.
-                                </p>
-                            </article>
-                        </div>
-                    </div>
-                </section>
+                  <li>
+                    <strong>Kerstvakantie:</strong> za. 22 december 2018  tot
+                    zo. 6 januari 2019
+                  </li>
+                  <li>
+                    <strong>Pedagogische studiedag:</strong>
+                    vrijdag 8 febr. 2019
+                  </li>
+                  <li>
+                    <strong>Facultatieve vrije dag:</strong>
+                    ma. 11 febr. 2019
+                  </li>
+                  <li>
+                    <strong>Krokusvakantie:</strong> za. 2 mrt 2019 tot zo. 10
+                    mrt. 2019
+                  </li>
+                  <li>
+                    <strong>Paasvakantie:</strong> za. 6 april 2019 tot ma. 22
+                    april 2019
+                  </li>
+                  <li><strong>Dag van de arbeid:</strong> wo. 1 mei 2019</li>
+                  <li><strong>Hemelvaartsdag:</strong> do. 30 mei 2019</li>
+                  <li><strong>Brugdag: </strong> vr. 31 mei 2019</li>
+                  <li><strong>Pinkstermaandag:</strong> ma. 10 juni 2019</li>
+                </ul>
+                <h4>De volledige jaarkalender</h4>
+                <p>
+                  <a href="documents/jaarkalender_2018-2019.pdf"
+                    >Download de volledige jaarkalender</a
+                  >
+                  voor een overzicht van alle belangrijke data op onze school.
+                </p>
+              </article>
             </div>
+          </div>
+        </section>
+      </div>
 
-            <!-- SCHOOLREGLEMENT -->
-            <div
-                class="container in-view"
-                id="id-schoolreglement"
-                data-btn="btn-schoolreglement"
-            >
-                <section class="page-section">
-                    <div class="page-section__content">
-                        <div class="flex-container flex-container--text">
-                            <article class="col col--text col--1-1">
-                                <h3 class="article__title">Schoolreglement</h3>
-                                <p>
-                                    Alle ouders en leerlingen moeten zich bij de
-                                    inschrijving akkoord verklaren met
-                                    <a
-                                        href="documents/schoolreglement_2018-2019.pdf"
-                                        >het volledige schoolreglement.</a
-                                    >
-                                    Het is dan ook belangrijk om dit document
-                                    aandachtig door te nemen. Als school kijken
-                                    wij streng, maar rechtvaardig toe op de
-                                    naleving daarvan.
-                                </p>
-                                <h3>Basisregels</h3>
-                                <p>
-                                    Deze regels zijn fundamenteel. Daarom staan
-                                    ze ook vooraan in je agenda afgedrukt.
-                                </p>
-                                <h4>
-                                    3 x 5 Basisregels van het Scheppersinstituut
-                                </h4>
-                                <h5>Algemene leefregels</h5>
-                                <ol>
-                                    <li>Kom op tijd naar school.</li>
-                                    <li>
-                                        Bij afwezigheid verwittigen je ouders de
-                                        school zo snel mogelijk. Wettig elke
-                                        afwezigheid binnen de 2 schooldagen na
-                                        je terugkomst.
-                                    </li>
-                                    <li>
-                                        Gedraag je altijd beleefd en met respect
-                                        tegenover het schoolpersoneel en je
-                                        medeleerlingen. Spreek verzorgd
-                                        Nederlands.
-                                    </li>
-                                    <li>
-                                        Draag zorg voor je eigen materiaal, dat
-                                        van anderen en dat van de school.
-                                    </li>
-                                    <li>
-                                        Breng je agenda altijd mee naar school.
-                                        Geef hem onmiddellijk af als erom
-                                        gevraagd wordt.
-                                    </li>
-                                </ol>
-                                <h5>Leefregels buiten de klas</h5>
-                                <ol>
-                                    <li>
-                                        Ga bij het belsignaal dadelijk naar de
-                                        afgesproken plaats en wacht er in stilte
-                                        en in rij op je leerkracht.
-                                    </li>
-                                    <li>
-                                        Neem de kortste en snelste weg, als je
-                                        naar een ander lokaal of andere campus
-                                        moet.
-                                    </li>
-                                    <li>
-                                        Wees stil in de gangen en ren er niet.
-                                    </li>
-                                    <li>
-                                        Een gsm of muziekdrager mag enkel
-                                        tijdens de pauzes aanstaan. Muziek
-                                        luidop afspelen, foto's nemen en filmen
-                                        mag nooit.
-                                    </li>
-                                    <li>
-                                        Eet en drink enkel tijdens de pauzes.
-                                        Gooi afval in de vuilnisbakken.
-                                    </li>
-                                </ol>
-                                <h5>Leefregels binnen de klas</h5>
-                                <ol>
-                                    <li>
-                                        Breng voor elk vak het nodige
-                                        lesmateriaal in een schooltas mee.
-                                    </li>
-                                    <li>
-                                        Leg voor elke les het juiste materiaal
-                                        klaar en steek de rest in je schooltas.
-                                    </li>
-                                    <li>
-                                        Kom voorbereid naar de les en werk
-                                        positief mee.
-                                    </li>
-                                    <li>
-                                        Spreek tijdens de les enkel als je
-                                        daarvoor de toestemming hebt gekregen.
-                                    </li>
-                                    <li>
-                                        Verlaat het lokaal pas als je daarvoor
-                                        de toestemming hebt gekregen.
-                                    </li>
-                                </ol>
-                            </article>
-                        </div>
-                    </div>
-                </section>
+      <!-- SCHOOLREGLEMENT -->
+      <div
+        class="container in-view"
+        id="id-schoolreglement"
+        data-btn="btn-schoolreglement"
+      >
+        <section class="page-section">
+          <div class="page-section__content">
+            <div class="flex-container flex-container--text">
+              <article class="col col--text col--1-1">
+                <h3 class="article__title">Schoolreglement</h3>
+                <p>
+                  Alle ouders en leerlingen moeten zich bij de inschrijving
+                  akkoord verklaren met
+                  <a href="documents/schoolreglement_2018-2019.pdf"
+                    >het volledige schoolreglement.</a
+                  >
+                  Het is dan ook belangrijk om dit document aandachtig door te
+                  nemen. Als school kijken wij streng, maar rechtvaardig toe op
+                  de naleving daarvan.
+                </p>
+                <h3>Basisregels</h3>
+                <p>
+                  Deze regels zijn fundamenteel. Daarom staan ze ook vooraan in
+                  je agenda afgedrukt.
+                </p>
+                <h4>
+                  3 x 5 Basisregels van het Scheppersinstituut
+                </h4>
+                <h5>Algemene leefregels</h5>
+                <ol>
+                  <li>Kom op tijd naar school.</li>
+                  <li>
+                    Bij afwezigheid verwittigen je ouders de school zo snel
+                    mogelijk. Wettig elke afwezigheid binnen de 2 schooldagen na
+                    je terugkomst.
+                  </li>
+                  <li>
+                    Gedraag je altijd beleefd en met respect tegenover het
+                    schoolpersoneel en je medeleerlingen. Spreek verzorgd
+                    Nederlands.
+                  </li>
+                  <li>
+                    Draag zorg voor je eigen materiaal, dat van anderen en dat
+                    van de school.
+                  </li>
+                  <li>
+                    Breng je agenda altijd mee naar school. Geef hem
+                    onmiddellijk af als erom gevraagd wordt.
+                  </li>
+                </ol>
+                <h5>Leefregels buiten de klas</h5>
+                <ol>
+                  <li>
+                    Ga bij het belsignaal dadelijk naar de afgesproken plaats en
+                    wacht er in stilte en in rij op je leerkracht.
+                  </li>
+                  <li>
+                    Neem de kortste en snelste weg, als je naar een ander lokaal
+                    of andere campus moet.
+                  </li>
+                  <li>
+                    Wees stil in de gangen en ren er niet.
+                  </li>
+                  <li>
+                    Een gsm of muziekdrager mag enkel tijdens de pauzes
+                    aanstaan. Muziek luidop afspelen, foto's nemen en filmen mag
+                    nooit.
+                  </li>
+                  <li>
+                    Eet en drink enkel tijdens de pauzes. Gooi afval in de
+                    vuilnisbakken.
+                  </li>
+                </ol>
+                <h5>Leefregels binnen de klas</h5>
+                <ol>
+                  <li>
+                    Breng voor elk vak het nodige lesmateriaal in een schooltas
+                    mee.
+                  </li>
+                  <li>
+                    Leg voor elke les het juiste materiaal klaar en steek de
+                    rest in je schooltas.
+                  </li>
+                  <li>
+                    Kom voorbereid naar de les en werk positief mee.
+                  </li>
+                  <li>
+                    Spreek tijdens de les enkel als je daarvoor de toestemming
+                    hebt gekregen.
+                  </li>
+                  <li>
+                    Verlaat het lokaal pas als je daarvoor de toestemming hebt
+                    gekregen.
+                  </li>
+                </ol>
+              </article>
             </div>
+          </div>
+        </section>
+      </div>
 
-            <!-- GDPR -->
-            <div class="container in-view" id="id-gdpr" data-btn="btn-gdpr">
-                <section class="page-section">
-                    <div class="page-section__content">
-                        <div class="flex-container flex-container--text">
-                            <article class="col col--text col--1-1">
-                                <h3 class="article__title">GDPR</h3>
-                                <p>
-                                    Op 25 mei 2018 wordt de privacywetgeving
-                                    vervangen door een Europese verordening:
-                                    GDPR (General data protection regulation).
-                                    Deze nieuwe verordening is gebaseerd op de
-                                    bestaande wetgeving, maar brengt op een
-                                    aantal vlakken een verbeteringen,
-                                    verduidelijking of uitdieping met zich mee.
-                                </p>
-                                <p>
-                                    Het uitgangspunt van de verordening is dat
-                                    er regels vastgesteld worden om de
-                                    bescherming van de grondrechten en de
-                                    fundamentele vrijheden van natuurlijke
-                                    personen en met name hun recht op
-                                    bescherming van persoonsgegevens bij
-                                    verwerkingen van deze gegevens te
-                                    waarborgen. Het schoolbestuur nam
-                                    maatregelen op het gebied van
-                                    informatieveiligheid en privacy (IVP). Dit
-                                    staat omschreven in het IVP-beleid.
-                                </p>
-                                <p>
-                                    Het IVP-beleid heeft als doel het waarborgen
-                                    van de continuïteit van het onderwijs en het
-                                    voorkomen van beveiligings- en privacy
-                                    incidenten.
-                                </p>
-                                <p>
-                                    U kan de verschillende documenten van ons
-                                    IVP-beleid raadplegen door op onderstaande
-                                    titels te klikken:
-                                </p>
-                                <ul>
-                                    <li>
-                                        <a
-                                            href="ivpb/IVPB-Achtergrondinformatie.pdf"
-                                            >Achtergrondinformatie</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="ivpb/IVPB-Algemeen.pdf"
-                                            >Algemeen</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="ivpb/IVPB-Classificatie.pdf"
-                                            >Classificatie</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="ivpb/IVPB-Communicatiebeleid.pdf"
-                                            >Communicatiebeleid</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="ivpb/IVPB-Toegangsmatrices.pdf"
-                                            >Toegangsmatrices</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="ivpb/IVPB-Toestelbeleid.pdf"
-                                            >Toestelbeleid</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="ivpb/IVPB-Wachtwoordbeleid.pdf"
-                                            >Wachtwoordbeleid</a
-                                        >
-                                    </li>
-                                </ul>
-                            </article>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </main>
-
-        <footer class="page-footer">
-            <div class="flex">
-                <address class="page-footer__content">
-                    <strong>Campus Sancta Maria Deurne</strong><br />
-                    Pieter de Ridderstraat 5<br />
-                    2100 Deurne<br />
-                    <i class="mdi mdi-phone"></i> 03 360 31 45
-                </address>
-                <address class="page-footer__content">
-                    <strong>Campus Sint-Eligius Antwerpen</strong><br />
-                    Van Helmonstraat 29<br />
-                    2060 Antwerpen<br />
-                    <i class="mdi mdi-phone"></i> 03 217 42 42
-                </address>
-                <address class="page-footer__content">
-                    <strong>Campus Sint-Eligius Deurne</strong><br />
-                    Lakborslei 263<br />
-                    2100 Deurne<br />
-                    <i class="mdi mdi-phone"></i> 03 326 33 59
-                </address>
-                <address class="page-footer__content">
-                    <i class="mdi mdi-email"></i>
-                    <a href="mailto:info@scheppers.be">info@scheppers.be</a
-                    ><br />
-                    <i class="mdi mdi-facebook-box"></i>
-                    <a href="https://fb.com/scheppersinstituut" target="_blank"
-                        >fb.com/scheppersinstituut</a
+      <!-- GDPR -->
+      <div class="container in-view" id="id-gdpr" data-btn="btn-gdpr">
+        <section class="page-section">
+          <div class="page-section__content">
+            <div class="flex-container flex-container--text">
+              <article class="col col--text col--1-1">
+                <h3 class="article__title">GDPR</h3>
+                <p>
+                  Op 25 mei 2018 wordt de privacywetgeving vervangen door een
+                  Europese verordening: GDPR (General data protection
+                  regulation). Deze nieuwe verordening is gebaseerd op de
+                  bestaande wetgeving, maar brengt op een aantal vlakken een
+                  verbeteringen, verduidelijking of uitdieping met zich mee.
+                </p>
+                <p>
+                  Het uitgangspunt van de verordening is dat er regels
+                  vastgesteld worden om de bescherming van de grondrechten en de
+                  fundamentele vrijheden van natuurlijke personen en met name
+                  hun recht op bescherming van persoonsgegevens bij verwerkingen
+                  van deze gegevens te waarborgen. Het schoolbestuur nam
+                  maatregelen op het gebied van informatieveiligheid en privacy
+                  (IVP). Dit staat omschreven in het IVP-beleid.
+                </p>
+                <p>
+                  Het IVP-beleid heeft als doel het waarborgen van de
+                  continuïteit van het onderwijs en het voorkomen van
+                  beveiligings- en privacy incidenten.
+                </p>
+                <p>
+                  U kan de verschillende documenten van ons IVP-beleid
+                  raadplegen door op onderstaande titels te klikken:
+                </p>
+                <ul>
+                  <li>
+                    <a href="ivpb/IVPB-Achtergrondinformatie.pdf"
+                      >Achtergrondinformatie</a
                     >
-                </address>
+                  </li>
+                  <li>
+                    <a href="ivpb/IVPB-Algemeen.pdf">Algemeen</a>
+                  </li>
+                  <li>
+                    <a href="ivpb/IVPB-Classificatie.pdf">Classificatie</a>
+                  </li>
+                  <li>
+                    <a href="ivpb/IVPB-Communicatiebeleid.pdf"
+                      >Communicatiebeleid</a
+                    >
+                  </li>
+                  <li>
+                    <a href="ivpb/IVPB-Toegangsmatrices.pdf"
+                      >Toegangsmatrices</a
+                    >
+                  </li>
+                  <li>
+                    <a href="ivpb/IVPB-Toestelbeleid.pdf">Toestelbeleid</a>
+                  </li>
+                  <li>
+                    <a href="ivpb/IVPB-Wachtwoordbeleid.pdf"
+                      >Wachtwoordbeleid</a
+                    >
+                  </li>
+                </ul>
+              </article>
             </div>
-            <hr />
-            <div class="page-footer__disclaimer">
-                &copy; Scheppersinstituut —
-                <a href="disclaimer.pdf">disclaimer</a> —
-                <a href="privacybeleid.pdf">privacybeleid</a> —
-                <a href="cookiebeleid.pdf">cookiebeleid</a>
-            </div>
-        </footer>
+          </div>
+        </section>
+      </div>
+    </main>
 
-        <script src="lib/jquery/dist/jquery.min.js"></script>
-        <script src="lib/in-view/dist/in-view.min.js"></script>
-        <script src="scripts/index.js"></script>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-108736060-1"
-        ></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
+    <footer class="page-footer">
+      <div class="flex">
+        <address class="page-footer__content">
+          <strong>Campus Sancta Maria Deurne</strong><br />
+          Pieter de Ridderstraat 5<br />
+          2100 Deurne<br />
+          <i class="mdi mdi-phone"></i> 03 360 31 45
+        </address>
+        <address class="page-footer__content">
+          <strong>Campus Sint-Eligius Antwerpen</strong><br />
+          Van Helmonstraat 29<br />
+          2060 Antwerpen<br />
+          <i class="mdi mdi-phone"></i> 03 217 42 42
+        </address>
+        <address class="page-footer__content">
+          <strong>Campus Sint-Eligius Deurne</strong><br />
+          Lakborslei 263<br />
+          2100 Deurne<br />
+          <i class="mdi mdi-phone"></i> 03 326 33 59
+        </address>
+        <address class="page-footer__content">
+          <i class="mdi mdi-email"></i>
+          <a href="mailto:info@scheppers.be">info@scheppers.be</a><br />
+          <i class="mdi mdi-facebook-box"></i>
+          <a href="https://fb.com/scheppersinstituut" target="_blank"
+            >fb.com/scheppersinstituut</a
+          >
+        </address>
+      </div>
+      <hr />
+      <div class="page-footer__disclaimer">
+        &copy; Scheppersinstituut —
+        <a href="disclaimer.pdf">disclaimer</a> —
+        <a href="privacybeleid.pdf">privacybeleid</a> —
+        <a href="cookiebeleid.pdf">cookiebeleid</a>
+      </div>
+    </footer>
 
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/in-view/dist/in-view.min.js"></script>
+    <script src="scripts/index.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-108736060-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-            gtag("config", "UA-108736060-1");
-        </script>
-    </body>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-108736060-1");
+    </script>
+  </body>
 </html>
